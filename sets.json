@@ -1,0 +1,142 @@
+{
+    "Eternal Masters": {
+        "code":   "ema",
+        "nPacks": 24,
+        "packsPerFoil": 6
+    },
+    "Modern Masters": {
+        "code":   "mma",
+        "nPacks": 24,
+        "packsPerFoil": 6
+    },
+    "Modern Masters 2015": {
+        "code":   "mm2",
+        "nPacks": 24,
+        "packsPerFoil": 6
+    },
+    "Modern Masters 2017": {
+        "code":   "mm3",
+        "nPacks": 24,
+        "packsPerFoil": 6
+    },
+    "Iconic Masters": {
+        "code":   "ima",
+        "nPacks": 24,
+        "packsPerFoil": 6
+    },
+    "Masters 25": {
+        "code":   "a25",
+        "nPacks": 24,
+        "packsPerFoil": 6
+    },
+    "Worldwake": {
+        "code":   "wwk",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Kaladesh": {
+        "code":   "kld",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Scars of Mirrodin": {
+        "code":   "som",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "New Phyrexia": {
+        "code":   "nph",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Coldsnap": {
+        "code":   "csp",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Khans of Tarkir": {
+        "code":   "ktk",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Zendikar": {
+        "code":   "zen",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Innistrad": {
+        "code":   "isd",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Dark Ascension": {
+        "code":   "dka",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Avacyn Restored": {
+        "code":   "avr",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Return to Ravnica": {
+        "code":   "rtr",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Gatecrash": {
+        "code":   "gtc",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Battle for Zendikar": {
+        "code":   "bfz",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Aether Revolt": {
+        "code":   "aer",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Shadows over Innistrad": {
+        "code":   "soi",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Hour of Devastation": {
+        "code":   "hou",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Amonkhet": {
+        "code":   "akh",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Ixalan": {
+        "code":   "xln",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Magic Origins": {
+        "code":   "ori",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Core Set 2019": {
+        "code":   "m19",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Magic 2011": {
+        "code":   "m11",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Dominaria": {
+        "code":   "dom",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    }
+}
