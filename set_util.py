@@ -1,5 +1,6 @@
 import sys
-import urllib
+# import urllib
+import urllib.parse
 import requests
 import json
 
@@ -34,6 +35,49 @@ class SetUtil(object):
 
 
     @staticmethod
+    def getSetToCode():
+        return {
+            setName: SetUtil.sets[setName]['code']
+            for setName in SetUtil.sets.keys()
+        }
+
+    #
+    # Assumes that the set of all codes AND names are unique with each other.
+    #
+    @staticmethod
+    def coerceToCode(setCodeOrName):
+        setToCode = SetUtil.getSetToCode()
+
+        # Set name; return the code
+        if setCodeOrName in setToCode:
+            return setToCode[setCodeOrName]
+
+        # Set code; return it
+        if setCodeOrName in setToCode.values():
+            return setCodeOrName
+
+        raise Exception('Invalid set name or code: %s' % setCodeOrName)
+
+    #
+    # Assumes that the set of all codes AND names are unique with each other.
+    # Also assumes that there's a 1:1 mapping between set names and codes.
+    #
+    @staticmethod
+    def coerceToName(setCodeOrName):
+        setToCode = SetUtil.getSetToCode()
+
+        # Set name return it
+        if setCodeOrName in setToCode:
+            return setCodeOrName
+
+        # Set code; return the name
+        if setCodeOrName in setToCode.values():
+            codeToSet = {setCode: setName for setName, setCode in setToCode.items()}
+            return codeToSet[setCodeOrName]
+
+        raise Exception('Invalid set name or code: %s' % setCodeOrName)
+
+    @staticmethod
     def downloadCards(setCode):
         print('Getting cards for %s' % setCode)
         sys.stdout.flush()
@@ -41,14 +85,16 @@ class SetUtil(object):
         cards = []
 
         baseURL = 'https://api.scryfall.com/cards/search?q='
-        query = urllib.quote_plus('set=%s' % setCode)
+        # query = urllib.quote_plus('set=%s' % setCode)
+        query = urllib.parse.quote('set=%s' % setCode)
 
         finalURL = baseURL + query
 
         r = requests.get(finalURL)
 
         if (r.status_code != 200):
-            print('Bad return status (' + r.status_code + ' != 200)! Returning none.')
+            print('Bad return status (' + str(r.status_code) + ' != 200)! Returning none.')
+            print('URL: %s' % str(finalURL))
             return None
 
         response = json.loads(r.text)

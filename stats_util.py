@@ -79,8 +79,14 @@ class StatsUtil(object):
         }
 
         for c in cards:
+
+            # from pprint import pprint
+            # pprint(c)
+            # exit()
+
             name = c['name']
-            price = float(c['usd']) if 'usd' in c else 0.0
+            prices = c['prices']
+            price = float(prices['usd']) if ('usd' in prices and prices['usd'] != None) else 0.0
 
             bucket = ret[c['rarity']]
 
@@ -88,7 +94,7 @@ class StatsUtil(object):
             bucket['all']['prices'][name] = price
 
             if (price >= exclPrice):
-                bucket['exclusive']['n'] += 1 
+                bucket['exclusive']['n'] += 1
                 bucket['exclusive']['prices'][name] = price
             else:
                 bucket['exclusive']['prices'][name] = 0
