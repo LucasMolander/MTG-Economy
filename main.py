@@ -7,6 +7,26 @@ from stats_util import StatsUtil
 
 
 
+
+
+
+
+# MASSIVE TODO
+# Take into account the fact that the new prices are stored as
+# usd, usd_foil, etc
+
+# ALSO
+# Print stuff out in those nice table things :D
+
+
+
+
+
+
+
+
+
+
 #
 # Call one of:
 #  - reportExpectedValues()

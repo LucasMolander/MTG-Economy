@@ -79,7 +79,9 @@ class SetUtil(object):
 
     @staticmethod
     def downloadCards(setCode):
-        print('Getting cards for %s' % setCode)
+        setName = SetUtil.coerceToName(setCode)
+
+        print('Getting cards for %s' % setName)
         sys.stdout.flush()
 
         cards = []
@@ -104,7 +106,7 @@ class SetUtil(object):
 
         # Might be pagified
         while (response['has_more'] == True):
-            print('\tGetting more cards for %s...' % setCode)
+            print('\tGetting more cards for %s...' % setName)
             sys.stdout.flush()
 
             url = response['next_page']
