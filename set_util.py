@@ -77,6 +77,7 @@ class SetUtil(object):
 
         raise Exception('Invalid set name or code: %s' % setCodeOrName)
 
+
     @staticmethod
     def downloadCards(setCode):
         setName = SetUtil.coerceToName(setCode)

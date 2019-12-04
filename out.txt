@@ -1,0 +1,323 @@
+
+Boxes and their expected values:
+(EXCLUSIVE PRICE $2.0)
+
+Aether Revolt
+-------------
+allAvg	$102.59
+allMed	$32.47
+exAvg	$64.46
+m kurt	-0.27
+m skew	1.01
+r kurt	13.88
+r skew	3.59
+
+
+Amonkhet
+--------
+allAvg	$82.25
+allMed	$49.73
+exAvg	$26.27
+m kurt	-1.33
+m skew	0.30
+r kurt	32.92
+r skew	5.45
+
+
+Avacyn Restored
+---------------
+allAvg	$168.79
+allMed	$68.00
+exAvg	$111.64
+m kurt	1.14
+m skew	1.57
+r kurt	32.96
+r skew	5.66
+
+
+Battle for Zendikar
+-------------------
+allAvg	$76.72
+allMed	$43.88
+exAvg	$25.13
+m kurt	2.84
+m skew	2.01
+r kurt	6.95
+r skew	2.62
+
+
+Coldsnap
+--------
+allAvg	$396.23
+allMed	$75.71
+exAvg	$272.35
+m kurt	nan
+m skew	nan
+r kurt	1.86
+r skew	1.81
+
+
+Core Set 2019
+-------------
+allAvg	$90.86
+allMed	$43.24
+exAvg	$29.35
+m kurt	1.30
+m skew	1.57
+r kurt	8.10
+r skew	2.55
+
+
+Dark Ascension
+--------------
+allAvg	$106.14
+allMed	$54.90
+exAvg	$36.61
+m kurt	2.47
+m skew	1.86
+r kurt	6.59
+r skew	2.73
+
+
+Dominaria
+---------
+allAvg	$88.53
+allMed	$36.18
+exAvg	$34.11
+m kurt	3.68
+m skew	2.18
+r kurt	3.27
+r skew	2.10
+
+
+Eternal Masters
+---------------
+allAvg	$310.39
+allMed	$108.45
+exAvg	$244.44
+m kurt	1.61
+m skew	1.61
+r kurt	4.12
+r skew	2.25
+
+
+Gatecrash
+---------
+allAvg	$122.34
+allMed	$56.93
+exAvg	$60.63
+m kurt	-0.17
+m skew	0.93
+r kurt	8.27
+r skew	2.87
+
+
+Hour of Devastation
+-------------------
+allAvg	$82.36
+allMed	$38.95
+exAvg	$39.56
+m kurt	0.93
+m skew	1.32
+r kurt	12.39
+r skew	3.39
+
+
+Iconic Masters
+--------------
+allAvg	$218.21
+allMed	$100.20
+exAvg	$164.16
+m kurt	6.91
+m skew	2.70
+r kurt	6.68
+r skew	2.61
+
+
+Innistrad
+---------
+allAvg	$156.90
+allMed	$70.45
+exAvg	$90.80
+m kurt	10.26
+m skew	3.44
+r kurt	41.23
+r skew	6.26
+
+
+Ixalan
+------
+allAvg	$89.63
+allMed	$43.61
+exAvg	$35.53
+m kurt	2.60
+m skew	1.78
+r kurt	7.26
+r skew	2.61
+
+
+Kaladesh
+--------
+allAvg	$93.59
+allMed	$34.74
+exAvg	$52.77
+m kurt	7.38
+m skew	2.78
+r kurt	6.07
+r skew	2.56
+
+
+Khans of Tarkir
+---------------
+allAvg	$123.09
+allMed	$41.54
+exAvg	$74.75
+m kurt	1.72
+m skew	1.59
+r kurt	6.06
+r skew	2.71
+
+
+Magic 2011
+----------
+allAvg	$170.73
+allMed	$97.97
+exAvg	$93.78
+m kurt	-0.52
+m skew	0.75
+r kurt	5.46
+r skew	2.28
+
+
+Magic Origins
+-------------
+allAvg	$107.29
+allMed	$62.71
+exAvg	$49.35
+m kurt	6.29
+m skew	2.56
+r kurt	21.28
+r skew	4.19
+
+
+Masters 25
+----------
+allAvg	$199.65
+allMed	$77.58
+exAvg	$135.55
+m kurt	3.14
+m skew	1.92
+r kurt	12.68
+r skew	3.15
+
+
+Modern Horizons
+---------------
+allAvg	$164.21
+allMed	$60.70
+exAvg	$112.07
+m kurt	4.73
+m skew	2.43
+r kurt	14.24
+r skew	3.73
+
+
+Modern Masters
+--------------
+allAvg	$391.14
+allMed	$169.44
+exAvg	$316.27
+m kurt	0.05
+m skew	1.24
+r kurt	7.74
+r skew	2.62
+
+
+Modern Masters 2015
+-------------------
+allAvg	$228.46
+allMed	$106.95
+exAvg	$170.01
+m kurt	2.15
+m skew	1.54
+r kurt	11.47
+r skew	3.33
+
+
+Modern Masters 2017
+-------------------
+allAvg	$290.53
+allMed	$89.31
+exAvg	$229.53
+m kurt	-0.80
+m skew	0.84
+r kurt	6.67
+r skew	2.71
+
+
+New Phyrexia
+------------
+allAvg	$323.54
+allMed	$181.01
+exAvg	$206.55
+m kurt	0.47
+m skew	0.82
+r kurt	6.06
+r skew	2.41
+
+
+Return to Ravnica
+-----------------
+allAvg	$140.82
+allMed	$50.98
+exAvg	$89.19
+m kurt	2.15
+m skew	1.89
+r kurt	2.63
+r skew	1.91
+
+
+Scars of Mirrodin
+-----------------
+allAvg	$242.27
+allMed	$105.75
+exAvg	$159.35
+m kurt	7.97
+m skew	3.00
+r kurt	14.59
+r skew	3.41
+
+
+Shadows over Innistrad
+----------------------
+allAvg	$102.76
+allMed	$44.33
+exAvg	$51.99
+m kurt	-0.04
+m skew	0.96
+r kurt	13.29
+r skew	3.51
+
+
+Worldwake
+---------
+allAvg	$315.45
+allMed	$94.36
+exAvg	$206.18
+m kurt	4.82
+m skew	2.58
+r kurt	19.49
+r skew	4.34
+
+
+Zendikar
+--------
+allAvg	$374.45
+allMed	$102.15
+exAvg	$294.82
+m kurt	-1.04
+m skew	0.21
+r kurt	6.91
+r skew	2.77
+
+

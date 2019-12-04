@@ -16,6 +16,7 @@ class StatsUtil(object):
                 'all': {
                     'n': 0,
                     'prices': {},
+                    'pricesFoil': {},
                     'priceSum': 0.0,
                     'priceAvg': 0.0,
                     'priceMed': 0.0
@@ -23,6 +24,7 @@ class StatsUtil(object):
                 'exclusive': {
                     'n': 0,
                     'prices': {},
+                    'pricesFoil': {},
                     'priceSum': 0.0,
                     'priceAvg': 0.0,
                     'priceMed': 0.0
@@ -32,6 +34,7 @@ class StatsUtil(object):
                 'all': {
                     'n': 0,
                     'prices': {},
+                    'pricesFoil': {},
                     'priceSum': 0.0,
                     'priceAvg': 0.0,
                     'priceMed': 0.0
@@ -39,6 +42,7 @@ class StatsUtil(object):
                 'exclusive': {
                     'n': 0,
                     'prices': {},
+                    'pricesFoil': {},
                     'priceSum': 0.0,
                     'priceAvg': 0.0,
                     'priceMed': 0.0
@@ -48,6 +52,7 @@ class StatsUtil(object):
                 'all': {
                     'n': 0,
                     'prices': {},
+                    'pricesFoil': {},
                     'priceSum': 0.0,
                     'priceAvg': 0.0,
                     'priceMed': 0.0
@@ -55,6 +60,7 @@ class StatsUtil(object):
                 'exclusive': {
                     'n': 0,
                     'prices': {},
+                    'pricesFoil': {},
                     'priceSum': 0.0,
                     'priceAvg': 0.0,
                     'priceMed': 0.0
@@ -64,6 +70,7 @@ class StatsUtil(object):
                 'all': {
                     'n': 0,
                     'prices': {},
+                    'pricesFoil': {},
                     'priceSum': 0.0,
                     'priceAvg': 0.0,
                     'priceMed': 0.0
@@ -71,6 +78,7 @@ class StatsUtil(object):
                 'exclusive': {
                     'n': 0,
                     'prices': {},
+                    'pricesFoil': {},
                     'priceSum': 0.0,
                     'priceAvg': 0.0,
                     'priceMed': 0.0
@@ -79,25 +87,28 @@ class StatsUtil(object):
         }
 
         for c in cards:
-
-            # from pprint import pprint
-            # pprint(c)
-            # exit()
-
             name = c['name']
             prices = c['prices']
             price = float(prices['usd']) if ('usd' in prices and prices['usd'] != None) else 0.0
+            priceFoil = float(prices['usd_foil']) if ('usd_foil' in prices and prices['usd_foil'] != None) else 0.0
 
             bucket = ret[c['rarity']]
 
-            bucket['all']['n']           += 1
-            bucket['all']['prices'][name] = price
+            bucket['all']['n']               += 1
+            bucket['all']['prices'][name]     = price
+            bucket['all']['pricesFoil'][name] = priceFoil
 
             if (price >= exclPrice):
                 bucket['exclusive']['n'] += 1
                 bucket['exclusive']['prices'][name] = price
             else:
                 bucket['exclusive']['prices'][name] = 0
+
+            if (priceFoil >= exclPrice):
+                bucket['exclusive']['n'] += 1
+                bucket['exclusive']['pricesFoil'][name] = priceFoil
+            else:
+                bucket['exclusive']['pricesFoil'][name] = 0
 
         for rarity in ret:
             bucket = ret[rarity]

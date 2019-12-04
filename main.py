@@ -4,6 +4,7 @@ import json
 
 from set_util import SetUtil
 from stats_util import StatsUtil
+from print_util import PrintUtil
 
 
 
@@ -138,17 +139,27 @@ def reportSet(args):
     cards = SetUtil.loadFromFiles(only=setName)
     stats = StatsUtil.getCardsStats(cards)
 
+    tableHeader = [('Card', 'l'), ('Price', 'r'), ('Price (foil)', 'r')]
+
     for rarity in ['mythic', 'rare', 'uncommon', 'common']:
         bucket = stats[rarity]
         descStats = bucket['all']
         cardToPrice = descStats['prices']
+        cardToPriceFoil = descStats['pricesFoil']
 
         print('\n%s\n%s' % (rarity, ('-' * len(rarity))))
         print('(avg=%.2f, med=%.2f)' % (descStats['avg'], descStats['med']))
 
-        # Sort by price descending
-        for key, value in sorted(cardToPrice.items(), reverse=True, key=lambda cardAndPrice: cardAndPrice[1]):
-            print("%s: %s" % (key, value))
+        tableRows = [
+            [card, '{0:.2f}'.format(value), '{0:.2f}'.format(cardToPriceFoil[card])]
+            for card, value in sorted(
+                cardToPrice.items(),
+                reverse=True,
+                key=lambda cardAndPrice: cardAndPrice[1]
+            )
+        ]
+
+        print(PrintUtil.getTable(tableHeader, tableRows))
 
     print('')
 

@@ -1,33 +1,38 @@
 {
-    "Eternal Masters": {
-        "code":   "ema",
-        "nPacks": 24,
-        "packsPerFoil": 6
-    },
     "Modern Masters": {
         "code":   "mma",
         "nPacks": 24,
-        "packsPerFoil": 6
+        "packsPerFoil": 1
     },
     "Modern Masters 2015": {
         "code":   "mm2",
         "nPacks": 24,
-        "packsPerFoil": 6
+        "packsPerFoil": 1
+    },
+    "Eternal Masters": {
+        "code":   "ema",
+        "nPacks": 24,
+        "packsPerFoil": 1
     },
     "Modern Masters 2017": {
         "code":   "mm3",
         "nPacks": 24,
-        "packsPerFoil": 6
+        "packsPerFoil": 1
     },
     "Iconic Masters": {
         "code":   "ima",
         "nPacks": 24,
-        "packsPerFoil": 6
+        "packsPerFoil": 1
     },
     "Masters 25": {
         "code":   "a25",
         "nPacks": 24,
-        "packsPerFoil": 6
+        "packsPerFoil": 1
+    },
+    "Ultimate Masters": {
+        "code":   "uma",
+        "nPacks": 24,
+        "packsPerFoil": 1
     },
     "Worldwake": {
         "code":   "wwk",
@@ -136,6 +141,11 @@
     },
     "Dominaria": {
         "code":   "dom",
+        "nPacks": 36,
+        "packsPerFoil": 6
+    },
+    "Modern Horizons": {
+        "code":   "mh1",
         "nPacks": 36,
         "packsPerFoil": 6
     }

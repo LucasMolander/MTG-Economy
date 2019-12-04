@@ -2,6 +2,14 @@ import json
 
 from set_util import SetUtil
 
+from print_util import PrintUtil
+
+header = ['Col A', 'Col B']
+rows = [['a1', 'b1'], ['a2', 'b2']]
+
+myTable = PrintUtil.getTable(header, rows)
+
+print(myTable)
 
 # excludeSets = ['Homelands']
 
