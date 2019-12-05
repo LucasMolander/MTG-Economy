@@ -52,7 +52,7 @@ def main():
         help='Don\'t consider cards below this price in EV calculations')
 
     parser_evs.add_argument(
-        '--setName',
+        '--set',
         type=str,
         default=None,
         help='Only calculate the EV for a specific set')
@@ -67,7 +67,7 @@ def main():
         help='Report card prices in a set')
 
     parser_set.add_argument(
-            '--name',
+            '--set',
             type=str,
             required=True,
             help='Only report card prices for a specific set')
@@ -82,7 +82,7 @@ def main():
         help='Locally price info from the internet')
 
     parser_store.add_argument(
-        '--only',
+        '--set',
         type=str,
         help='Only store info for a specific set')
 
@@ -95,7 +95,7 @@ def main():
 
 def reportExpectedValues(args):
     exclPrice = args.exclPrice
-    name      = args.setName
+    name      = args.set
 
     print('\nBoxes and their expected values:')
     if (exclPrice > 0):
@@ -105,7 +105,7 @@ def reportExpectedValues(args):
     if (name):
         name  = SetUtil.coerceToName(name)
         cards = SetUtil.loadFromFiles(only=name)
-        cardsStats = StatsUtil.getCardsStats(cards, exclPrice=exclPrice)
+        cardsStats = StatsUtil.getCardsStats(cards, name, exclPrice=exclPrice)
         setStats = StatsUtil.getSetStats(name, cardsStats, exclPrice=exclPrice)
 
         print(name)
@@ -119,11 +119,10 @@ def reportExpectedValues(args):
 
     for setName in setNamesSorted:
         cards = setNameToSetCards[setName]
-        cardsStats = StatsUtil.getCardsStats(cards, exclPrice=exclPrice)
+        cardsStats = StatsUtil.getCardsStats(cards, setName, exclPrice=exclPrice)
         setStats = StatsUtil.getSetStats(setName, cardsStats, exclPrice=exclPrice)
         setNameToBoxEVs[setName] = setStats
 
-    # pprint(setNameToBoxEVs)
     for setName in setNamesSorted:
         evs = setNameToBoxEVs[setName]
 
@@ -134,14 +133,14 @@ def reportExpectedValues(args):
 
 
 def reportSet(args):
-    setName = SetUtil.coerceToName(args.name)
+    setName = SetUtil.coerceToName(args.set)
 
     cards = SetUtil.loadFromFiles(only=setName)
-    stats = StatsUtil.getCardsStats(cards)
+    stats = StatsUtil.getCardsStats(cards, setName)
 
     tableHeader = [('Card', 'l'), ('Price', 'r'), ('Price (foil)', 'r')]
 
-    for rarity in ['mythic', 'rare', 'uncommon', 'common']:
+    for rarity in ['common', 'uncommon', 'rare', 'mythic']:
         bucket = stats[rarity]
         descStats = bucket['all']
         cardToPrice = descStats['prices']
@@ -166,9 +165,9 @@ def reportSet(args):
 
 
 def storeToFiles(args):
-    if (args.only):
-        setCode = SetUtil.coerceToCode(args.only)
-        setName = SetUtil.coerceToName(args.only)
+    if (args.set):
+        setCode = SetUtil.coerceToCode(args.set)
+        setName = SetUtil.coerceToName(args.set)
 
         cards = SetUtil.downloadCards(setCode)
         SetUtil.persist(setName, cards)

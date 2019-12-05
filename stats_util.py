@@ -10,78 +10,136 @@ class StatsUtil(object):
     """
 
     @staticmethod
-    def getCardsStats(cards, exclPrice=0):
+    def getCardsStats(cards, setName, exclPrice=0):
+        packsPerFoil = SetUtil.sets[setName]['packsPerFoil']
+
         ret = {
             'mythic': {
                 'all': {
                     'n': 0,
                     'prices': {},
+                    'sum': 0.0,
+                    'avg': 0.0,
+                    'med': 0.0,
+                    'avgValAdd': 0.0,
+                    'medValAdd': 0.0,
                     'pricesFoil': {},
-                    'priceSum': 0.0,
-                    'priceAvg': 0.0,
-                    'priceMed': 0.0
+                    'sumFoil': 0.0,
+                    'avgFoil': 0.0,
+                    'medFoil': 0.0,
+                    'avgValAddFoil': 0.0,
+                    'medValAddFoil': 0.0
                 },
                 'exclusive': {
                     'n': 0,
                     'prices': {},
+                    'sum': 0.0,
+                    'avg': 0.0,
+                    'med': 0.0,
+                    'avgValAdd': 0.0,
+                    'medValAdd': 0.0,
                     'pricesFoil': {},
-                    'priceSum': 0.0,
-                    'priceAvg': 0.0,
-                    'priceMed': 0.0
+                    'sumFoil': 0.0,
+                    'avgFoil': 0.0,
+                    'medFoil': 0.0,
+                    'avgValAddFoil': 0.0,
+                    'medValAddFoil': 0.0
                 }
             },
             'rare': {
                 'all': {
                     'n': 0,
                     'prices': {},
+                    'sum': 0.0,
+                    'avg': 0.0,
+                    'med': 0.0,
+                    'avgValAdd': 0.0,
+                    'medValAdd': 0.0,
                     'pricesFoil': {},
-                    'priceSum': 0.0,
-                    'priceAvg': 0.0,
-                    'priceMed': 0.0
+                    'sumFoil': 0.0,
+                    'avgFoil': 0.0,
+                    'medFoil': 0.0,
+                    'avgValAddFoil': 0.0,
+                    'medValAddFoil': 0.0
                 },
                 'exclusive': {
                     'n': 0,
                     'prices': {},
+                    'sum': 0.0,
+                    'avg': 0.0,
+                    'med': 0.0,
+                    'avgValAdd': 0.0,
+                    'medValAdd': 0.0,
                     'pricesFoil': {},
-                    'priceSum': 0.0,
-                    'priceAvg': 0.0,
-                    'priceMed': 0.0
+                    'sumFoil': 0.0,
+                    'avgFoil': 0.0,
+                    'medFoil': 0.0,
+                    'avgValAddFoil': 0.0,
+                    'medValAddFoil': 0.0
                 }
             },
             'uncommon': {
                 'all': {
                     'n': 0,
                     'prices': {},
+                    'sum': 0.0,
+                    'avg': 0.0,
+                    'med': 0.0,
+                    'avgValAdd': 0.0,
+                    'medValAdd': 0.0,
                     'pricesFoil': {},
-                    'priceSum': 0.0,
-                    'priceAvg': 0.0,
-                    'priceMed': 0.0
+                    'sumFoil': 0.0,
+                    'avgFoil': 0.0,
+                    'medFoil': 0.0,
+                    'avgValAddFoil': 0.0,
+                    'medValAddFoil': 0.0
                 },
                 'exclusive': {
                     'n': 0,
                     'prices': {},
+                    'sum': 0.0,
+                    'avg': 0.0,
+                    'med': 0.0,
+                    'avgValAdd': 0.0,
+                    'medValAdd': 0.0,
                     'pricesFoil': {},
-                    'priceSum': 0.0,
-                    'priceAvg': 0.0,
-                    'priceMed': 0.0
+                    'sumFoil': 0.0,
+                    'avgFoil': 0.0,
+                    'medFoil': 0.0,
+                    'avgValAddFoil': 0.0,
+                    'medValAddFoil': 0.0
                 }
             },
             'common': {
                 'all': {
                     'n': 0,
                     'prices': {},
+                    'sum': 0.0,
+                    'avg': 0.0,
+                    'med': 0.0,
+                    'avgValAdd': 0.0,
+                    'medValAdd': 0.0,
                     'pricesFoil': {},
-                    'priceSum': 0.0,
-                    'priceAvg': 0.0,
-                    'priceMed': 0.0
+                    'sumFoil': 0.0,
+                    'avgFoil': 0.0,
+                    'medFoil': 0.0,
+                    'avgValAddFoil': 0.0,
+                    'medValAddFoil': 0.0
                 },
                 'exclusive': {
                     'n': 0,
                     'prices': {},
+                    'sum': 0.0,
+                    'avg': 0.0,
+                    'med': 0.0,
+                    'avgValAdd': 0.0,
+                    'medValAdd': 0.0,
                     'pricesFoil': {},
-                    'priceSum': 0.0,
-                    'priceAvg': 0.0,
-                    'priceMed': 0.0
+                    'sumFoil': 0.0,
+                    'avgFoil': 0.0,
+                    'medFoil': 0.0,
+                    'avgValAddFoil': 0.0,
+                    'medValAddFoil': 0.0
                 }
             }
         }
@@ -110,18 +168,30 @@ class StatsUtil(object):
             else:
                 bucket['exclusive']['pricesFoil'][name] = 0
 
+        rarityToProb = {
+            'mythic':   1.0 / 8.0,
+            'rare':     7.0 / 8.0,
+            'uncommon': 3.0,
+            'common':   10.0
+        }
+
+        totalProb = sum(rarityToProb.values())
+
+        rarityToNormalizedProb = {
+            rarity: prob / totalProb
+            for rarity, prob in rarityToProb.items()
+        }
+
         for rarity in ret:
             bucket = ret[rarity]
-            p = {
-                'mythic':   1.0 / 8.0,
-                'rare':     7.0 / 8.0,
-                'uncommon': 3.0,
-                'common':   10.0,
-            }[rarity]
+            p = rarityToProb[rarity]
+            normalizedP = rarityToNormalizedProb[rarity]
 
+            # For 'all' and 'exclusive'
             for subset in bucket:
                 innerBucket = bucket[subset]
 
+                # Non-foil prices first
                 priceValues = list(innerBucket['prices'].values())
                 if (len(priceValues) > 0):
                     innerBucket['sum']       = sum(priceValues)
@@ -136,10 +206,41 @@ class StatsUtil(object):
                     innerBucket['avgValAdd'] = 0.0
                     innerBucket['medValAdd'] = 0.0
 
+                # Foil prices now
+                foilPriceValues = list(innerBucket['pricesFoil'].values())
+                if (len(priceValues) > 0 and packsPerFoil > 0):
+                    innerBucket['sumFoil']       = sum(foilPriceValues)
+                    innerBucket['avgFoil']       = statistics.mean(foilPriceValues)
+                    innerBucket['medFoil']       = statistics.median(foilPriceValues)
+                    innerBucket['avgValAddFoil'] = innerBucket['avgFoil'] * normalizedP / packsPerFoil
+                    innerBucket['medValAddFoil'] = innerBucket['medFoil'] * normalizedP / packsPerFoil
+                else:
+                    innerBucket['sumFoil']       = 0.0
+                    innerBucket['avgFoil']       = 0.0
+                    innerBucket['medFoil']       = 0.0
+                    innerBucket['avgValAddFoil'] = 0.0
+                    innerBucket['medValAddFoil'] = 0.0
+
         return ret
+
 
     @staticmethod
     def getSetStats(setName, cardsStats, exclPrice=0):
+
+
+        # from pprint import pprint
+        # import json
+        # asdf = json.loads(json.dumps(cardsStats))
+        # for rarity in asdf:
+        #     bucket = asdf[rarity]
+        #     for poop in bucket:
+        #         thingy = bucket[poop]
+        #         del thingy['prices']
+        #         del thingy['pricesFoil']
+        # pprint(asdf)
+        # exit()
+
+
         ret = {}
 
         nPacks = SetUtil.sets[setName]['nPacks']
@@ -151,24 +252,22 @@ class StatsUtil(object):
             # Average of cards that meet minimum price
             totalVA = 0.0
             for rarity in cardsStats:
-                bucket = cardsStats[rarity]
+                bucket   = cardsStats[rarity]
                 totalVA += bucket['exclusive']['avgValAdd']
+                totalVA += bucket['exclusive']['avgValAddFoil']
 
             ret['exAvg'] = totalVA * nPacks
-            # print('Exclusive EV by avg: %s' % totalVA)
-            # print('\t(%s per box)\n' % (totalVA * nPacks))
         else:
             ret['exAvg'] = None
 
-        # Average of all cards
+        # Average of non-foil cards
         totalVA = 0.0
         for rarity in cardsStats:
             bucket = cardsStats[rarity]
             totalVA += bucket['all']['avgValAdd']
+            totalVA += bucket['all']['avgValAddFoil']
 
         ret['allAvg'] = totalVA * nPacks
-        # print('All EV by avg: %s' % totalVA)
-        # print('\t(%s per box)\n' % (totalVA * nPacks))
 
         # Median of all cards
         totalVA = 0.0
@@ -177,12 +276,6 @@ class StatsUtil(object):
             totalVA += bucket['all']['medValAdd']
 
         ret['allMed'] = totalVA * nPacks
-        # print('All EV by med: %s' % totalVA)
-        # print('\t(%s per box)\n' % (totalVA * nPacks))
-
-        # from pprint import pprint
-        # pprint(cardsStats)
-        # exit()
 
         # Skewness
         mythicPriceValues = list(cardsStats['mythic']['all']['prices'].values())
