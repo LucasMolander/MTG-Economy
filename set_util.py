@@ -14,25 +14,6 @@ class SetUtil(object):
 
     sets = FileUtil.getJSONContents(SETS_PATH)
 
-    #
-    # TODO
-    # Care about this later
-    #
-    # nameToCodeOld = {
-    #     'Alpha':     'lea',
-    #     'Beta':      'leb',
-    #     'Unlimited': '2ed',
-    #     'Collector\'s Edition': 'ced',
-    #     'Arabian Nights': 'arn',
-    #     'Antiquities': 'atq',
-    #     'Revised': '3ed',
-    #     'Legends': 'leg',
-    #     'The Dark': 'drk',
-    #     'Fallen Empires': 'fem',
-    #     'Fourth Edition': '4ed',
-    #     'Ice Age': 'ice'
-    # }
-
 
     @staticmethod
     def getSetToCode():
@@ -40,6 +21,7 @@ class SetUtil(object):
             setName: SetUtil.sets[setName]['code']
             for setName in SetUtil.sets.keys()
         }
+
 
     #
     # Assumes that the set of all codes AND names are unique with each other.
@@ -57,6 +39,7 @@ class SetUtil(object):
             return setCodeOrName
 
         raise Exception('Invalid set name or code: %s' % setCodeOrName)
+
 
     #
     # Assumes that the set of all codes AND names are unique with each other.
@@ -88,7 +71,6 @@ class SetUtil(object):
         cards = []
 
         baseURL = 'https://api.scryfall.com/cards/search?q='
-        # query = urllib.quote_plus('set=%s' % setCode)
         query = urllib.parse.quote('set=%s' % setCode)
 
         finalURL = baseURL + query

@@ -226,21 +226,6 @@ class StatsUtil(object):
 
     @staticmethod
     def getSetStats(setName, cardsStats, exclPrice=0):
-
-
-        # from pprint import pprint
-        # import json
-        # asdf = json.loads(json.dumps(cardsStats))
-        # for rarity in asdf:
-        #     bucket = asdf[rarity]
-        #     for poop in bucket:
-        #         thingy = bucket[poop]
-        #         del thingy['prices']
-        #         del thingy['pricesFoil']
-        # pprint(asdf)
-        # exit()
-
-
         ret = {}
 
         nPacks = SetUtil.sets[setName]['nPacks']
@@ -285,8 +270,8 @@ class StatsUtil(object):
         ret['r kurt'] = kurtosis(rarePriceValues)
         ret['r skew'] = skew(rarePriceValues)
 
-
         return ret
+
 
     @staticmethod
     def printSetStats(setStats):

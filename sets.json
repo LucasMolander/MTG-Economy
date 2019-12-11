@@ -311,6 +311,66 @@
             "mythic":    16
         }
     },
+    "Magic 2011": {
+        "code":   "m11",
+        "nPacks": 36,
+        "packsPerFoil": 6,
+        "rarityCounts": {
+            "basicLand": 20,
+            "common":    101,
+            "uncommon":  60,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "Magic 2012": {
+        "code":   "m12",
+        "nPacks": 36,
+        "packsPerFoil": 6,
+        "rarityCounts": {
+            "basicLand": 20,
+            "common":    101,
+            "uncommon":  60,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "Magic 2013": {
+        "code":   "m13",
+        "nPacks": 36,
+        "packsPerFoil": 6,
+        "rarityCounts": {
+            "basicLand": 20,
+            "common":    101,
+            "uncommon":  60,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "Magic 2014": {
+        "code":   "m14",
+        "nPacks": 36,
+        "packsPerFoil": 6,
+        "rarityCounts": {
+            "basicLand": 20,
+            "common":    101,
+            "uncommon":  60,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "Magic 2015": {
+        "code":   "m15",
+        "nPacks": 36,
+        "packsPerFoil": 6,
+        "rarityCounts": {
+            "basicLand": 20,
+            "common":    101,
+            "uncommon":  80,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
     "Core Set 2019": {
         "code":   "m19",
         "nPacks": 36,
@@ -323,14 +383,14 @@
             "mythic":    16
         }
     },
-    "Magic 2011": {
-        "code":   "m11",
+    "Core Set 2020": {
+        "code":   "m20",
         "nPacks": 36,
         "packsPerFoil": 6,
         "rarityCounts": {
             "basicLand": 20,
-            "common":    101,
-            "uncommon":  60,
+            "common":    112,
+            "uncommon":  80,
             "rare":      53,
             "mythic":    15
         }
@@ -353,6 +413,18 @@
         "packsPerFoil": 6,
         "rarityCounts": {
             "basicLand": 5,
+            "common":    101,
+            "uncommon":  80,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "Kaladesh": {
+        "code":   "kld",
+        "nPacks": 36,
+        "packsPerFoil": 6,
+        "rarityCounts": {
+            "basicLand": 15,
             "common":    101,
             "uncommon":  80,
             "rare":      53,

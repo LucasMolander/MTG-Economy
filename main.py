@@ -1,31 +1,11 @@
 import argparse
 from pprint import pprint
 import json
+from time import sleep
 
 from set_util import SetUtil
 from stats_util import StatsUtil
 from print_util import PrintUtil
-
-
-
-
-
-
-
-# MASSIVE TODO
-# Take into account the fact that the new prices are stored as
-# usd, usd_foil, etc
-
-# ALSO
-# Print stuff out in those nice table things :D
-
-
-
-
-
-
-
-
 
 
 #
@@ -102,6 +82,7 @@ def reportExpectedValues(args):
         print('(EXCLUSIVE PRICE $%s)' % exclPrice)
     print('')
 
+    # Only report one set
     if (name):
         name  = SetUtil.coerceToName(name)
         cards = SetUtil.loadFromFiles(only=name)
@@ -113,6 +94,7 @@ def reportExpectedValues(args):
         StatsUtil.printSetStats(setStats)
         return
 
+    # Report ALL the sets!
     setNameToSetCards = SetUtil.loadFromFiles()
     setNameToBoxEVs = {}
     setNamesSorted = sorted(list(setNameToSetCards.keys()))
@@ -123,13 +105,46 @@ def reportExpectedValues(args):
         setStats = StatsUtil.getSetStats(setName, cardsStats, exclPrice=exclPrice)
         setNameToBoxEVs[setName] = setStats
 
+    tableHeader = [
+        ('Set', 'l'),
+        ('EV',  'r'),
+    ]
+
+    if (exclPrice > 0):
+        tableHeader.append(('EV (excl $%s)' % exclPrice, 'r'))
+
+    tableHeader.extend([
+        ('EV (median-based)', 'r'),
+        ('Rare kurtosis',     'r'),
+        ('Rare skew',         'r'),
+        ('Mythic kurtosis',   'r'),
+        ('Mythic skew',       'r'),
+    ])
+
+    tableRows = []
+
     for setName in setNamesSorted:
         evs = setNameToBoxEVs[setName]
 
-        print(setName)
-        print('-' * len(setName))
-        StatsUtil.printSetStats(evs)
+        vals = [
+            setName,
+            '{0:.2f}'.format(evs['allAvg']),
+        ]
 
+        if (exclPrice > 0):
+            vals.append('{0:.2f}'.format(evs['exAvg']))
+
+        vals.extend([
+            '{0:.2f}'.format(evs['allMed']),
+            '{0:.2f}'.format(evs['r kurt']),
+            '{0:.2f}'.format(evs['r skew']),
+            '{0:.2f}'.format(evs['m kurt']),
+            '{0:.2f}'.format(evs['m skew']),
+        ])
+
+        tableRows.append(vals)
+
+    print(PrintUtil.getTable(tableHeader, tableRows))
 
 
 def reportSet(args):
@@ -138,7 +153,11 @@ def reportSet(args):
     cards = SetUtil.loadFromFiles(only=setName)
     stats = StatsUtil.getCardsStats(cards, setName)
 
-    tableHeader = [('Card', 'l'), ('Price', 'r'), ('Price (foil)', 'r')]
+    tableHeader = [
+        ('Card', 'l'),
+        ('Price', 'r'),
+        ('Price (foil)', 'r')
+    ]
 
     for rarity in ['common', 'uncommon', 'rare', 'mythic']:
         bucket = stats[rarity]
@@ -172,14 +191,18 @@ def storeToFiles(args):
         cards = SetUtil.downloadCards(setCode)
         SetUtil.persist(setName, cards)
     else:
-        for setName in SetUtil.sets:
+        for i, setName in enumerate(SetUtil.sets):
             s = SetUtil.sets[setName]
             setCode = s['code']
 
             cards = SetUtil.downloadCards(setCode)
             SetUtil.persist(setName, cards)
 
+            # Let's hope to not get rate-limited
+            if (i + 1 < len(SetUtil.sets)):
+                sleep(0.5)
 
 
-main()
+if __name__ == '__main__':
+    main()
 
