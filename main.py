@@ -79,7 +79,7 @@ def reportExpectedValues(args):
 
     print('\nBoxes and their expected values:')
     if (exclPrice > 0):
-        print('(EXCLUSIVE PRICE $%s)' % exclPrice)
+        print('(EXCLUSIVE PRICE ${0:.2f})'.format(exclPrice))
     print('')
 
     # Only report one set
@@ -111,7 +111,7 @@ def reportExpectedValues(args):
     ]
 
     if (exclPrice > 0):
-        tableHeader.append(('EV (excl $%s)' % exclPrice, 'r'))
+        tableHeader.append(('EV (excl ${0:.2f})'.format(exclPrice), 'r'))
 
     tableHeader.extend([
         ('EV (median-based)', 'r'),
@@ -190,16 +190,33 @@ def storeToFiles(args):
 
         cards = SetUtil.downloadCards(setCode)
         SetUtil.persist(setName, cards)
-    else:
-        for i, setName in enumerate(SetUtil.sets):
-            s = SetUtil.sets[setName]
-            setCode = s['code']
 
-            cards = SetUtil.downloadCards(setCode)
-            SetUtil.persist(setName, cards)
+        # Get masterpieces if necessary
+        mpCode = SetUtil.sets[setName]['masterpieceCode']
+        if (mpCode):
+            mpName  = SetUtil.masterpieces[mpCode]['name']
+            mpCards = SetUtil.downloadCards('N/A', mpCode)
+            SetUtil.persist(mpName, mpCards)
+    else:
+        # for i, setName in enumerate(SetUtil.sets):
+        #     s = SetUtil.sets[setName]
+        #     setCode = s['code']
+
+        #     cards = SetUtil.downloadCards(setCode)
+        #     SetUtil.persist(setName, cards)
+
+        #     # Let's hope to not get rate-limited
+        #     if (i + 1 < len(SetUtil.sets)):
+        #         sleep(0.5)
+
+        # Get all masterpieces
+        for i, mpCode in enumerate(SetUtil.masterpieces):
+            mp = SetUtil.masterpieces[mpCode]
+            mpCards = SetUtil.downloadCards('N/A', mpCode)
+            SetUtil.persist(mp['name'], mpCards)
 
             # Let's hope to not get rate-limited
-            if (i + 1 < len(SetUtil.sets)):
+            if (i + 1 < len(SetUtil.masterpieces)):
                 sleep(0.5)
 
 

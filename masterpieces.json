@@ -1,5 +1,214 @@
 {
-    "akh": "mp2",
-    "zen": "exp",
-    "kld": "mps",
+    "mp2": {
+        "name": "Invocations",
+        "setCodeToCards": {
+            "akh": [
+                "Austere Command",
+                "Aven Mindcensor",
+                "Containment Priest",
+                "Loyal Retainers",
+                "Oketra the True",
+                "Worship",
+                "Wrath of God",
+                "Consecrated Sphinx",
+                "Counterbalance",
+                "Counterspell",
+                "Cryptic Command",
+                "Daze",
+                "Divert",
+                "Force of Will",
+                "Kefnet the Mindful",
+                "Pact of Negation",
+                "Spell Pierce",
+                "Stifle",
+                "Attrition",
+                "Bontu the Glorified",
+                "Dark Ritual",
+                "Diabolic Intent",
+                "Entomb",
+                "Mind Twist",
+                "Aggravated Assault",
+                "Chain Lightning",
+                "Hazoret the Fervent",
+                "Rhonas the Indomitable",
+                "Maelstrom Pulse",
+                "Vindicate"
+            ],
+            "hou": [
+                "Armageddon",
+                "Capsize",
+                "Forbid",
+                "Omniscience",
+                "Opposition",
+                "Sunder",
+                "Threads of Disloyalty",
+                "Avatar of Woe",
+                "Damnation",
+                "Desolation Angel",
+                "Diabolic Edict",
+                "Doomsday",
+                "No Mercy",
+                "Slaughter Pact",
+                "Thoughtseize",
+                "Blood Moon",
+                "Boil",
+                "Shatterstorm",
+                "Through the Breach",
+                "Choke",
+                "The Locust God",
+                "Lord of Extinction",
+                "The Scarab God",
+                "The Scorpion God"
+            ]
+        }
+    },
+    "exp": {
+        "name": "Expeditions",
+        "setCodeToCards": {
+            "bfz": [
+                "Prairie Stream",
+                "Sunken Hollow",
+                "Smoldering Marsh",
+                "Cinder Glade",
+                "Canopy Vista",
+                "Hallowed Fountain",
+                "Watery Grave",
+                "Blood Crypt",
+                "Stomping Ground",
+                "Temple Garden",
+                "Godless Shrine",
+                "Steam Vents",
+                "Overgrown Tomb",
+                "Sacred Foundry",
+                "Breeding Pool",
+                "Flooded Strand",
+                "Polluted Delta",
+                "Bloodstained Mire",
+                "Wooded Foothills",
+                "Windswept Heath",
+                "Marsh Flats",
+                "Scalding Tarn",
+                "Verdant Catacombs",
+                "Arid Mesa",
+                "Misty Rainforest"
+            ],
+            "ogw": [
+                "Mystic Gate",
+                "Sunken Ruins",
+                "Graven Cairns",
+                "Fire-Lit Thicket",
+                "Wooded Bastion",
+                "Fetid Heath",
+                "Cascade Bluffs",
+                "Twilight Mire",
+                "Rugged Prairie",
+                "Flooded Grove",
+                "Ancient Tomb",
+                "Dust Bowl",
+                "Eye of Ugin",
+                "Forbidden Orchard",
+                "Horizon Canopy",
+                "Kor Haven",
+                "Mana Confluence",
+                "Strip Mine",
+                "Tectonic Edge",
+                "Wasteland"
+            ]
+        }
+    },
+    "mps": {
+        "name": "Inventions",
+        "setCodeToCards": {
+            "kld": [
+                "Cataclysmic Gearhulk",
+                "Torrential Gearhulk",
+                "Noxious Gearhulk",
+                "Combustible Gearhulk",
+                "Verdurous Gearhulk",
+                "Aether Vial",
+                "Champion's Helm",
+                "Chromatic Lantern",
+                "Chrome Mox",
+                "Cloudstone Curio",
+                "Crucible of Worlds",
+                "Gauntlet of Power",
+                "Hangarback Walker",
+                "Lightning Greaves",
+                "Lotus Petal",
+                "Mana Crypt",
+                "Mana Vault",
+                "Mind's Eye",
+                "Mox Opal",
+                "Painter's Servant",
+                "Rings of Brighthearth",
+                "Scroll Rack",
+                "Sculpting Steel",
+                "Sol Ring",
+                "Solemn Simulacrum",
+                "Static Orb",
+                "Steel Overseer",
+                "Sword of Feast and Famine",
+                "Sword of Fire and Ice",
+                "Sword of Light and Shadow"
+            ],
+            "aer": [
+                "Arcbound Ravager",
+                "Black Vise",
+                "Chalice of the Void",
+                "Defense Grid",
+                "Duplicant",
+                "Engineered Explosives",
+                "Ensnaring Bridge",
+                "Extraplanar Lens",
+                "Grindstone",
+                "Meekstone",
+                "Oblivion Stone",
+                "Ornithopter",
+                "Paradox Engine",
+                "Pithing Needle",
+                "Planar Bridge",
+                "Platinum Angel",
+                "Sphere of Resistance",
+                "Staff of Domination",
+                "Sundering Titan",
+                "Sword of Body and Mind",
+                "Sword of War and Peace",
+                "Trinisphere",
+                "Vedalken Shackles",
+                "Wurmcoil Engine"
+            ]
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

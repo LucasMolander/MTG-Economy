@@ -228,7 +228,14 @@ class StatsUtil(object):
     def getSetStats(setName, cardsStats, exclPrice=0):
         ret = {}
 
+        setCode = SetUtil.coerceToCode(setName)
+
         nPacks = SetUtil.sets[setName]['nPacks']
+
+        mpCode = SetUtil.sets[setName]['masterpieceCode']
+        if (mpCode):
+            mp = SetUtil.masterpieces[mpCode]
+            mpCardNames = mp[setCode]
 
         #
         # Calculate overall expected values

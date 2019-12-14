@@ -10,9 +10,14 @@ from file_util import FileUtil
 class SetUtil(object):
 
     SETS_PATH = 'sets.json'
+    MP_PATH   = 'masterpieces.json'
+
     CARDS_DIR = 'card_prices'
 
-    sets = FileUtil.getJSONContents(SETS_PATH)
+    MP_SUFFIX = '_masterpieces'
+
+    sets         = FileUtil.getJSONContents(SETS_PATH)
+    masterpieces = FileUtil.getJSONContents(MP_PATH)
 
 
     @staticmethod
@@ -62,16 +67,43 @@ class SetUtil(object):
 
 
     @staticmethod
-    def downloadCards(setCode):
-        setName = SetUtil.coerceToName(setCode)
+    def getAvgMasterpiecePrice(mpCode, setNameOrCode):
+        mp = SetUtil.masterpieces[mpCode]
+        setCode = SetUtil.coerceToCode(setNameOrCode)
 
-        print('Getting cards for %s' % setName)
+        mpCardSubset = mp['setCodeToCards'][setCode]
+
+        cards = SetUtil.loadFromFiles(only=mp['name'])
+
+        from pprint import pprint
+        pprint(cards)
+
+
+
+    @staticmethod
+    def downloadCards(setCode, mpCode=None):
+        if (not mpCode):
+            setName = SetUtil.coerceToName(setCode)
+
+        if (mpCode):
+            mpName = SetUtil.masterpieces[mpCode]['name']
+        else:
+            mpName = None
+
+        if (mpCode):
+            print('Getting %s cards' % mpName)
+        else:
+            print('Getting cards for %s' % setName)
         sys.stdout.flush()
 
         cards = []
 
         baseURL = 'https://api.scryfall.com/cards/search?q='
-        query = urllib.parse.quote('set=%s' % setCode)
+        if (mpCode):
+            query = urllib.parse.quote('set=%s' % mpCode)
+        else:
+            query = urllib.parse.quote('set=%s' % setCode)
+
 
         finalURL = baseURL + query
 
@@ -89,7 +121,10 @@ class SetUtil(object):
 
         # Might be pagified
         while (response['has_more'] == True):
-            print('\tGetting more cards for %s...' % setName)
+            if (mpCode):
+                print('\tGetting more %s cards...' % mpName)
+            else:
+                print('\tGetting more cards for %s...' % setName)
             sys.stdout.flush()
 
             url = response['next_page']
@@ -108,7 +143,7 @@ class SetUtil(object):
     @staticmethod
     def persist(setName, cards):
         filePath = '%s/%s' % (SetUtil.CARDS_DIR, setName)
-        with open(filePath, 'w') as f:
+        with open(filePath, 'w', encoding='utf-8') as f:
             f.write(json.dumps(cards))
 
 

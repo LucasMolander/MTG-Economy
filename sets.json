@@ -1,8 +1,9 @@
 {
     "Modern Masters": {
-        "code":   "mma",
-        "nPacks": 24,
-        "packsPerFoil": 1,
+        "code":            "mma",
+        "masterpieceCode": null,
+        "nPacks":          24,
+        "packsPerFoil":    1,
         "rarityCounts": {
             "basicLand": 0,
             "common":    101,
@@ -12,9 +13,10 @@
         }
     },
     "Modern Masters 2015": {
-        "code":   "mm2",
-        "nPacks": 24,
-        "packsPerFoil": 1,
+        "code":            "mm2",
+        "masterpieceCode": null,
+        "nPacks":          24,
+        "packsPerFoil":    1,
         "rarityCounts": {
             "basicLand": 0,
             "common":    101,
@@ -24,9 +26,10 @@
         }
     },
     "Eternal Masters": {
-        "code":   "ema",
-        "nPacks": 24,
-        "packsPerFoil": 1,
+        "code":            "ema",
+        "masterpieceCode": null,
+        "nPacks":          24,
+        "packsPerFoil":    1,
         "rarityCounts": {
             "basicLand": 0,
             "common":    101,
@@ -36,9 +39,10 @@
         }
     },
     "Modern Masters 2017": {
-        "code":   "mm3",
-        "nPacks": 24,
-        "packsPerFoil": 1,
+        "code":            "mm3",
+        "masterpieceCode": null,
+        "nPacks":          24,
+        "packsPerFoil":    1,
         "rarityCounts": {
             "basicLand": 0,
             "common":    101,
@@ -48,9 +52,10 @@
         }
     },
     "Iconic Masters": {
-        "code":   "ima",
-        "nPacks": 24,
-        "packsPerFoil": 1,
+        "code":            "ima",
+        "masterpieceCode": null,
+        "nPacks":          24,
+        "packsPerFoil":    1,
         "rarityCounts": {
             "basicLand": 0,
             "common":    101,
@@ -60,9 +65,10 @@
         }
     },
     "Masters 25": {
-        "code":   "a25",
-        "nPacks": 24,
-        "packsPerFoil": 1,
+        "code":            "a25",
+        "masterpieceCode": null,
+        "nPacks":          24,
+        "packsPerFoil":    1,
         "rarityCounts": {
             "basicLand": 0,
             "common":    101,
@@ -72,9 +78,10 @@
         }
     },
     "Ultimate Masters": {
-        "code":   "uma",
-        "nPacks": 24,
-        "packsPerFoil": 1,
+        "code":            "uma",
+        "masterpieceCode": null,
+        "nPacks":          24,
+        "packsPerFoil":    1,
         "rarityCounts": {
             "basicLand": 0,
             "common":    101,
@@ -84,9 +91,10 @@
         }
     },
     "Worldwake": {
-        "code":   "wwk",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "wwk",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 0,
             "common":    60,
@@ -96,9 +104,10 @@
         }
     },
     "Kaladesh": {
-        "code":   "kld",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "kld",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 15,
             "common":    101,
@@ -108,9 +117,10 @@
         }
     },
     "Scars of Mirrodin": {
-        "code":   "som",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "som",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -120,9 +130,10 @@
         }
     },
     "New Phyrexia": {
-        "code":   "nph",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "nph",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 10,
             "common":    60,
@@ -132,9 +143,10 @@
         }
     },
     "Coldsnap": {
-        "code":   "csp",
-        "nPacks": 36,
-        "packsPerFoil": 1000,
+        "code":            "csp",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    1000,
         "rarityCounts": {
             "basicLand": 0,
             "common":    60,
@@ -144,9 +156,10 @@
         }
     },
     "Khans of Tarkir": {
-        "code":   "ktk",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "ktk",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -156,9 +169,10 @@
         }
     },
     "Zendikar": {
-        "code":   "zen",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "zen",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -168,9 +182,10 @@
         }
     },
     "Innistrad": {
-        "code":   "isd",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "isd",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 15,
             "common":    107,
@@ -180,9 +195,10 @@
         }
     },
     "Dark Ascension": {
-        "code":   "dka",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "dka",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 0,
             "common":    64,
@@ -192,9 +208,10 @@
         }
     },
     "Avacyn Restored": {
-        "code":   "avr",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "avr",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 15,
             "common":    101,
@@ -204,9 +221,10 @@
         }
     },
     "Return to Ravnica": {
-        "code":   "rtr",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "rtr",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 25,
             "common":    101,
@@ -216,9 +234,10 @@
         }
     },
     "Gatecrash": {
-        "code":   "gtc",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "gtc",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 0,
             "common":    101,
@@ -228,9 +247,10 @@
         }
     },
     "Battle for Zendikar": {
-        "code":   "bfz",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "bfz",
+        "masterpieceCode": "exp",
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 25,
             "common":    101,
@@ -239,10 +259,11 @@
             "mythic":    15
         }
     },
-    "Aether Revolt": {
-        "code":   "aer",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+    "Oath of the Gatewatch": {
+        "code":            "ogw",
+        "masterpieceCode": "exp",
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 0,
             "common":    70,
@@ -252,9 +273,10 @@
         }
     },
     "Shadows over Innistrad": {
-        "code":   "soi",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "soi",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 15,
             "common":    105,
@@ -263,22 +285,11 @@
             "mythic":    18
         }
     },
-    "Hour of Devastation": {
-        "code":   "hou",
-        "nPacks": 36,
-        "packsPerFoil": 6,
-        "rarityCounts": {
-            "basicLand": 15,
-            "common":    70,
-            "uncommon":  60,
-            "rare":      42,
-            "mythic":    12
-        }
-    },
     "Amonkhet": {
-        "code":   "akh",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "akh",
+        "masterpieceCode": "mp2",
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -287,10 +298,24 @@
             "mythic":    15
         }
     },
+    "Hour of Devastation": {
+        "code":            "hou",
+        "masterpieceCode": "mp2",
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 15,
+            "common":    70,
+            "uncommon":  60,
+            "rare":      42,
+            "mythic":    12
+        }
+    },
     "Ixalan": {
-        "code":   "xln",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "xln",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -300,9 +325,10 @@
         }
     },
     "Magic Origins": {
-        "code":   "ori",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "ori",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -312,9 +338,10 @@
         }
     },
     "Magic 2011": {
-        "code":   "m11",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "m11",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -324,9 +351,10 @@
         }
     },
     "Magic 2012": {
-        "code":   "m12",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "m12",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -336,9 +364,10 @@
         }
     },
     "Magic 2013": {
-        "code":   "m13",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "m13",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -348,9 +377,10 @@
         }
     },
     "Magic 2014": {
-        "code":   "m14",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "m14",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -360,9 +390,10 @@
         }
     },
     "Magic 2015": {
-        "code":   "m15",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "m15",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -372,9 +403,10 @@
         }
     },
     "Core Set 2019": {
-        "code":   "m19",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "m19",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    111,
@@ -384,9 +416,10 @@
         }
     },
     "Core Set 2020": {
-        "code":   "m20",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "m20",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    112,
@@ -396,9 +429,10 @@
         }
     },
     "Dominaria": {
-        "code":   "dom",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "dom",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 20,
             "common":    101,
@@ -409,8 +443,9 @@
     },
     "Modern Horizons": {
         "code":   "mh1",
+        "masterpieceCode": null,
         "nPacks": 36,
-        "packsPerFoil": 6,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 5,
             "common":    101,
@@ -420,15 +455,29 @@
         }
     },
     "Kaladesh": {
-        "code":   "kld",
-        "nPacks": 36,
-        "packsPerFoil": 6,
+        "code":            "kld",
+        "masterpieceCode": "mps",
+        "nPacks":          36,
+        "packsPerFoil":    6,
         "rarityCounts": {
             "basicLand": 15,
             "common":    101,
             "uncommon":  80,
             "rare":      53,
             "mythic":    15
+        }
+    },
+    "Aether Revolt": {
+        "code":            "aer",
+        "masterpieceCode": "mps",
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 0,
+            "common":    70,
+            "uncommon":  60,
+            "rare":      42,
+            "mythic":    12
         }
     }
 }
