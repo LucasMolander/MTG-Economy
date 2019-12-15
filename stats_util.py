@@ -3,10 +3,11 @@ from scipy.stats import kurtosis
 from scipy.stats import skew
 
 from set_util import SetUtil
+from print_util import PrintUtil
 
 class StatsUtil(object):
     """
-    Houses useful methods for files.
+    Houses useful card/set stats methods.
     """
 
     @staticmethod
@@ -232,11 +233,6 @@ class StatsUtil(object):
 
         nPacks = SetUtil.sets[setName]['nPacks']
 
-        mpCode = SetUtil.sets[setName]['masterpieceCode']
-        if (mpCode):
-            mp = SetUtil.masterpieces[mpCode]
-            mpCardNames = mp[setCode]
-
         #
         # Calculate overall expected values
         #
@@ -268,6 +264,16 @@ class StatsUtil(object):
             totalVA += bucket['all']['medValAdd']
 
         ret['allMed'] = totalVA * nPacks
+
+        # Median and average for masterpieces, if they exist
+        mpCode = SetUtil.sets[setName]['masterpieceCode']
+        if (mpCode):
+            mpNameToPrice = SetUtil.getMasterpieceNameToPriceForSet(mpCode, setName)
+            mpPriceAvg = statistics.mean(mpNameToPrice.values())
+            mpPriceMed = statistics.median(mpNameToPrice.values())
+            ret['allAvg'] += mpPriceAvg * SetUtil.MASTERPIECE_PROBABILITY * nPacks
+            ret['allMed'] += mpPriceMed * SetUtil.MASTERPIECE_PROBABILITY * nPacks
+
 
         # Skewness
         mythicPriceValues = list(cardsStats['mythic']['all']['prices'].values())

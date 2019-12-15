@@ -14,7 +14,7 @@ class SetUtil(object):
 
     CARDS_DIR = 'card_prices'
 
-    MP_SUFFIX = '_masterpieces'
+    MASTERPIECE_PROBABILITY = 1.0 / 144.0
 
     sets         = FileUtil.getJSONContents(SETS_PATH)
     masterpieces = FileUtil.getJSONContents(MP_PATH)
@@ -67,16 +67,27 @@ class SetUtil(object):
 
 
     @staticmethod
-    def getAvgMasterpiecePrice(mpCode, setNameOrCode):
+    def getMasterpieceNameToPriceForSet(mpCode, setNameOrCode):
         mp = SetUtil.masterpieces[mpCode]
         setCode = SetUtil.coerceToCode(setNameOrCode)
 
-        mpCardSubset = mp['setCodeToCards'][setCode]
+        # Get all masterpiece cards
+        allMPCards = SetUtil.loadFromFiles(only=mp['name'])
+        mpNameToCard = {
+            mpCard['name']: mpCard
+            for mpCard in allMPCards
+        }
 
-        cards = SetUtil.loadFromFiles(only=mp['name'])
-
-        from pprint import pprint
-        pprint(cards)
+        # Get the prices for the cards in the specific set
+        mpSubsetNames = mp['setCodeToCards'][setCode]
+        # return [
+        #     float(mpNameToCard[mpName]['prices']['usd_foil'])
+        #     for mpName in mpSubsetNames
+        # ]
+        return {
+            mpNameToCard[mpName]['name']: float(mpNameToCard[mpName]['prices']['usd_foil'])
+            for mpName in mpSubsetNames
+        }
 
 
 
@@ -141,13 +152,6 @@ class SetUtil(object):
 
 
     @staticmethod
-    def persist(setName, cards):
-        filePath = '%s/%s' % (SetUtil.CARDS_DIR, setName)
-        with open(filePath, 'w', encoding='utf-8') as f:
-            f.write(json.dumps(cards))
-
-
-    @staticmethod
     def loadFromFiles(only=None):
         if (only):
             return FileUtil.getJSONContents('%s/%s' % (SetUtil.CARDS_DIR, only))
@@ -156,3 +160,10 @@ class SetUtil(object):
             name: FileUtil.getJSONContents('%s/%s' % (SetUtil.CARDS_DIR, name))
             for name in SetUtil.sets
         }
+
+
+    @staticmethod
+    def persist(setName, cards):
+        filePath = '%s/%s' % (SetUtil.CARDS_DIR, setName)
+        with open(filePath, 'w', encoding='utf-8') as f:
+            f.write(json.dumps(cards))

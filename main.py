@@ -1,17 +1,19 @@
+import statistics
 import argparse
-from pprint import pprint
 import json
 from time import sleep
 
 from set_util import SetUtil
 from stats_util import StatsUtil
 from print_util import PrintUtil
+from file_util import FileUtil
 
 
 #
 # Call one of:
 #  - reportExpectedValues()
 #  - reportSet(setName)
+#  - reportMasterpieces()
 #  - storeToFiles()
 #
 def main():
@@ -53,6 +55,15 @@ def main():
             help='Only report card prices for a specific set')
 
     parser_set.set_defaults(func=reportSet)
+
+    #
+    # Masterpieces Reporting
+    #
+    parser_masterpieces = subparsers.add_parser(
+        'masterpieces',
+        help='Report card prices for masterpieces')
+
+    parser_masterpieces.set_defaults(func=reportMasterpieces)
 
     #
     # Storing Set Information
@@ -179,8 +190,75 @@ def reportSet(args):
 
         print(PrintUtil.getTable(tableHeader, tableRows))
 
+    # If there are masterpieces, print those too
+    mpCode = SetUtil.sets[setName]['masterpieceCode']
+    if (mpCode):
+        mpName = SetUtil.masterpieces[mpCode]['name']
+        mpNameToPrice = SetUtil.getMasterpieceNameToPriceForSet(mpCode, setName)
+
+        tableHeader = [
+            ('Card', 'l'),
+            ('Price', 'r')
+        ]
+
+        tableRows = [
+            [name, '{0:.2f}'.format(value)]
+            for name, value in sorted(
+                mpNameToPrice.items(),
+                reverse=True,
+                key=lambda cardAndPrice: cardAndPrice[1]
+            )
+        ]
+
+        mpPriceAvg = statistics.mean(mpNameToPrice.values())
+        mpPriceMed = statistics.median(mpNameToPrice.values())
+
+        mpFullName = 'masterpieces (%s)' % mpName
+        print('\n%s\n%s' % (mpFullName, ('-' * len(mpFullName))))
+        print('(avg=%.2f, med=%.2f)' % (mpPriceAvg, mpPriceMed))
+
+        print(PrintUtil.getTable(tableHeader, tableRows))
+
+
     print('')
 
+
+def reportMasterpieces(args):
+    mps = SetUtil.masterpieces
+    for mpCode in mps:
+        mp = mps[mpCode]
+        mpCards = SetUtil.loadFromFiles(only=mp['name'])
+
+        mpNameToPrice = {
+            mpCard['name']: float(mpCard['prices']['usd_foil'])
+            for mpCard in mpCards
+        }
+
+        mpPriceAvg = statistics.mean(mpNameToPrice.values())
+        mpPriceMed = statistics.median(mpNameToPrice.values())
+
+        tableHeader = [
+            ('Card', 'l'),
+            ('Price', 'r')
+        ]
+
+        tableRows = [
+            [name, '{0:.2f}'.format(value)]
+            for name, value in sorted(
+                mpNameToPrice.items(),
+                reverse=True,
+                key=lambda cardAndPrice: cardAndPrice[1]
+            )
+        ]
+
+        mpPriceTot = sum(mpNameToPrice.values())
+        mpPriceAvg = statistics.mean(mpNameToPrice.values())
+        mpPriceMed = statistics.median(mpNameToPrice.values())
+
+        print('\n%s\n%s' % (mp['name'], ('-' * len(mp['name']))))
+        print('(n=%d, avg=%.2f, med=%.2f, total=%.2f)' % (len(mpNameToPrice), mpPriceAvg, mpPriceMed, mpPriceTot))
+
+        print(PrintUtil.getTable(tableHeader, tableRows))
 
 
 def storeToFiles(args):
@@ -198,16 +276,16 @@ def storeToFiles(args):
             mpCards = SetUtil.downloadCards('N/A', mpCode)
             SetUtil.persist(mpName, mpCards)
     else:
-        # for i, setName in enumerate(SetUtil.sets):
-        #     s = SetUtil.sets[setName]
-        #     setCode = s['code']
+        for i, setName in enumerate(SetUtil.sets):
+            s = SetUtil.sets[setName]
+            setCode = s['code']
 
-        #     cards = SetUtil.downloadCards(setCode)
-        #     SetUtil.persist(setName, cards)
+            cards = SetUtil.downloadCards(setCode)
+            SetUtil.persist(setName, cards)
 
-        #     # Let's hope to not get rate-limited
-        #     if (i + 1 < len(SetUtil.sets)):
-        #         sleep(0.5)
+            # Let's hope to not get rate-limited
+            if (i + 1 < len(SetUtil.sets)):
+                sleep(0.5)
 
         # Get all masterpieces
         for i, mpCode in enumerate(SetUtil.masterpieces):
