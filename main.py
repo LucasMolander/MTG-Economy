@@ -174,38 +174,28 @@ def reportExpectedValues(args):
 
         vals = [
             setName,
-            # '{0:.2f}'.format(evs['allAvg']),
             round(evs['allAvg'], 2),
         ]
 
         if (exclPrice > 0):
-            # vals.append('{0:.2f}'.format(evs['exAvg']))
             vals.append(round(evs['exAvg'], 2))
 
         vals.extend([
-            # '{}'.format(marketPrice),
             round(marketPrice, 2),
-            # '{0:.2f}'.format(evs['allAvg'] - marketPrice),
             round(evs['allAvg'] - marketPrice, 2),
         ])
 
         if (exclPrice > 0):
-            # vals.append('{0:.2f}'.format(evs['exAvg'] - marketPrice))
             vals.append(round(evs['exAvg'] - marketPrice, 2))
 
         if (exclPrice == 0):
-            # vals.append('{0:.2f}'.format(evs['allMed']))
             vals.append(round(evs['allMed'], 2))
 
         if (showSkew):
             vals.extend([
-                # '{0:.2f}'.format(evs['r kurt']),
                 round(evs['r kurt'], 2),
-                # '{0:.2f}'.format(evs['r skew']),
                 round(evs['r skew'], 2),
-                # '{0:.2f}'.format(evs['m kurt']),
                 round(evs['m kurt'], 2),
-                # '{0:.2f}'.format(evs['m skew']),
                 round(evs['m skew'], 2),
             ])
 

@@ -29,8 +29,6 @@ class PrintUtil(object):
             t.sortby = sortby
             t.reversesort = reversesort
 
-        # t.set_style(float_format=".2")
-        # t.float_format['%'] = '.2'
         t.float_format = '.2'
 
         return t.get_string()
