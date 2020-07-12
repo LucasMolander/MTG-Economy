@@ -11,7 +11,7 @@ class PrintUtil(object):
     # @param rows list of strings
     #
     @staticmethod
-    def getTable(header: List[Tuple[str]], rows: List[List[str]]) -> str:
+    def getTable(header: List[Tuple[str]], rows: List[List[str]], sortby=None, reversesort=False) -> str:
         columns = [h[0] for h in header]
 
         t = PrettyTable(columns)
@@ -24,4 +24,13 @@ class PrintUtil(object):
         for row in rows:
             t.add_row(row)
 
-        return t.__str__()
+        # Sort, potentially
+        if (sortby is not None):
+            t.sortby = sortby
+            t.reversesort = reversesort
+
+        # t.set_style(float_format=".2")
+        # t.float_format['%'] = '.2'
+        t.float_format = '.2'
+
+        return t.get_string()

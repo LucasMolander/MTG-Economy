@@ -28,6 +28,7 @@ def main():
         help='Calculate Expected Value(s) of a set')
 
     parser_evs.add_argument(
+        '-ep',
         '--exclPrice',
         type=float,
         default=0.0,
@@ -38,6 +39,18 @@ def main():
         type=str,
         default=None,
         help='Only calculate the EV for a specific set')
+
+    parser_evs.add_argument(
+        '-ss',
+        '--showSkew',
+        action='store_true',
+        help='Show skew metrics (not super useful; takes up space)')
+
+    parser_evs.add_argument(
+        '-sa',
+        '--sortByArbitrage',
+        action='store_true',
+        help='Sort by arbitrage opportunity (excl arbitrage if excl is enabled)')
 
     parser_evs.set_defaults(func=reportExpectedValues)
 
@@ -87,21 +100,28 @@ def main():
 def reportExpectedValues(args):
     exclPrice = args.exclPrice
     name      = args.set
+    showSkew  = args.showSkew
+    sortByArbitrage = args.sortByArbitrage
 
     print('\nBoxes and their expected values:')
     if (exclPrice > 0):
         print('(EXCLUSIVE PRICE ${0:.2f})'.format(exclPrice))
     print('')
 
+    codeToPriceInfo = FileUtil.getJSONContents('set_market_prices.json')
+
     # Only report one set
     if (name):
-        name  = SetUtil.coerceToName(name)
+        name = SetUtil.coerceToName(name)
+        code = SetUtil.coerceToCode(name)
         cards = SetUtil.loadFromFiles(only=name)
         cardsStats = StatsUtil.getCardsStats(cards, name, exclPrice=exclPrice)
         setStats = StatsUtil.getSetStats(name, cardsStats, exclPrice=exclPrice)
+        marketPrice = codeToPriceInfo[code]['marketPrice']
 
         print(name)
         print('-' * len(name))
+        print('Market\t${0:.2f}'.format(marketPrice))
         StatsUtil.printSetStats(setStats)
         return
 
@@ -124,38 +144,81 @@ def reportExpectedValues(args):
     if (exclPrice > 0):
         tableHeader.append(('EV (excl ${0:.2f})'.format(exclPrice), 'r'))
 
+    arbitrageColName = 'Arbitrage (EV-MP)'
     tableHeader.extend([
-        ('EV (median-based)', 'r'),
-        ('Rare kurtosis',     'r'),
-        ('Rare skew',         'r'),
-        ('Mythic kurtosis',   'r'),
-        ('Mythic skew',       'r'),
+        ('Market Price',   'r'),
+        (arbitrageColName, 'r')
     ])
+
+    if (exclPrice > 0):
+        arbitrageColName = 'Arbitrage (excl ${0:.2f})'.format(exclPrice)
+        tableHeader.append((arbitrageColName, 'r'))
+
+    if (exclPrice == 0):
+        tableHeader.append(('EV (median-based)', 'r'))
+
+    if (showSkew):
+        tableHeader.extend([
+            ('Rare kurtosis',     'r'),
+            ('Rare skew',         'r'),
+            ('Mythic kurtosis',   'r'),
+            ('Mythic skew',       'r'),
+        ])
 
     tableRows = []
 
     for setName in setNamesSorted:
+        code = SetUtil.coerceToCode(setName)
+        marketPrice = codeToPriceInfo[code]['marketPrice']
         evs = setNameToBoxEVs[setName]
 
         vals = [
             setName,
-            '{0:.2f}'.format(evs['allAvg']),
+            # '{0:.2f}'.format(evs['allAvg']),
+            round(evs['allAvg'], 2),
         ]
 
         if (exclPrice > 0):
-            vals.append('{0:.2f}'.format(evs['exAvg']))
+            # vals.append('{0:.2f}'.format(evs['exAvg']))
+            vals.append(round(evs['exAvg'], 2))
 
         vals.extend([
-            '{0:.2f}'.format(evs['allMed']),
-            '{0:.2f}'.format(evs['r kurt']),
-            '{0:.2f}'.format(evs['r skew']),
-            '{0:.2f}'.format(evs['m kurt']),
-            '{0:.2f}'.format(evs['m skew']),
+            # '{}'.format(marketPrice),
+            round(marketPrice, 2),
+            # '{0:.2f}'.format(evs['allAvg'] - marketPrice),
+            round(evs['allAvg'] - marketPrice, 2),
         ])
+
+        if (exclPrice > 0):
+            # vals.append('{0:.2f}'.format(evs['exAvg'] - marketPrice))
+            vals.append(round(evs['exAvg'] - marketPrice, 2))
+
+        if (exclPrice == 0):
+            # vals.append('{0:.2f}'.format(evs['allMed']))
+            vals.append(round(evs['allMed'], 2))
+
+        if (showSkew):
+            vals.extend([
+                # '{0:.2f}'.format(evs['r kurt']),
+                round(evs['r kurt'], 2),
+                # '{0:.2f}'.format(evs['r skew']),
+                round(evs['r skew'], 2),
+                # '{0:.2f}'.format(evs['m kurt']),
+                round(evs['m kurt'], 2),
+                # '{0:.2f}'.format(evs['m skew']),
+                round(evs['m skew'], 2),
+            ])
 
         tableRows.append(vals)
 
-    print(PrintUtil.getTable(tableHeader, tableRows))
+    if (sortByArbitrage):
+        sortby = arbitrageColName
+        reverse = True
+    else:
+        sortby = None
+        reverse = False
+
+    print(PrintUtil.getTable(tableHeader, tableRows, sortby=sortby, reversesort=reverse))
 
 
 def reportSet(args):
