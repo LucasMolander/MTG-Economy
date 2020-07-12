@@ -479,5 +479,83 @@
             "rare":      42,
             "mythic":    12
         }
+    },
+    "Guilds of Ravnica": {
+        "code":            "grn",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 0,
+            "common":    111,
+            "uncommon":  80,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "Ravnica Allegiance": {
+        "code":            "rna",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 0,
+            "common":    111,
+            "uncommon":  80,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "War of the Spark": {
+        "code":            "war",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 15,
+            "common":    101,
+            "uncommon":  80,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "Throne of Eldraine": {
+        "code":            "eld",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 20,
+            "common":    101,
+            "uncommon":  80,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "Theros: Beyond Death": {
+        "code":            "thb",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 5,
+            "common":    101,
+            "uncommon":  80,
+            "rare":      53,
+            "mythic":    15
+        }
+    },
+    "Ikoria: Lair of Behemoths": {
+        "code":            "iko",
+        "masterpieceCode": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 15,
+            "common":    111,
+            "uncommon":  80,
+            "rare":      52,
+            "mythic":    14
+        }
     }
 }
