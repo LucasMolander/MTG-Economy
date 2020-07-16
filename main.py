@@ -1,6 +1,5 @@
 import statistics
 import argparse
-import json
 from time import sleep
 
 from set_util import SetUtil

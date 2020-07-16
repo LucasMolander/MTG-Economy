@@ -1,5 +1,8 @@
 from pprint import pprint
 
-from set_util import SetUtil
-from stats_util import StatsUtil
+from tcgplayer_api import TCGPlayerAPI
 
+TCGPlayerAPI.init()
+
+print("\nBearer token:")
+print(TCGPlayerAPI.bearerToken)
