@@ -6,3 +6,7 @@ TCGPlayerAPI.init()
 
 print("\nBearer token:")
 print(TCGPlayerAPI.bearerToken)
+print('')
+
+
+TCGPlayerAPI.doStuff()
