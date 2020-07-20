@@ -66,6 +66,13 @@ class SetUtil(object):
 
 
     @staticmethod
+    def isCollectorsEd(setCodeOrName):
+        setName = SetUtil.coerceToName(setCodeOrName)
+        setInfo = SetUtil.sets[setName]
+        return setInfo['collectorEdInfo'] is not None
+
+
+    @staticmethod
     def getMasterpieceNameToPriceForSet(mpCode, setNameOrCode):
         mp = SetUtil.masterpieces[mpCode]
         setCode = SetUtil.coerceToCode(setNameOrCode)

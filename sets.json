@@ -2,7 +2,7 @@
     "Modern Masters": {
         "code":            "mma",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          24,
         "packsPerFoil":    1,
         "rarityCounts": {
@@ -16,7 +16,7 @@
     "Modern Masters 2015": {
         "code":            "mm2",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          24,
         "packsPerFoil":    1,
         "rarityCounts": {
@@ -30,7 +30,7 @@
     "Eternal Masters": {
         "code":            "ema",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          24,
         "packsPerFoil":    1,
         "rarityCounts": {
@@ -44,7 +44,7 @@
     "Modern Masters 2017": {
         "code":            "mm3",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          24,
         "packsPerFoil":    1,
         "rarityCounts": {
@@ -58,7 +58,7 @@
     "Iconic Masters": {
         "code":            "ima",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          24,
         "packsPerFoil":    1,
         "rarityCounts": {
@@ -72,7 +72,7 @@
     "Masters 25": {
         "code":            "a25",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          24,
         "packsPerFoil":    1,
         "rarityCounts": {
@@ -86,7 +86,7 @@
     "Ultimate Masters": {
         "code":            "uma",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          24,
         "packsPerFoil":    1,
         "rarityCounts": {
@@ -100,7 +100,7 @@
     "Worldwake": {
         "code":            "wwk",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -114,7 +114,7 @@
     "Kaladesh": {
         "code":            "kld",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -128,7 +128,7 @@
     "Scars of Mirrodin": {
         "code":            "som",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -142,7 +142,7 @@
     "New Phyrexia": {
         "code":            "nph",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -156,7 +156,7 @@
     "Coldsnap": {
         "code":            "csp",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    1000,
         "rarityCounts": {
@@ -170,7 +170,7 @@
     "Khans of Tarkir": {
         "code":            "ktk",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -184,7 +184,7 @@
     "Zendikar": {
         "code":            "zen",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -198,7 +198,7 @@
     "Innistrad": {
         "code":            "isd",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -212,7 +212,7 @@
     "Dark Ascension": {
         "code":            "dka",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -226,7 +226,7 @@
     "Avacyn Restored": {
         "code":            "avr",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -240,7 +240,7 @@
     "Return to Ravnica": {
         "code":            "rtr",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -254,7 +254,7 @@
     "Gatecrash": {
         "code":            "gtc",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -268,7 +268,7 @@
     "Battle for Zendikar": {
         "code":            "bfz",
         "masterpieceCode": "exp",
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -282,7 +282,7 @@
     "Oath of the Gatewatch": {
         "code":            "ogw",
         "masterpieceCode": "exp",
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -296,7 +296,7 @@
     "Shadows over Innistrad": {
         "code":            "soi",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -310,7 +310,7 @@
     "Amonkhet": {
         "code":            "akh",
         "masterpieceCode": "mp2",
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -324,7 +324,7 @@
     "Hour of Devastation": {
         "code":            "hou",
         "masterpieceCode": "mp2",
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -338,7 +338,7 @@
     "Ixalan": {
         "code":            "xln",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -352,7 +352,7 @@
     "Magic Origins": {
         "code":            "ori",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -366,7 +366,7 @@
     "Magic 2011": {
         "code":            "m11",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -380,7 +380,7 @@
     "Magic 2012": {
         "code":            "m12",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -394,7 +394,7 @@
     "Magic 2013": {
         "code":            "m13",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -408,7 +408,7 @@
     "Magic 2014": {
         "code":            "m14",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -422,7 +422,7 @@
     "Magic 2015": {
         "code":            "m15",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -436,7 +436,7 @@
     "Core Set 2019": {
         "code":            "m19",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -450,7 +450,7 @@
     "Core Set 2020": {
         "code":            "m20",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -464,7 +464,7 @@
     "Dominaria": {
         "code":            "dom",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -478,7 +478,7 @@
     "Modern Horizons": {
         "code":   "mh1",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks": 36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -492,7 +492,7 @@
     "Kaladesh": {
         "code":            "kld",
         "masterpieceCode": "mps",
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -506,7 +506,7 @@
     "Aether Revolt": {
         "code":            "aer",
         "masterpieceCode": "mps",
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -520,7 +520,7 @@
     "Guilds of Ravnica": {
         "code":            "grn",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -534,7 +534,7 @@
     "Ravnica Allegiance": {
         "code":            "rna",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -548,7 +548,7 @@
     "War of the Spark": {
         "code":            "war",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -562,7 +562,7 @@
     "Throne of Eldraine": {
         "code":            "eld",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -576,7 +576,7 @@
     "Theros: Beyond Death": {
         "code":            "thb",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -590,7 +590,7 @@
     "Ikoria: Lair of Behemoths": {
         "code":            "iko",
         "masterpieceCode": null,
-        "hasCollectorEd":  false,
+        "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
@@ -604,7 +604,9 @@
     "Core Set 2021": {
         "code":            "m21",
         "masterpieceCode": null,
-        "hasCollectorEd":  true,
+        "collectorEdInfo":  {
+            "n": 397
+        },
         "nPacks":          36,
         "packsPerFoil":    6,
         "rarityCounts": {
