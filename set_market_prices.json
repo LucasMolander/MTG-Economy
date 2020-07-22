@@ -131,6 +131,11 @@
         "marketPrice": 100,
         "name": "Core Set 2020"
     },
+    "m21": {
+        "marketPrice": 100,
+        "name": "Core Set 2021",
+        "collectorsEdPrice": 215
+    },
     "dom": {
         "marketPrice": 159,
         "name": "Dominaria"

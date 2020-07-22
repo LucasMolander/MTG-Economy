@@ -89,6 +89,12 @@ def main():
         type=str,
         help='Only store info for a specific set')
 
+    parser_store.add_argument(
+        '-mp',
+        '--masterpieces',
+        action='store_true',
+        help='Only update masterpieces')
+
     parser_store.set_defaults(func=storeToFiles)
 
     args = parser.parse_args()
@@ -314,6 +320,18 @@ def reportMasterpieces(args):
 
 
 def storeToFiles(args):
+    if (args.masterpieces):
+        for i, mpCode in enumerate(SetUtil.masterpieces):
+            mp = SetUtil.masterpieces[mpCode]
+            mpCards = SetUtil.downloadCards('N/A', mpCode)
+            SetUtil.persist(mp['name'], mpCards)
+
+            # Let's hope to not get rate-limited
+            if (i + 1 < len(SetUtil.masterpieces)):
+                sleep(0.5)
+
+        return
+
     if (args.set):
         setCode = SetUtil.coerceToCode(args.set)
         setName = SetUtil.coerceToName(args.set)

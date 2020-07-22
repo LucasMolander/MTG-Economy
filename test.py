@@ -23,8 +23,19 @@ from file_util import FileUtil
 
 
 
-isCollectorsEd = SetUtil.isCollectorsEd('m20')
-print(isCollectorsEd)
+# Try doing unique%3Aprints
+
+
+baseURL = 'https://api.scryfall.com/cards/search?q='
+mpCode = 'm21'
+query = urllib.parse.quote('set=%s unique:prints' % mpCode)
+finalURL = baseURL + query
+
+print(finalURL)
+
+
+# isCollectorsEd = SetUtil.isCollectorsEd('m20')
+# print(isCollectorsEd)
 
 
 

@@ -119,8 +119,7 @@ class SetUtil(object):
         if (mpCode):
             query = urllib.parse.quote('set=%s' % mpCode)
         else:
-            query = urllib.parse.quote('set=%s' % setCode)
-
+            query = urllib.parse.quote('set=%s unique:prints' % setCode)
 
         finalURL = baseURL + query
 
