@@ -5,6 +5,23 @@ from tcgplayer_api import TCGPlayerAPI
 from set_util import SetUtil
 from file_util import FileUtil
 
+
+name = "iko"
+code = SetUtil.coerceToCode(name)
+name = SetUtil.coerceToName(name)
+
+print(name)
+exit()
+
+stuff = SetUtil.loadFromFiles(only=iko)
+pprint(stuff)
+exit()
+
+
+
+
+
+
 # TCGPlayerAPI.init()
 
 # print("\nBearer token:")

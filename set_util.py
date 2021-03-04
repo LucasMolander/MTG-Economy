@@ -2,6 +2,7 @@ import sys
 import urllib.parse
 import requests
 import json
+from sanitize_filename import sanitize
 
 from file_util import FileUtil
 
@@ -159,16 +160,18 @@ class SetUtil(object):
     @staticmethod
     def loadFromFiles(only=None):
         if (only):
-            return FileUtil.getJSONContents('%s/%s' % (SetUtil.CARDS_DIR, only))
+            return FileUtil.getJSONContents('%s/%s' % (SetUtil.CARDS_DIR, sanitize(only)))
 
         return {
-            name: FileUtil.getJSONContents('%s/%s' % (SetUtil.CARDS_DIR, name))
+            name: FileUtil.getJSONContents('%s/%s' % (SetUtil.CARDS_DIR, sanitize(only)))
             for name in SetUtil.sets
         }
 
 
     @staticmethod
     def persist(setName, cards):
-        filePath = '%s/%s' % (SetUtil.CARDS_DIR, setName)
+        sanitizedSetName = sanitize(setName)
+        filePath = '%s/%s' % (SetUtil.CARDS_DIR, sanitizedSetName)
         with open(filePath, 'w', encoding='utf-8') as f:
             f.write(json.dumps(cards))
+

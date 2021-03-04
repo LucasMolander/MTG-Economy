@@ -1,62 +1,62 @@
 {
     "mma": {
-        "marketPrice": 500,
+        "marketPrice": 440,
         "name": "Modern Masters"
     },
     "mm2": {
-        "marketPrice": 294,
+        "marketPrice": 270,
         "name": "Modern Masters 2015"
     },
     "ema": {
-        "marketPrice": 430,
+        "marketPrice": 450,
         "name": "Eternal Masters"
     },
     "mm3": {
-        "marketPrice": 383,
+        "marketPrice": 323,
         "name": "Modern Masters 2017"
     },
     "ima": {
-        "marketPrice": 212,
+        "marketPrice": 225,
         "name": "Iconic Masters"
     },
     "a25": {
-        "marketPrice": 205,
+        "marketPrice": 213,
         "name": "Masters 25"
     },
     "uma": {
-        "marketPrice": 340,
+        "marketPrice": 370,
         "name": "Ultimate Masters"
     },
     "wwk": {
-        "marketPrice": 800,
+        "marketPrice": 1000,
         "name": "Worldwake"
     },
     "kld": {
-        "marketPrice": 207,
+        "marketPrice": 200,
         "name": "Kaladesh"
     },
     "som": {
-        "marketPrice": 380,
+        "marketPrice": 610,
         "name": "Scars of Mirrodin"
     },
     "nph": {
-        "marketPrice": 640,
+        "marketPrice": 1000,
         "name": "New Phyrexia"
     },
     "csp": {
-        "marketPrice": 515,
+        "marketPrice": 1000,
         "name": "Coldsnap"
     },
     "ktk": {
-        "marketPrice": 180,
+        "marketPrice": 150,
         "name": "Khans of Tarkir"
     },
     "zen": {
-        "marketPrice": 835,
+        "marketPrice": 1200,
         "name": "Zendikar"
     },
     "isd": {
-        "marketPrice": 490,
+        "marketPrice": 740,
         "name": "Innistrad"
     },
     "dka": {
@@ -175,5 +175,13 @@
     "iko": {
         "marketPrice": 100,
         "name": "Ikoria: Lair of Behemoths"
+    },
+    "znr": {
+        "marketPrice": 100,
+        "name": "Zendikar Rising"
+    },
+    "khm": {
+        "marketPrice": 100,
+        "name": "Kaldheim"
     }
 }
