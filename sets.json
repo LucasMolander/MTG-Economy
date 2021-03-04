@@ -616,5 +616,33 @@
             "rare":      53,
             "mythic":    15
         }
+    },
+    "Zendikar Rising": {
+        "code":            "znr",
+        "masterpieceCode": null,
+        "collectorEdInfo": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 15,
+            "common":    101,
+            "uncommon":  80,
+            "rare":      64,
+            "mythic":    20
+        }
+    },
+    "Kaldheim": {
+        "code":            "khm",
+        "masterpieceCode": null,
+        "collectorEdInfo": null,
+        "nPacks":          36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 10,
+            "common":    121,
+            "uncommon":  80,
+            "rare":      64,
+            "mythic":    20
+        }
     }
 }
