@@ -27,8 +27,8 @@
             "mythic":    15
         }
     },
-    "Eternal Masters": {
-        "code":            "ema",
+    "Modern Masters 2017": {
+        "code":            "mm3",
         "masterpieceCode": null,
         "collectorEdInfo": null,
         "nPacks":          24,
@@ -41,8 +41,8 @@
             "mythic":    15
         }
     },
-    "Modern Masters 2017": {
-        "code":            "mm3",
+    "Eternal Masters": {
+        "code":            "ema",
         "masterpieceCode": null,
         "collectorEdInfo": null,
         "nPacks":          24,
@@ -643,6 +643,20 @@
             "uncommon":  80,
             "rare":      64,
             "mythic":    20
+        }
+    },
+    "Modern Horizons 2": {
+        "code":   "mh2",
+        "masterpieceCode": null,
+        "collectorEdInfo": null,
+        "nPacks": 36,
+        "packsPerFoil":    6,
+        "rarityCounts": {
+            "basicLand": 5,
+            "common":    101,
+            "uncommon":  80,
+            "rare":      53,
+            "mythic":    15
         }
     }
 }

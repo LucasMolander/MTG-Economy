@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 
 class FileUtil(object):
@@ -11,5 +12,8 @@ class FileUtil(object):
 
     @staticmethod
     def writeJSONContents(filePath, obj):
+        p = Path(filePath)
+        p.mkdir()
+        p.touch()
         with open(filePath, 'w', encoding='utf-8') as f:
             return json.dump(obj, f)

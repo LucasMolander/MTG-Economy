@@ -1,21 +1,24 @@
 from pprint import pprint
 import urllib.parse
+import json
+from enum import Enum, IntEnum
+from typing import Tuple, Dict, Any, List
 
 from tcgplayer_api import TCGPlayerAPI
 from set_util import SetUtil
 from file_util import FileUtil
 
 
-name = "iko"
-code = SetUtil.coerceToCode(name)
-name = SetUtil.coerceToName(name)
+# name = "iko"
+# code = SetUtil.coerceToCode(name)
+# name = SetUtil.coerceToName(name)
 
-print(name)
-exit()
+# print(name)
+# exit()
 
-stuff = SetUtil.loadFromFiles(only=iko)
-pprint(stuff)
-exit()
+# stuff = SetUtil.loadFromFiles(only=iko)
+# pprint(stuff)
+# exit()
 
 
 
@@ -133,46 +136,110 @@ def printDupePrices(dupeNames, cards):
 
 
 
-cards = SetUtil.loadFromFiles(only="Core Set 2021")
+cards = SetUtil.loadFromFiles(only="Modern Horizons 2")
 print('Total number of cards: {}\n'.format(len(cards)))
 
+
+class BorderType(Enum):
+    BLACK = "black"
+    BORDERLESS = "borderless"
+
+    def __str__(self):
+        return str(self.value)
+
+    def __repr__(self):
+        return self.__str__()
+
+
+class FrameEffect(Enum):
+    NONE = "none"
+    EXTENDED_ART = "extended_art"
+    SHOWCASE = "showcase"
+    INVERTED = "inverted"
+
+    def __str__(self):
+        return str(self.value)
+
+    def __repr__(self):
+        return self.__str__()
+
+
+TBorderInfo = Tuple[BorderType, FrameEffect]
+
+
+def getBorderInfo(card) -> TBorderInfo:
+    borderType: BorderType = {
+        "black": BorderType.BLACK,
+        "borderless": BorderType.BORDERLESS,
+    }[card['border_color']]
+
+    if 'frame_effects' in card:
+        if 'extendedart' in card['frame_effects']:
+            frameEffect: FrameEffect = FrameEffect.EXTENDED_ART
+        elif 'showcase' in card['frame_effects']:
+            frameEffect: FrameEffect = FrameEffect.SHOWCASE
+        elif 'inverted' in card['frame_effects']:
+            frameEffect: FrameEffect = FrameEffect.INVERTED
+        else:
+            frameEffect: FrameEffect = FrameEffect.NONE
+    else:
+        frameEffect: FrameEffect = FrameEffect.NONE
+
+    return (borderType, frameEffect)
+
+
+borderTypeToCount: Dict[TBorderInfo, int] = {}
+borderTypeToCards: Dict[TBorderInfo, List[Dict[str, Any]]] = {}
 
 bordlessCards = []
 showcaseCards = []
 extendedartCards = []
 regularCards = []
 for card in cards:
-    if card['border_color'] == 'borderless':
-        bordlessCards.append(card)
-    elif 'frame_effects' in card and 'showcase' in card['frame_effects']:
-        showcaseCards.append(card)
-    elif 'frame_effects' in card and 'extendedart' in card['frame_effects']:
-        extendedartCards.append(card)
-    else:
-        regularCards.append(card)
+    borderInfo = getBorderInfo(card)
 
-print('Bordless: {}'.format(len(bordlessCards)))
-print('{}'.format(valToCount([card['rarity'] for card in bordlessCards])))
-dupeNames = list(valToCountAtLeastN([card['name'] for card in bordlessCards], 2).keys())
-printDupePrices(dupeNames, bordlessCards)
-print('{}\n'.format(valToCountAtLeastN([card['name'] for card in bordlessCards], 2)))
+    if borderInfo not in borderTypeToCount:
+        borderTypeToCount[borderInfo] = 0
+    borderTypeToCount[borderInfo] += 1
 
-print('Showcase: {}'.format(len(showcaseCards)))
-print('{}'.format(valToCount([card['rarity'] for card in showcaseCards])))
-dupeNames = list(valToCountAtLeastN([card['name'] for card in showcaseCards], 2).keys())
-printDupePrices(dupeNames, showcaseCards)
-print('{}\n'.format(valToCountAtLeastN([card['name'] for card in showcaseCards], 2)))
+    if borderInfo not in borderTypeToCards:
+        borderTypeToCards[borderInfo] = []
 
-print('Extended art: {}'.format(len(extendedartCards)))
-print('{}'.format(valToCount([card['rarity'] for card in extendedartCards])))
-dupeNames = list(valToCountAtLeastN([card['name'] for card in extendedartCards], 2).keys())
-printDupePrices(dupeNames, extendedartCards)
-print('{}\n'.format(valToCountAtLeastN([card['name'] for card in extendedartCards], 2)))
+    prices = card['prices']
+    borderTypeToCards[borderInfo].append({
+        "name": card['name'],
+        "rarity": card['rarity'],
+        "price": float(prices['usd']) if ('usd' in prices and prices['usd'] != None) else 0.0,
+        "priceFoil": float(prices['usd_foil']) if ('usd_foil' in prices and prices['usd_foil'] != None) else 0.0,
+    })
 
-print('Regular: {}'.format(len(regularCards)))
-print('{}'.format(valToCount([card['rarity'] for card in regularCards])))
-dupeNames = list(valToCountAtLeastN([card['name'] for card in regularCards], 2).keys())
-printDupePrices(dupeNames, regularCards)
-print('{}\n'.format(valToCountAtLeastN([card['name'] for card in regularCards], 2)))
+
+pprint(borderTypeToCount)
+pprint(borderTypeToCards)
+
+
+# print('Bordless: {}'.format(len(bordlessCards)))
+# print('{}'.format(valToCount([card['rarity'] for card in bordlessCards])))
+# dupeNames = list(valToCountAtLeastN([card['name'] for card in bordlessCards], 2).keys())
+# printDupePrices(dupeNames, bordlessCards)
+# print('{}\n'.format(valToCountAtLeastN([card['name'] for card in bordlessCards], 2)))
+
+# print('Showcase: {}'.format(len(showcaseCards)))
+# print('{}'.format(valToCount([card['rarity'] for card in showcaseCards])))
+# dupeNames = list(valToCountAtLeastN([card['name'] for card in showcaseCards], 2).keys())
+# printDupePrices(dupeNames, showcaseCards)
+# print('{}\n'.format(valToCountAtLeastN([card['name'] for card in showcaseCards], 2)))
+
+# print('Extended art: {}'.format(len(extendedartCards)))
+# print('{}'.format(valToCount([card['rarity'] for card in extendedartCards])))
+# dupeNames = list(valToCountAtLeastN([card['name'] for card in extendedartCards], 2).keys())
+# printDupePrices(dupeNames, extendedartCards)
+# print('{}\n'.format(valToCountAtLeastN([card['name'] for card in extendedartCards], 2)))
+
+# print('Regular: {}'.format(len(regularCards)))
+# print('{}'.format(valToCount([card['rarity'] for card in regularCards])))
+# dupeNames = list(valToCountAtLeastN([card['name'] for card in regularCards], 2).keys())
+# printDupePrices(dupeNames, regularCards)
+# print('{}\n'.format(valToCountAtLeastN([card['name'] for card in regularCards], 2)))
 
 

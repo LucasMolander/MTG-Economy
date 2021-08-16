@@ -1,6 +1,7 @@
 import requests
 import json
 import time
+import os
 
 from file_util import FileUtil
 
@@ -10,12 +11,15 @@ class TCGPlayerAPI(object):
     KEY_NAME = 'tcgplayer'
 
     GET_BEARER_TOKEN_URL = 'https://api.tcgplayer.com/token'
-    GET_MARKETPRICE_URL = 'https://api.tcgplayer.com/pricing/marketprices/%d'
 
     keyInfo = FileUtil.getJSONContents(KEYS_PATH)[KEY_NAME]
     USER_AGENT = keyInfo['user_agent_header']
 
     bearerToken = None
+
+    @staticmethod
+    def getMarketpriceURL(skuID: int):
+        return f"https://api.tcgplayer.com/pricing/marketprices/{skuID}"
 
     @staticmethod
     def init():
@@ -25,11 +29,14 @@ class TCGPlayerAPI(object):
 
         # Try getting the cached bearer token
         # TODO Factor this out into an abstract base class
-        tokenFP = "%s/%s.json" % (FileUtil.TOKENS_FOLDER_PATH, TCGPlayerAPI.KEY_NAME)
-        tokenInfo = FileUtil.getJSONContents(tokenFP)['bearer_token']
-        tokenValue = tokenInfo['value']
-        expireTime = tokenInfo['expires']
         currTime = int(time.time())
+        try:
+            tokenFP = f"{FileUtil.TOKENS_FOLDER_PATH}{os.sep}{TCGPlayerAPI.KEY_NAME}.json"
+            tokenInfo = FileUtil.getJSONContents(tokenFP)['bearer_token']
+            tokenValue = tokenInfo['value']
+            expireTime = tokenInfo['expires']
+        except Exception as e:
+            expireTime = currTime - 1
 
         # Give ourselves 3 minutes of leeway for any given run
         if (currTime + 180) >= expireTime:
@@ -42,19 +49,20 @@ class TCGPlayerAPI(object):
                     'client_secret': TCGPlayerAPI.keyInfo['private'],
                 }
             )
-            response = json.loads(r.text)
+            print(f"Request ({r.status_code}):\n{r.text}")
+            respJSON = json.loads(r.text)
             # TODO: Make this not clobber everything else in the file
             # It's fine for now because there's nothing else, though
             FileUtil.writeJSONContents(
                 tokenFP,
                 {
                     'bearer_token': {
-                        'value': response['access_token'],
-                        'expires': response['expires_in'] + currTime
+                        'value': respJSON['access_token'],
+                        'expires': respJSON['expires_in'] + currTime
                     }
                 }
             )
-            TCGPlayerAPI.bearerToken = response['access_token']
+            TCGPlayerAPI.bearerToken = respJSON['access_token']
         else:
             print('Using cached bearer token for %s' % TCGPlayerAPI.KEY_NAME)
             TCGPlayerAPI.bearerToken = tokenValue
@@ -70,9 +78,9 @@ class TCGPlayerAPI(object):
     @staticmethod
     def doStuff():
         skuID = 2999708
-        url = TCGPlayerAPI.GET_MARKETPRICE_URL % skuID
+        marketpriceURL = getMarketpriceURL(skuID)
 
-        r = requests.request("GET", url, headers=TCGPlayerAPI.getRequestHeaders())
+        r = requests.request("GET", marketpriceURL, headers=TCGPlayerAPI.getRequestHeaders())
         response = json.loads(r.text)
 
         print(response)
