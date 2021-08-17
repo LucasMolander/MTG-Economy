@@ -3,7 +3,6 @@ from scipy.stats import kurtosis
 from scipy.stats import skew
 
 from set_util import SetUtil
-from print_util import PrintUtil
 
 class StatsUtil(object):
     """

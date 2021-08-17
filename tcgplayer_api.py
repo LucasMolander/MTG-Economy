@@ -29,17 +29,24 @@ class TCGPlayerAPI(object):
 
         # Try getting the cached bearer token
         # TODO Factor this out into an abstract base class
+        tokenFP = f"{FileUtil.TOKENS_FOLDER_PATH}{os.sep}{TCGPlayerAPI.KEY_NAME}.json"
         currTime = int(time.time())
         try:
-            tokenFP = f"{FileUtil.TOKENS_FOLDER_PATH}{os.sep}{TCGPlayerAPI.KEY_NAME}.json"
             tokenInfo = FileUtil.getJSONContents(tokenFP)['bearer_token']
             tokenValue = tokenInfo['value']
             expireTime = tokenInfo['expires']
+            if (currTime + 180) >= expireTime:
+                TCGPlayerAPI.bearerToken = tokenValue
+                haveToken = True
+            else:
+                haveToken = False
         except Exception as e:
+            haveToken = False
             expireTime = currTime - 1
 
-        # Give ourselves 3 minutes of leeway for any given run
-        if (currTime + 180) >= expireTime:
+        if haveToken:
+            print('Using cached bearer token for %s' % TCGPlayerAPI.KEY_NAME)
+        else:
             print('Getting new bearer token for %s' % TCGPlayerAPI.KEY_NAME)
             r = requests.post(
                 TCGPlayerAPI.GET_BEARER_TOKEN_URL,
@@ -63,9 +70,6 @@ class TCGPlayerAPI(object):
                 }
             )
             TCGPlayerAPI.bearerToken = respJSON['access_token']
-        else:
-            print('Using cached bearer token for %s' % TCGPlayerAPI.KEY_NAME)
-            TCGPlayerAPI.bearerToken = tokenValue
 
     @staticmethod
     def getRequestHeaders():
@@ -78,7 +82,7 @@ class TCGPlayerAPI(object):
     @staticmethod
     def doStuff():
         skuID = 2999708
-        marketpriceURL = getMarketpriceURL(skuID)
+        marketpriceURL = TCGPlayerAPI.getMarketpriceURL(skuID)
 
         r = requests.request("GET", marketpriceURL, headers=TCGPlayerAPI.getRequestHeaders())
         response = json.loads(r.text)

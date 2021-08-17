@@ -11,7 +11,7 @@ class PrintUtil(object):
     # @param rows list of strings
     #
     @staticmethod
-    def getTable(header: List[Tuple[str]], rows: List[List[str]], sortby=None, reversesort=False) -> str:
+    def getTable(header: List[Tuple[str, str]], rows: List[List[str]], sortby=None, reversesort=False) -> str:
         columns = [h[0] for h in header]
 
         t = PrettyTable(columns)

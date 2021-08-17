@@ -119,7 +119,7 @@ def reportExpectedValues(args):
     if (name):
         name = SetUtil.coerceToName(name)
         code = SetUtil.coerceToCode(name)
-        cards = SetUtil.loadFromFiles(only=name)
+        cards = SetUtil.loadFromFile(name)
         cardsStats = StatsUtil.getCardsStats(cards, name, exclPrice=exclPrice)
         setStats = StatsUtil.getSetStats(name, cardsStats, exclPrice=exclPrice)
         marketPrice = codeToPriceInfo[code]['marketPrice']
@@ -131,7 +131,7 @@ def reportExpectedValues(args):
         return
 
     # Report ALL the sets!
-    setNameToSetCards = SetUtil.loadFromFiles()
+    setNameToSetCards = SetUtil.loadAllFromFiles()
     setNameToBoxEVs = {}
     setNamesSorted = sorted(list(setNameToSetCards.keys()))
 
@@ -154,6 +154,7 @@ def reportExpectedValues(args):
         ('Market Price',   'r'),
         (arbitrageColName, 'r')
     ])
+
 
     if (exclPrice > 0):
         arbitrageColName = 'Arbitrage (excl ${0:.2f})'.format(exclPrice)
@@ -219,7 +220,7 @@ def reportExpectedValues(args):
 def reportSet(args):
     setName = SetUtil.coerceToName(args.set)
 
-    cards = SetUtil.loadFromFiles(only=setName)
+    cards = SetUtil.loadFromFile(setName)
     stats = StatsUtil.getCardsStats(cards, setName)
 
     tableHeader = [
@@ -285,7 +286,7 @@ def reportMasterpieces(args):
     mps = SetUtil.masterpieces
     for mpCode in mps:
         mp = mps[mpCode]
-        mpCards = SetUtil.loadFromFiles(only=mp['name'])
+        mpCards = SetUtil.loadFromFile(mp['name'])
 
         mpNameToPrice = {
             mpCard['name']: float(mpCard['prices']['usd_foil'])
@@ -329,7 +330,6 @@ def storeToFiles(args):
             # Let's hope to not get rate-limited
             if (i + 1 < len(SetUtil.masterpieces)):
                 sleep(0.5)
-
         return
 
     if (args.set):
@@ -343,7 +343,7 @@ def storeToFiles(args):
         mpCode = SetUtil.sets[setName]['masterpieceCode']
         if (mpCode):
             mpName  = SetUtil.masterpieces[mpCode]['name']
-            mpCards = SetUtil.downloadCards('N/A', mpCode)
+            mpCards = SetUtil.downloadCards(None, mpCode)
             SetUtil.persist(mpName, mpCards)
     else:
         for i, setName in enumerate(SetUtil.sets):
@@ -360,7 +360,7 @@ def storeToFiles(args):
         # Get all masterpieces
         for i, mpCode in enumerate(SetUtil.masterpieces):
             mp = SetUtil.masterpieces[mpCode]
-            mpCards = SetUtil.downloadCards('N/A', mpCode)
+            mpCards = SetUtil.downloadCards(None, mpCode)
             SetUtil.persist(mp['name'], mpCards)
 
             # Let's hope to not get rate-limited
@@ -370,4 +370,3 @@ def storeToFiles(args):
 
 if __name__ == '__main__':
     main()
-
