@@ -32,15 +32,18 @@ class TCGPlayerAPI(object):
         tokenFP = f"{FileUtil.TOKENS_FOLDER_PATH}{os.sep}{TCGPlayerAPI.KEY_NAME}.json"
         currTime = int(time.time())
         try:
+            # Bearer tokens last 2 weeks so this shouldn't happen too often
             tokenInfo = FileUtil.getJSONContents(tokenFP)['bearer_token']
             tokenValue = tokenInfo['value']
-            expireTime = tokenInfo['expires']
-            if (currTime + 180) >= expireTime:
+            expireTime = int(tokenInfo['expires'])
+            if expireTime >= (currTime + 180):
                 TCGPlayerAPI.bearerToken = tokenValue
                 haveToken = True
             else:
                 haveToken = False
         except Exception as e:
+            print("Exception getting bearer token info:")
+            print(e)
             haveToken = False
             expireTime = currTime - 1
 
