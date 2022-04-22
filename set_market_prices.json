@@ -141,12 +141,12 @@
         "name": "Dominaria"
     },
     "mh1": {
-        "marketPrice": 190,
+        "marketPrice": 300,
         "name": "Modern Horizons"
     },
-    "kld": {
-        "marketPrice": 210,
-        "name": "Kaladesh"
+    "mh2": {
+        "marketPrice": 215,
+        "name": "Modern Horizons 2"
     },
     "aer": {
         "marketPrice": 165,

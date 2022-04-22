@@ -25,13 +25,13 @@ from file_util import FileUtil
 
 
 
-# TCGPlayerAPI.init()
+TCGPlayerAPI.init()
 
-# print("\nBearer token:")
-# print(TCGPlayerAPI.bearerToken)
-# print('')
+print("\nBearer token:")
+print(TCGPlayerAPI.bearerToken)
+print('')
 
-# TCGPlayerAPI.doStuff()
+TCGPlayerAPI.doStuff()
 
 
 
@@ -74,101 +74,106 @@ from file_util import FileUtil
 
 
 
-class BorderType(Enum):
-  BLACK = "black"
-  BORDERLESS = "borderless"
-
-  def __str__(self):
-    return str(self.value)
-
-  def __repr__(self):
-    return self.__str__()
-
-
-class FrameEffect(Enum):
-  NONE = "none"
-  EXTENDED_ART = "extended_art"
-  FULL_ART = "full_art"
-  SHOWCASE = "showcase"
-  INVERTED = "inverted"
-
-  def __str__(self):
-    return str(self.value)
-
-  def __repr__(self):
-    return self.__str__()
-
-
-TBorderInfo = Tuple[BorderType, FrameEffect]
-
-
-def getBorderInfo(card) -> TBorderInfo:
-  borderType: BorderType = {
-    "black": BorderType.BLACK,
-    "borderless": BorderType.BORDERLESS,
-  }[card['border_color']]
-
-  # These frames don't change the cardinality of a card,
-  # i.e. "This card" will always have "that frame"
-  ignoreFrames = {'legendary', 'nyxtouched', 'nyxborn', 'miracle', 'sunmoondfc', 'devoid', 'compasslanddfc', 'originpwdfc', 'companion', 'snow'}
-
-  if 'frame_effects' in card:
-    frameEffects: List[str] = card['frame_effects']
-    keepFrameEffects = set(frameEffects).difference(ignoreFrames)
-
-    if len(keepFrameEffects) > 1:
-      raise Exception(f"More than 1 keep frame effect: {keepFrameEffects}\nCard: {card['name']}")
-
-    if 'extendedart' in keepFrameEffects:
-      frameEffect: FrameEffect = FrameEffect.EXTENDED_ART
-    elif 'fullart' in keepFrameEffects:
-      frameEffect: FrameEffect = FrameEffect.FULL_ART
-    elif 'showcase' in keepFrameEffects:
-      frameEffect: FrameEffect = FrameEffect.SHOWCASE
-    elif 'inverted' in keepFrameEffects:
-      frameEffect: FrameEffect = FrameEffect.INVERTED
-    else:
-      if len(keepFrameEffects) > 0:
-        raise Exception(f"Unknown frame effect: {keepFrameEffects}\nCard: {card['name']}")
-      else:
-        frameEffect: FrameEffect = FrameEffect.NONE
-  else:
-    frameEffect: FrameEffect = FrameEffect.NONE
-
-  return (borderType, frameEffect)
-
-
-def doASet(setName):
-  print(f"{setName}\n{'-'*len(setName)}")
-  cards = SetUtil.loadFromFile(setName)
-
-  borderTypeToCount: Dict[TBorderInfo, int] = {}
-  borderTypeToCards: Dict[TBorderInfo, List[Dict[str, Any]]] = {}
-
-  for card in cards:
-    borderInfo = getBorderInfo(card)
-
-    if borderInfo not in borderTypeToCount:
-      borderTypeToCount[borderInfo] = 0
-    borderTypeToCount[borderInfo] += 1
-
-    if borderInfo not in borderTypeToCards:
-      borderTypeToCards[borderInfo] = []
-
-    prices = card['prices']
-    borderTypeToCards[borderInfo].append({
-      "name": card['name'],
-      "rarity": card['rarity'],
-      "price": float(prices['usd']) if ('usd' in prices and prices['usd'] != None) else 0.0,
-      "priceFoil": float(prices['usd_foil']) if ('usd_foil' in prices and prices['usd_foil'] != None) else 0.0,
-    })
-
-  borderTypeToCount = dict(sorted(borderTypeToCount.items(), key = lambda itm: itm[1]))
-  print(borderTypeToCount)
 
 
 
-setToInfo = SetUtil.loadAllFromFiles()
-for setName in setToInfo:
-  doASet(setName)
-  print()
+
+
+# class BorderType(Enum):
+#   BLACK = "black"
+#   BORDERLESS = "borderless"
+
+#   def __str__(self):
+#     return str(self.value)
+
+#   def __repr__(self):
+#     return self.__str__()
+
+
+# class FrameEffect(Enum):
+#   NONE = "none"
+#   EXTENDED_ART = "extended_art"
+#   FULL_ART = "full_art"
+#   SHOWCASE = "showcase"
+#   INVERTED = "inverted"
+
+#   def __str__(self):
+#     return str(self.value)
+
+#   def __repr__(self):
+#     return self.__str__()
+
+
+# TBorderInfo = Tuple[BorderType, FrameEffect]
+
+
+# def getBorderInfo(card) -> TBorderInfo:
+#   borderType: BorderType = {
+#     "black": BorderType.BLACK,
+#     "borderless": BorderType.BORDERLESS,
+#   }[card['border_color']]
+
+#   # These frames don't change the cardinality of a card,
+#   # i.e. "This card" will always have "that frame"
+#   ignoreFrames = {'legendary', 'nyxtouched', 'nyxborn', 'miracle', 'sunmoondfc', 'devoid', 'compasslanddfc', 'originpwdfc', 'companion', 'snow'}
+
+#   if 'frame_effects' in card:
+#     frameEffects: List[str] = card['frame_effects']
+#     keepFrameEffects = set(frameEffects).difference(ignoreFrames)
+
+#     if len(keepFrameEffects) > 1:
+#       raise Exception(f"More than 1 keep frame effect: {keepFrameEffects}\nCard: {card['name']}")
+
+#     if 'extendedart' in keepFrameEffects:
+#       frameEffect: FrameEffect = FrameEffect.EXTENDED_ART
+#     elif 'fullart' in keepFrameEffects:
+#       frameEffect: FrameEffect = FrameEffect.FULL_ART
+#     elif 'showcase' in keepFrameEffects:
+#       frameEffect: FrameEffect = FrameEffect.SHOWCASE
+#     elif 'inverted' in keepFrameEffects:
+#       frameEffect: FrameEffect = FrameEffect.INVERTED
+#     else:
+#       if len(keepFrameEffects) > 0:
+#         raise Exception(f"Unknown frame effect: {keepFrameEffects}\nCard: {card['name']}")
+#       else:
+#         frameEffect: FrameEffect = FrameEffect.NONE
+#   else:
+#     frameEffect: FrameEffect = FrameEffect.NONE
+
+#   return (borderType, frameEffect)
+
+
+# def doASet(setName):
+#   print(f"{setName}\n{'-'*len(setName)}")
+#   cards = SetUtil.loadFromFile(setName)
+
+#   borderTypeToCount: Dict[TBorderInfo, int] = {}
+#   borderTypeToCards: Dict[TBorderInfo, List[Dict[str, Any]]] = {}
+
+#   for card in cards:
+#     borderInfo = getBorderInfo(card)
+
+#     if borderInfo not in borderTypeToCount:
+#       borderTypeToCount[borderInfo] = 0
+#     borderTypeToCount[borderInfo] += 1
+
+#     if borderInfo not in borderTypeToCards:
+#       borderTypeToCards[borderInfo] = []
+
+#     prices = card['prices']
+#     borderTypeToCards[borderInfo].append({
+#       "name": card['name'],
+#       "rarity": card['rarity'],
+#       "price": float(prices['usd']) if ('usd' in prices and prices['usd'] != None) else 0.0,
+#       "priceFoil": float(prices['usd_foil']) if ('usd_foil' in prices and prices['usd_foil'] != None) else 0.0,
+#     })
+
+#   borderTypeToCount = dict(sorted(borderTypeToCount.items(), key = lambda itm: itm[1]))
+#   print(borderTypeToCount)
+
+
+
+# setToInfo = SetUtil.loadAllFromFiles()
+# for setName in setToInfo:
+#   doASet(setName)
+#   print()

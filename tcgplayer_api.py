@@ -58,6 +58,7 @@ class TCGPlayerAPI(object):
             )
             print(f"Request ({r.status_code}):\n{r.text}")
             respJSON = json.loads(r.text)
+
             # TODO: Make this not clobber everything else in the file
             # It's fine for now because there's nothing else, though
             FileUtil.writeJSONContents(
