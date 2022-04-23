@@ -11,10 +11,10 @@ class FileUtil(object):
       return json.loads(f.read().encode(encoding='utf-8'))
 
   @staticmethod
-  def writeJSONContents(filePath: str, obj):
+  def writeJSONContents(filePath: str, obj, indent=None):
     p = Path(filePath)
     parentFolderPath: Path = p.parent.absolute()
     parentFolderPath.mkdir(parents=True, exist_ok=True)
     p.touch()
     with open(filePath, 'w', encoding='utf-8') as f:
-      return json.dump(obj, f)
+      return json.dump(obj, f, indent=indent)

@@ -129,7 +129,7 @@ def reportExpectedValues(args):
     print('(EXCLUSIVE PRICE ${0:.2f})'.format(exclPrice))
   print('')
 
-  codeToPriceInfo = FileUtil.getJSONContents(SetUtil.BOX_MARKET_PRICES_PATH)
+  nameToPriceInfo = FileUtil.getJSONContents(SetUtil.BOX_MARKET_PRICES_PATH)
 
   # Only report one set
   if (name):
@@ -138,7 +138,7 @@ def reportExpectedValues(args):
     cards = SetUtil.loadFromFile(name)
     cardsStats = StatsUtil.getCardsStats(cards, name, exclPrice=exclPrice)
     setStats = StatsUtil.getSetStats(name, cardsStats, exclPrice=exclPrice)
-    marketPrice = codeToPriceInfo[code]['marketPrice']
+    marketPrice = nameToPriceInfo[name]['marketPrice']
 
     print(name)
     print('-' * len(name))
@@ -190,8 +190,13 @@ def reportExpectedValues(args):
   tableRows = []
 
   for setName in setNamesSorted:
-    code = SetUtil.coerceToCode(setName)
-    marketPrice = codeToPriceInfo[code]['marketPrice']
+    if setName not in nameToPriceInfo:
+      print(f"Set '{setName}' not in nameToPriceInfo")
+      continue
+    marketPrice = nameToPriceInfo[setName]['marketPrice']
+    if marketPrice is None:
+      print(f"Set '{setName}' has a null market price")
+      continue
     evs = setNameToBoxEVs[setName]
 
     vals = [
@@ -338,12 +343,12 @@ def downloadCardsAndPersist(args):
   if (args.masterpieces):
     for i, mpCode in enumerate(SetUtil.masterpieces):
       mp = SetUtil.masterpieces[mpCode]
-      mpCards = SetUtil.downloadCards('N/A', mpCode)
+      mpCards = SetUtil.downloadCards(None, mpCode)
       SetUtil.persistSetCards(mp['name'], mpCards)
 
       # Let's hope to not get rate-limited
       if (i + 1 < len(SetUtil.masterpieces)):
-        sleep(0.5)
+        sleep(0.1)
     return
 
   if (args.set):
@@ -369,7 +374,7 @@ def downloadCardsAndPersist(args):
 
       # Let's hope to not get rate-limited
       if (i + 1 < len(SetUtil.sets)):
-        sleep(0.5)
+        sleep(0.1)
 
     # Get all masterpieces
     for i, mpCode in enumerate(SetUtil.masterpieces):
@@ -379,27 +384,38 @@ def downloadCardsAndPersist(args):
 
       # Let's hope to not get rate-limited
       if (i + 1 < len(SetUtil.masterpieces)):
-        sleep(0.5)
+        sleep(0.1)
 
+# TODO @nocommit Pick back up here!
 def downloadBoxesAndPersist(args):
   TCGPlayerAPI.init()
-  nameToInfo: Dict[str, Dict[str, Any]] = {}
 
-  if (args.set):
-    pass
-  else:
-    pass
+  nameToInfo: Dict[str, Dict[str, Any]] = SetUtil.readBoxPrices()
 
-  for i, (name, s) in enumerate(SetUtil.sets.items()):
+  def getInfoForSet(name: str, setInfo: Dict[str, Any]):
     name = SetUtil.coerceToName(name)
     code = SetUtil.coerceToCode(name)
-    skuID = int(s['skuID'])
+    skuID = int(setInfo['skuID'])
     price = TCGPlayerAPI.getMarketPrice(skuID)
-
-    nameToInfo[name] = {
+    return {
       'marketPrice': price,
       'code': code,
     }
+
+  if (args.set):
+    name = SetUtil.coerceToName(args.set)
+    print(f"Getting price for a box of {name}...")
+    nameToInfo[name] = getInfoForSet(
+      name,
+      SetUtil.sets[name],
+    )
+  else:
+    for i, (name, setInfo) in enumerate(SetUtil.sets.items()):
+      print(f"Getting price for a box of {name}...")
+      nameToInfo[name] = getInfoForSet(name, setInfo)
+      # Let's hope to not get rate-limited
+      if (i + 1 < len(SetUtil.sets)):
+        sleep(0.1)
 
   SetUtil.persistBoxPrices(nameToInfo)
 

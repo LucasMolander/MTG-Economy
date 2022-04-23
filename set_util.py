@@ -1,10 +1,10 @@
 import sys
-from typing import Any, Dict, List, Optional
 import urllib.parse
 import requests
 import json
 import os
 from sanitize_filename import sanitize
+from typing import Any, Dict, List, Optional, Set
 
 from file_util import FileUtil
 
@@ -19,8 +19,27 @@ class SetUtil(object):
 
   MASTERPIECE_PROBABILITY = 1.0 / 144.0
 
+  """ Keyed by set name - NOT the code """
   sets: Dict[str, Any]         = FileUtil.getJSONContents(SETS_PATH)
   masterpieces: Dict[str, Any] = FileUtil.getJSONContents(MP_PATH)
+
+  KEEP_CARD_KEYS: Set[str] = {
+    'name',
+    'reserved',
+    'foil',
+    'nonfoil',
+    'fininshes',
+    'variation',
+    'set_type',
+    'rarity',
+    'border_color',
+    'frame_effects',
+    'frame',
+    'full_art',
+    'textless',
+    'booster',
+    'prices',
+  }
 
 
   @staticmethod
@@ -131,7 +150,7 @@ class SetUtil(object):
 
     sys.stdout.flush()
 
-    cards = []
+    cards: List[Dict[str, Any]] = []
 
     baseURL = 'https://api.scryfall.com/cards/search?q='
     if mpCode is not None:
@@ -168,8 +187,23 @@ class SetUtil(object):
       response = json.loads(r.text)
       cards.extend(response['data'])
 
+    # Only keep the keys we care about
+    for card in cards:
+      for k in set(card.keys()):
+        if k not in SetUtil.KEEP_CARD_KEYS:
+          card.pop(k, None)
+
     return cards
 
+  @staticmethod
+  def sortDictRecursively(d: Dict):
+    result = {}
+    for k, v in sorted(d.items()):
+      if isinstance(v, dict):
+        result[k] = SetUtil.sortDictRecursively(v)
+      else:
+        result[k] = v
+    return result
 
   @staticmethod
   def loadFromFile(setName: str) -> List[Dict[str, Any]]:
@@ -189,11 +223,22 @@ class SetUtil(object):
 
   @staticmethod
   def persistSetCards(setName: str, cards: List[Dict[str, Any]]) -> None:
-    filePath = f"{SetUtil.CARDS_DIR}{os.sep}{sanitize(setName)}"
-    FileUtil.writeJSONContents(filePath, cards)
-    # with open(filePath, 'w', encoding='utf-8') as f:
-    #   f.write(json.dumps(cards))
+    FileUtil.writeJSONContents(
+      f"{SetUtil.CARDS_DIR}{os.sep}{sanitize(setName)}",
+      [SetUtil.sortDictRecursively(card) for card in cards],
+      indent=2
+    )
 
   @staticmethod
   def persistBoxPrices(nameToInfo: Dict[str, Dict[str, Any]]) -> None:
-    FileUtil.writeJSONContents(SetUtil.BOX_MARKET_PRICES_PATH, nameToInfo)
+    FileUtil.writeJSONContents(
+      SetUtil.BOX_MARKET_PRICES_PATH,
+      SetUtil.sortDictRecursively(nameToInfo),
+      indent=2
+    )
+
+  @staticmethod
+  def readBoxPrices() -> Dict[str, Dict[str, Any]]:
+    return FileUtil.getJSONContents(
+      SetUtil.BOX_MARKET_PRICES_PATH,
+    )
