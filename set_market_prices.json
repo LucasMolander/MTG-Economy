@@ -1,187 +1,187 @@
 {
-    "mma": {
-        "marketPrice": 440,
-        "name": "Modern Masters"
-    },
-    "mm2": {
-        "marketPrice": 270,
-        "name": "Modern Masters 2015"
-    },
-    "ema": {
-        "marketPrice": 450,
-        "name": "Eternal Masters"
-    },
-    "mm3": {
-        "marketPrice": 323,
-        "name": "Modern Masters 2017"
-    },
-    "ima": {
-        "marketPrice": 225,
-        "name": "Iconic Masters"
-    },
-    "a25": {
-        "marketPrice": 213,
-        "name": "Masters 25"
-    },
-    "uma": {
-        "marketPrice": 370,
-        "name": "Ultimate Masters"
-    },
-    "wwk": {
-        "marketPrice": 1000,
-        "name": "Worldwake"
-    },
-    "kld": {
-        "marketPrice": 200,
-        "name": "Kaladesh"
-    },
-    "som": {
-        "marketPrice": 610,
-        "name": "Scars of Mirrodin"
-    },
-    "nph": {
-        "marketPrice": 1000,
-        "name": "New Phyrexia"
-    },
-    "csp": {
-        "marketPrice": 1000,
-        "name": "Coldsnap"
-    },
-    "ktk": {
-        "marketPrice": 150,
-        "name": "Khans of Tarkir"
-    },
-    "zen": {
-        "marketPrice": 1200,
-        "name": "Zendikar"
-    },
-    "isd": {
-        "marketPrice": 740,
-        "name": "Innistrad"
-    },
-    "dka": {
-        "marketPrice": 156,
-        "name": "Dark Ascension"
-    },
-    "avr": {
-        "marketPrice": 322,
-        "name": "Avacyn Restored"
-    },
-    "rtr": {
-        "marketPrice": 120,
-        "name": "Return to Ravnica"
-    },
-    "gtc": {
-        "marketPrice": 110,
-        "name": "Gatecrash"
-    },
-    "bfz": {
-        "marketPrice": 183,
-        "name": "Battle for Zendikar"
-    },
-    "ogw": {
-        "marketPrice": 130,
-        "name": "Oath of the Gatewatch"
-    },
-    "soi": {
-        "marketPrice": 128,
-        "name": "Shadows over Innistrad"
-    },
-    "akh": {
-        "marketPrice": 155,
-        "name": "Amonkhet"
-    },
-    "hou": {
-        "marketPrice": 135,
-        "name": "Hour of Devastation"
-    },
-    "xln": {
-        "marketPrice": 100,
-        "name": "Ixalan"
-    },
-    "ori": {
-        "marketPrice": 128,
-        "name": "Magic Origins"
-    },
-    "m11": {
-        "marketPrice": 324,
-        "name": "Magic 2011"
-    },
-    "m12": {
-        "marketPrice": 190,
-        "name": "Magic 2012"
-    },
-    "m13": {
-        "marketPrice": 147,
-        "name": "Magic 2013"
-    },
-    "m14": {
-        "marketPrice": 170,
-        "name": "Magic 2014"
-    },
-    "m15": {
-        "marketPrice": 180,
-        "name": "Magic 2015"
-    },
-    "m19": {
-        "marketPrice": 100,
-        "name": "Core Set 2019"
-    },
-    "m20": {
-        "marketPrice": 100,
-        "name": "Core Set 2020"
-    },
-    "m21": {
-        "marketPrice": 100,
-        "name": "Core Set 2021",
-        "collectorsEdPrice": 215
-    },
-    "dom": {
-        "marketPrice": 159,
-        "name": "Dominaria"
-    },
-    "mh1": {
-        "marketPrice": 300,
-        "name": "Modern Horizons"
-    },
-    "mh2": {
-        "marketPrice": 215,
-        "name": "Modern Horizons 2"
-    },
-    "aer": {
-        "marketPrice": 165,
-        "name": "Aether Revolt"
-    },
-    "grn": {
-        "marketPrice": 100,
-        "name": "Guilds of Ravnica"
-    },
-    "rna": {
-        "marketPrice": 100,
-        "name": "Ravnica Allegiance"
-    },
-    "war": {
-        "marketPrice": 105,
-        "name": "War of the Spark"
-    },
-    "eld": {
-        "marketPrice": 100,
-        "name": "Throne of Eldraine"
-    },
-    "thb": {
-        "marketPrice": 100,
-        "name": "Theros: Beyond Death"
-    },
-    "iko": {
-        "marketPrice": 100,
-        "name": "Ikoria: Lair of Behemoths"
-    },
-    "znr": {
-        "marketPrice": 100,
-        "name": "Zendikar Rising"
-    },
-    "khm": {
-        "marketPrice": 100,
-        "name": "Kaldheim"
-    }
+  "mma": {
+    "marketPrice": 440,
+    "name": "Modern Masters"
+  },
+  "mm2": {
+    "marketPrice": 270,
+    "name": "Modern Masters 2015"
+  },
+  "ema": {
+    "marketPrice": 450,
+    "name": "Eternal Masters"
+  },
+  "mm3": {
+    "marketPrice": 323,
+    "name": "Modern Masters 2017"
+  },
+  "ima": {
+    "marketPrice": 225,
+    "name": "Iconic Masters"
+  },
+  "a25": {
+    "marketPrice": 213,
+    "name": "Masters 25"
+  },
+  "uma": {
+    "marketPrice": 370,
+    "name": "Ultimate Masters"
+  },
+  "wwk": {
+    "marketPrice": 1000,
+    "name": "Worldwake"
+  },
+  "kld": {
+    "marketPrice": 200,
+    "name": "Kaladesh"
+  },
+  "som": {
+    "marketPrice": 610,
+    "name": "Scars of Mirrodin"
+  },
+  "nph": {
+    "marketPrice": 1000,
+    "name": "New Phyrexia"
+  },
+  "csp": {
+    "marketPrice": 1000,
+    "name": "Coldsnap"
+  },
+  "ktk": {
+    "marketPrice": 150,
+    "name": "Khans of Tarkir"
+  },
+  "zen": {
+    "marketPrice": 1200,
+    "name": "Zendikar"
+  },
+  "isd": {
+    "marketPrice": 740,
+    "name": "Innistrad"
+  },
+  "dka": {
+    "marketPrice": 156,
+    "name": "Dark Ascension"
+  },
+  "avr": {
+    "marketPrice": 322,
+    "name": "Avacyn Restored"
+  },
+  "rtr": {
+    "marketPrice": 120,
+    "name": "Return to Ravnica"
+  },
+  "gtc": {
+    "marketPrice": 110,
+    "name": "Gatecrash"
+  },
+  "bfz": {
+    "marketPrice": 183,
+    "name": "Battle for Zendikar"
+  },
+  "ogw": {
+    "marketPrice": 130,
+    "name": "Oath of the Gatewatch"
+  },
+  "soi": {
+    "marketPrice": 128,
+    "name": "Shadows over Innistrad"
+  },
+  "akh": {
+    "marketPrice": 155,
+    "name": "Amonkhet"
+  },
+  "hou": {
+    "marketPrice": 135,
+    "name": "Hour of Devastation"
+  },
+  "xln": {
+    "marketPrice": 100,
+    "name": "Ixalan"
+  },
+  "ori": {
+    "marketPrice": 128,
+    "name": "Magic Origins"
+  },
+  "m11": {
+    "marketPrice": 324,
+    "name": "Magic 2011"
+  },
+  "m12": {
+    "marketPrice": 190,
+    "name": "Magic 2012"
+  },
+  "m13": {
+    "marketPrice": 147,
+    "name": "Magic 2013"
+  },
+  "m14": {
+    "marketPrice": 170,
+    "name": "Magic 2014"
+  },
+  "m15": {
+    "marketPrice": 180,
+    "name": "Magic 2015"
+  },
+  "m19": {
+    "marketPrice": 100,
+    "name": "Core Set 2019"
+  },
+  "m20": {
+    "marketPrice": 100,
+    "name": "Core Set 2020"
+  },
+  "m21": {
+    "marketPrice": 100,
+    "name": "Core Set 2021",
+    "collectorsEdPrice": 215
+  },
+  "dom": {
+    "marketPrice": 159,
+    "name": "Dominaria"
+  },
+  "mh1": {
+    "marketPrice": 300,
+    "name": "Modern Horizons"
+  },
+  "mh2": {
+    "marketPrice": 215,
+    "name": "Modern Horizons 2"
+  },
+  "aer": {
+    "marketPrice": 165,
+    "name": "Aether Revolt"
+  },
+  "grn": {
+    "marketPrice": 100,
+    "name": "Guilds of Ravnica"
+  },
+  "rna": {
+    "marketPrice": 100,
+    "name": "Ravnica Allegiance"
+  },
+  "war": {
+    "marketPrice": 105,
+    "name": "War of the Spark"
+  },
+  "eld": {
+    "marketPrice": 100,
+    "name": "Throne of Eldraine"
+  },
+  "thb": {
+    "marketPrice": 100,
+    "name": "Theros: Beyond Death"
+  },
+  "iko": {
+    "marketPrice": 100,
+    "name": "Ikoria: Lair of Behemoths"
+  },
+  "znr": {
+    "marketPrice": 100,
+    "name": "Zendikar Rising"
+  },
+  "khm": {
+    "marketPrice": 100,
+    "name": "Kaldheim"
+  }
 }
