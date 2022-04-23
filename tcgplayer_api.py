@@ -3,7 +3,7 @@ import json
 import time
 import os
 
-from typing import List
+from typing import List, Optional
 
 from file_util import FileUtil
 
@@ -17,7 +17,7 @@ class TCGPlayerAPI(object):
   GET_SKU_IDS_URL = 'https://api.tcgplayer.com/catalog/skus/skuIds'
 
   keyInfo = FileUtil.getJSONContents(KEYS_PATH)[KEY_NAME]
-  USER_AGENT = keyInfo['user_agent_header']
+  USER_AGENT: str = keyInfo['user_agent_header']
 
   bearerToken = None
 
@@ -91,15 +91,27 @@ class TCGPlayerAPI(object):
     }
 
   @staticmethod
-  def doStuff():
-    # skuID = 2999708
-    skuID = 68104
-    marketpriceURL = TCGPlayerAPI.getMarketpriceURL(skuID)
-
-    r = requests.request("GET", marketpriceURL, headers=TCGPlayerAPI.getRequestHeaders())
+  def getMarketPrice(skuID: int) -> Optional[float]:
+    r = requests.request(
+      "GET",
+      TCGPlayerAPI.getMarketpriceURL(skuID),
+      headers=TCGPlayerAPI.getRequestHeaders()
+    )
     response = json.loads(r.text)
 
-    print(response)
+    if 'results' not in response:
+      print(f"'results' not in response: {response}")
+      return None
+    res: List = response['results']
+    if len(res) == 0:
+      print(f"Response results was empty")
+      return None
+    theRes = res[0]
+    if 'price' not in theRes:
+      print(f"'price' not in the result: {theRes}")
+      return None
+
+    return round(float(theRes['price']), 2)
 
   @staticmethod
   def getProductSKUIDs(productID: int) -> List[int]:
@@ -109,7 +121,6 @@ class TCGPlayerAPI(object):
       headers=TCGPlayerAPI.getRequestHeaders()
     )
     response = json.loads(r.text)
-    print(response)
     return [int(sku['skuId']) for sku in response['results']]
 
   @staticmethod

@@ -31,8 +31,31 @@ print("\nBearer token:")
 print(TCGPlayerAPI.bearerToken)
 print('')
 
-# TCGPlayerAPI.doStuff()
-# TCGPlayerAPI.getSKUIDs()
+# marketPrice = TCGPlayerAPI.getMarketPrice(1086072)
+# print(f"Market price: {marketPrice}")
+
+
+
+
+
+
+nameToInfo: Dict[str, Dict[str, Any]] = {}
+
+N = 5
+for i, (name, s) in enumerate(SetUtil.sets.items()):
+  if i > N:
+    break
+  name = SetUtil.coerceToName(name)
+  code = SetUtil.coerceToCode(name)
+  skuID = int(s['skuID'])
+  price = TCGPlayerAPI.getMarketPrice(skuID)
+
+  nameToInfo[name] = {
+    'marketPrice': price,
+    'code': code,
+  }
+
+SetUtil.persistBoxPrices(nameToInfo)
 
 
 

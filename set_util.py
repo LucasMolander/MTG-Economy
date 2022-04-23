@@ -188,8 +188,12 @@ class SetUtil(object):
 
 
   @staticmethod
-  def persist(setName: str, cards: List[Dict[str, Any]]) -> None:
-    sanitizedSetName = sanitize(setName)
-    filePath = f"{SetUtil.CARDS_DIR}{os.sep}{sanitizedSetName}"
-    with open(filePath, 'w', encoding='utf-8') as f:
-      f.write(json.dumps(cards))
+  def persistSetCards(setName: str, cards: List[Dict[str, Any]]) -> None:
+    filePath = f"{SetUtil.CARDS_DIR}{os.sep}{sanitize(setName)}"
+    FileUtil.writeJSONContents(filePath, cards)
+    # with open(filePath, 'w', encoding='utf-8') as f:
+    #   f.write(json.dumps(cards))
+
+  @staticmethod
+  def persistBoxPrices(nameToInfo: Dict[str, Dict[str, Any]]) -> None:
+    FileUtil.writeJSONContents(SetUtil.BOX_MARKET_PRICES_PATH, nameToInfo)

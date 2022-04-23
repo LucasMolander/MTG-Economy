@@ -1,11 +1,13 @@
 import statistics
 import argparse
 from time import sleep
+from typing import Dict, Any
 
 from set_util import SetUtil
 from stats_util import StatsUtil
 from print_util import PrintUtil
 from file_util import FileUtil
+from tcgplayer_api import TCGPlayerAPI
 
 
 #
@@ -78,24 +80,38 @@ def main():
   parser_masterpieces.set_defaults(func=reportMasterpieces)
 
   #
-  # Storing Set Information
+  # Store Card Prices
   #
-  parser_store = subparsers.add_parser(
-    'store',
-    help='Locally price info from the internet')
+  parser_storecards = subparsers.add_parser(
+    'storecards',
+    help='Store prices of cards in set(s)')
 
-  parser_store.add_argument(
+  parser_storecards.add_argument(
     '--set',
     type=str,
     help='Only store info for a specific set')
 
-  parser_store.add_argument(
+  parser_storecards.add_argument(
     '-mp',
     '--masterpieces',
     action='store_true',
     help='Only update masterpieces')
 
-  parser_store.set_defaults(func=storeToFiles)
+  parser_storecards.set_defaults(func=downloadCardsAndPersist)
+
+  #
+  # Store Box Prices
+  #
+  parser_storeboxes = subparsers.add_parser(
+    'storeboxes',
+    help='Store the market price of box(es)')
+
+  parser_storeboxes.add_argument(
+    '--set',
+    type=str,
+    help='Only store info for a specific set')
+
+  parser_storeboxes.set_defaults(func=downloadBoxesAndPersist)
 
   args = parser.parse_args()
   args.func(args)
@@ -278,7 +294,6 @@ def reportSet(args):
 
     print(PrintUtil.getTable(tableHeader, tableRows))
 
-
   print('')
 
 
@@ -319,13 +334,12 @@ def reportMasterpieces(args):
 
     print(PrintUtil.getTable(tableHeader, tableRows))
 
-
-def storeToFiles(args):
+def downloadCardsAndPersist(args):
   if (args.masterpieces):
     for i, mpCode in enumerate(SetUtil.masterpieces):
       mp = SetUtil.masterpieces[mpCode]
       mpCards = SetUtil.downloadCards('N/A', mpCode)
-      SetUtil.persist(mp['name'], mpCards)
+      SetUtil.persistSetCards(mp['name'], mpCards)
 
       # Let's hope to not get rate-limited
       if (i + 1 < len(SetUtil.masterpieces)):
@@ -337,21 +351,21 @@ def storeToFiles(args):
     setName = SetUtil.coerceToName(args.set)
 
     cards = SetUtil.downloadCards(setCode)
-    SetUtil.persist(setName, cards)
+    SetUtil.persistSetCards(setName, cards)
 
     # Get masterpieces if necessary
     mpCode = SetUtil.sets[setName]['masterpieceCode']
     if (mpCode):
       mpName  = SetUtil.masterpieces[mpCode]['name']
       mpCards = SetUtil.downloadCards(None, mpCode)
-      SetUtil.persist(mpName, mpCards)
+      SetUtil.persistSetCards(mpName, mpCards)
   else:
     for i, setName in enumerate(SetUtil.sets):
       s = SetUtil.sets[setName]
       setCode = s['code']
 
       cards = SetUtil.downloadCards(setCode)
-      SetUtil.persist(setName, cards)
+      SetUtil.persistSetCards(setName, cards)
 
       # Let's hope to not get rate-limited
       if (i + 1 < len(SetUtil.sets)):
@@ -361,11 +375,33 @@ def storeToFiles(args):
     for i, mpCode in enumerate(SetUtil.masterpieces):
       mp = SetUtil.masterpieces[mpCode]
       mpCards = SetUtil.downloadCards(None, mpCode)
-      SetUtil.persist(mp['name'], mpCards)
+      SetUtil.persistSetCards(mp['name'], mpCards)
 
       # Let's hope to not get rate-limited
       if (i + 1 < len(SetUtil.masterpieces)):
         sleep(0.5)
+
+def downloadBoxesAndPersist(args):
+  TCGPlayerAPI.init()
+  nameToInfo: Dict[str, Dict[str, Any]] = {}
+
+  if (args.set):
+    pass
+  else:
+    pass
+
+  for i, (name, s) in enumerate(SetUtil.sets.items()):
+    name = SetUtil.coerceToName(name)
+    code = SetUtil.coerceToCode(name)
+    skuID = int(s['skuID'])
+    price = TCGPlayerAPI.getMarketPrice(skuID)
+
+    nameToInfo[name] = {
+      'marketPrice': price,
+      'code': code,
+    }
+
+  SetUtil.persistBoxPrices(nameToInfo)
 
 
 if __name__ == '__main__':
