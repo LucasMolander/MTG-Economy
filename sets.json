@@ -111,20 +111,6 @@
             "mythic":    10
         }
     },
-    "Kaladesh": {
-        "code":            "kld",
-        "masterpieceCode": null,
-        "collectorEdInfo": null,
-        "nPacks":          36,
-        "packsPerFoil":    6,
-        "rarityCounts": {
-            "basicLand": 15,
-            "common":    101,
-            "uncommon":  80,
-            "rare":      53,
-            "mythic":    15
-        }
-    },
     "Scars of Mirrodin": {
         "code":            "som",
         "masterpieceCode": null,
@@ -281,7 +267,7 @@
     },
     "Oath of the Gatewatch": {
         "code":            "ogw",
-        "masterpieceCode": "exp",
+        "masterpieceCode": null,
         "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
@@ -505,7 +491,7 @@
     },
     "Aether Revolt": {
         "code":            "aer",
-        "masterpieceCode": "mps",
+        "masterpieceCode": null,
         "collectorEdInfo": null,
         "nPacks":          36,
         "packsPerFoil":    6,
