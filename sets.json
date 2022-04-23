@@ -1,6 +1,8 @@
 {
   "Modern Masters": {
     "code":            "mma",
+    "productID":       68104,
+    "skuID":           1086072,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          24,
@@ -15,6 +17,8 @@
   },
   "Modern Masters 2015": {
     "code":            "mm2",
+    "productID":       95052,
+    "skuID":           1275326,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          24,
@@ -29,6 +33,8 @@
   },
   "Modern Masters 2017": {
     "code":            "mm3",
+    "productID":       127069,
+    "skuID":           3263108,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          24,
@@ -43,6 +49,8 @@
   },
   "Eternal Masters": {
     "code":            "ema",
+    "productID":       114832,
+    "skuID":           3092804,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          24,
@@ -57,6 +65,8 @@
   },
   "Iconic Masters": {
     "code":            "ima",
+    "productID":       145235,
+    "skuID":           3465934,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          24,
@@ -71,6 +81,8 @@
   },
   "Masters 25": {
     "code":            "a25",
+    "productID":       157857,
+    "skuID":           3596445,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          24,
@@ -85,6 +97,8 @@
   },
   "Ultimate Masters": {
     "code":            "uma",
+    "productID":       179444,
+    "skuID":           3903701,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          24,
@@ -99,6 +113,8 @@
   },
   "Worldwake": {
     "code":            "wwk",
+    "productID":       34468,
+    "skuID":           383692,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -113,6 +129,8 @@
   },
   "Scars of Mirrodin": {
     "code":            "som",
+    "productID":       35749,
+    "skuID":           392520,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -127,6 +145,8 @@
   },
   "New Phyrexia": {
     "code":            "nph",
+    "productID":       39410,
+    "skuID":           416737,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -141,6 +161,8 @@
   },
   "Coldsnap": {
     "code":            "csp",
+    "productID":       27271,
+    "skuID":           250549,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -155,6 +177,8 @@
   },
   "Khans of Tarkir": {
     "code":            "ktk",
+    "productID":       91650,
+    "skuID":           1240841,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -169,6 +193,8 @@
   },
   "Zendikar": {
     "code":            "zen",
+    "productID":       32789,
+    "skuID":           311633,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -183,6 +209,8 @@
   },
   "Innistrad": {
     "code":            "isd",
+    "productID":       47791,
+    "skuID":           475775,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -197,6 +225,8 @@
   },
   "Dark Ascension": {
     "code":            "dka",
+    "productID":       57584,
+    "skuID":           759831,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -211,6 +241,8 @@
   },
   "Avacyn Restored": {
     "code":            "avr",
+    "productID":       58058,
+    "skuID":           850213,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -225,6 +257,8 @@
   },
   "Return to Ravnica": {
     "code":            "rtr",
+    "productID":       60117,
+    "skuID":           942700,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -239,6 +273,8 @@
   },
   "Gatecrash": {
     "code":            "gtc",
+    "productID":       67311,
+    "skuID":           1066410,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -254,6 +290,8 @@
   "Battle for Zendikar": {
     "code":            "bfz",
     "masterpieceCode": "exp",
+    "productID":       102715,
+    "skuID":           2941362,
     "collectorEdInfo": null,
     "nPacks":          36,
     "packsPerFoil":    6,
@@ -267,6 +305,8 @@
   },
   "Oath of the Gatewatch": {
     "code":            "ogw",
+    "productID":       110418,
+    "skuID":           3040304,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -281,6 +321,8 @@
   },
   "Shadows over Innistrad": {
     "code":            "soi",
+    "productID":       112706,
+    "skuID":           3076154,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -296,6 +338,8 @@
   "Amonkhet": {
     "code":            "akh",
     "masterpieceCode": "mp2",
+    "productID":       127174,
+    "skuID":           3263633,
     "collectorEdInfo": null,
     "nPacks":          36,
     "packsPerFoil":    6,
@@ -310,6 +354,8 @@
   "Hour of Devastation": {
     "code":            "hou",
     "masterpieceCode": "mp2",
+    "productID":       131456,
+    "skuID":           3368106,
     "collectorEdInfo": null,
     "nPacks":          36,
     "packsPerFoil":    6,
@@ -323,6 +369,8 @@
   },
   "Ixalan": {
     "code":            "xln",
+    "productID":       141989,
+    "skuID":           3457258,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -337,6 +385,8 @@
   },
   "Magic Origins": {
     "code":            "ori",
+    "productID":       96147,
+    "skuID":           2733105,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -351,6 +401,8 @@
   },
   "Magic 2011": {
     "code":            "m11",
+    "productID":       35372,
+    "skuID":           389626,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -365,6 +417,8 @@
   },
   "Magic 2012": {
     "code":            "m12",
+    "productID":       46957,
+    "skuID":           469182,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -379,6 +433,8 @@
   },
   "Magic 2013": {
     "code":            "m13",
+    "productID":       59120,
+    "skuID":           876333,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -393,6 +449,8 @@
   },
   "Magic 2014": {
     "code":            "m14",
+    "productID":       69243,
+    "skuID":           1100240,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -407,6 +465,8 @@
   },
   "Magic 2015": {
     "code":            "m15",
+    "productID":       90786,
+    "skuID":           1226139,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -421,6 +481,8 @@
   },
   "Core Set 2019": {
     "code":            "m19",
+    "productID":       166550,
+    "skuID":           3743645,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -435,6 +497,8 @@
   },
   "Core Set 2020": {
     "code":            "m20",
+    "productID":       188210,
+    "skuID":           3998033,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -449,6 +513,8 @@
   },
   "Dominaria": {
     "code":            "dom",
+    "productID":       158423,
+    "skuID":           3598751,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -462,7 +528,9 @@
     }
   },
   "Modern Horizons": {
-    "code":   "mh1",
+    "code":            "mh1",
+    "productID":       185894,
+    "skuID":           3978951,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks": 36,
@@ -478,6 +546,8 @@
   "Kaladesh": {
     "code":            "kld",
     "masterpieceCode": "mps",
+    "productID":       121527,
+    "skuID":           3193062,
     "collectorEdInfo": null,
     "nPacks":          36,
     "packsPerFoil":    6,
@@ -491,6 +561,8 @@
   },
   "Aether Revolt": {
     "code":            "aer",
+    "productID":       125794,
+    "skuID":           3254153,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -505,6 +577,8 @@
   },
   "Guilds of Ravnica": {
     "code":            "grn",
+    "productID":       173362,
+    "skuID":           3826390,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -519,6 +593,8 @@
   },
   "Ravnica Allegiance": {
     "code":            "rna",
+    "productID":       180734,
+    "skuID":           3913646,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -533,6 +609,8 @@
   },
   "War of the Spark": {
     "code":            "war",
+    "productID":       185676,
+    "skuID":           3978689,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -547,6 +625,8 @@
   },
   "Throne of Eldraine": {
     "code":            "eld",
+    "productID":       194891,
+    "skuID":           4142834,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -561,6 +641,8 @@
   },
   "Theros: Beyond Death": {
     "code":            "thb",
+    "productID":       202298,
+    "skuID":           4263312,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -575,6 +657,8 @@
   },
   "Ikoria: Lair of Behemoths": {
     "code":            "iko",
+    "productID":       208273,
+    "skuID":           4335927,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -589,6 +673,8 @@
   },
   "Core Set 2021": {
     "code":            "m21",
+    "productID":       214811,
+    "skuID":           4432826,
     "masterpieceCode": null,
     "collectorEdInfo":  {
       "n": 397
@@ -605,6 +691,8 @@
   },
   "Zendikar Rising": {
     "code":            "znr",
+    "productID":       220414,
+    "skuID":           4530560,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -619,6 +707,8 @@
   },
   "Kaldheim": {
     "code":            "khm",
+    "productID":       228245,
+    "skuID":           4684974,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks":          36,
@@ -632,7 +722,9 @@
     }
   },
   "Modern Horizons 2": {
-    "code":   "mh2",
+    "code":            "mh2",
+    "productID":       236354,
+    "skuID":           4894863,
     "masterpieceCode": null,
     "collectorEdInfo": null,
     "nPacks": 36,

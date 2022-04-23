@@ -113,7 +113,7 @@ def reportExpectedValues(args):
     print('(EXCLUSIVE PRICE ${0:.2f})'.format(exclPrice))
   print('')
 
-  codeToPriceInfo = FileUtil.getJSONContents('set_market_prices.json')
+  codeToPriceInfo = FileUtil.getJSONContents(SetUtil.BOX_MARKET_PRICES_PATH)
 
   # Only report one set
   if (name):

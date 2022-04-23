@@ -13,6 +13,7 @@ class SetUtil(object):
 
   SETS_PATH = 'sets.json'
   MP_PATH   = 'masterpieces.json'
+  BOX_MARKET_PRICES_PATH = 'box_market_prices.json'
 
   CARDS_DIR = 'card_prices'
 
@@ -20,6 +21,14 @@ class SetUtil(object):
 
   sets: Dict[str, Any]         = FileUtil.getJSONContents(SETS_PATH)
   masterpieces: Dict[str, Any] = FileUtil.getJSONContents(MP_PATH)
+
+
+  @staticmethod
+  def recordBoxPrices() -> None:
+    # Which sets to get???
+    # From the sets.json, of course
+
+    pass
 
 
   @staticmethod

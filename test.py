@@ -31,7 +31,10 @@ print("\nBearer token:")
 print(TCGPlayerAPI.bearerToken)
 print('')
 
-TCGPlayerAPI.doStuff()
+# TCGPlayerAPI.doStuff()
+# TCGPlayerAPI.getSKUIDs()
+
+
 
 
 

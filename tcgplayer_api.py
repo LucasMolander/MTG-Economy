@@ -3,14 +3,18 @@ import json
 import time
 import os
 
+from typing import List
+
 from file_util import FileUtil
 
 
+# TODO @nocommit Make this a singleton because there is state associated with it
 class TCGPlayerAPI(object):
   KEYS_PATH = 'keys.json'
   KEY_NAME = 'tcgplayer'
 
   GET_BEARER_TOKEN_URL = 'https://api.tcgplayer.com/token'
+  GET_SKU_IDS_URL = 'https://api.tcgplayer.com/catalog/skus/skuIds'
 
   keyInfo = FileUtil.getJSONContents(KEYS_PATH)[KEY_NAME]
   USER_AGENT = keyInfo['user_agent_header']
@@ -20,6 +24,10 @@ class TCGPlayerAPI(object):
   @staticmethod
   def getMarketpriceURL(skuID: int):
     return f"https://api.tcgplayer.com/pricing/marketprices/{skuID}"
+
+  @staticmethod
+  def getSKUsURL(productID: int):
+    return f"https://api.tcgplayer.com/catalog/products/{productID}/skus"
 
   @staticmethod
   def init():
@@ -84,10 +92,32 @@ class TCGPlayerAPI(object):
 
   @staticmethod
   def doStuff():
-    skuID = 2999708
+    # skuID = 2999708
+    skuID = 68104
     marketpriceURL = TCGPlayerAPI.getMarketpriceURL(skuID)
 
     r = requests.request("GET", marketpriceURL, headers=TCGPlayerAPI.getRequestHeaders())
     response = json.loads(r.text)
 
+    print(response)
+
+  @staticmethod
+  def getProductSKUIDs(productID: int) -> List[int]:
+    r = requests.request(
+      "GET",
+      TCGPlayerAPI.getSKUsURL(productID),
+      headers=TCGPlayerAPI.getRequestHeaders()
+    )
+    response = json.loads(r.text)
+    print(response)
+    return [int(sku['skuId']) for sku in response['results']]
+
+  @staticmethod
+  def getSKUIDs():
+    r = requests.request(
+      "GET",
+      TCGPlayerAPI.GET_SKU_IDS_URL,
+      headers=TCGPlayerAPI.getRequestHeaders()
+    )
+    response = json.loads(r.text)
     print(response)
