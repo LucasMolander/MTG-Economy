@@ -8,6 +8,8 @@ from tcgplayer_api import TCGPlayerAPI
 from set_util import SetUtil
 from file_util import FileUtil
 
+from statistics import mean, median
+
 
 
 """
@@ -38,6 +40,7 @@ THEY DO IT LIKE THIS FOR DOUBLE MASTERS
 
 
 
+
 THEY DO IT LIKE THIS FOR DOUBLE MASTERS 2022
 579 total
 * 332 In Boosters              set:2x2 is:nonfoil is:booster
@@ -46,6 +49,24 @@ THEY DO IT LIKE THIS FOR DOUBLE MASTERS 2022
 * 160 Etched Foil-only         set:2x2 is:etched not:nonfoil not:foil
 * 5   Textured Foil            set:2x2 is:textured
 * 2   Promos                   set:2x2 is:promo
+
+Double Masters 2022 Breakdowns
+In Boosters
+* 92  Common     set:2x2 is:nonfoil is:booster rarity:common
+* 80  Uncommon   set:2x2 is:nonfoil is:booster rarity:uncommon
+* 120 Rare       set:2x2 is:nonfoil is:booster rarity:rare
+* 40  Mythic     set:2x2 is:nonfoil is:booster rarity:mythic
+
+Borderless
+* 9  Common     set:2x2 is:nonfoil border:borderless rarity:common
+* 21 Uncommon   set:2x2 is:nonfoil border:borderless rarity:uncommon
+* 30 Rare       set:2x2 is:nonfoil border:borderless rarity:rare
+* 20 Mythic     set:2x2 is:nonfoil border:borderless rarity:mythic
+
+Etched
+* 120 Rare    set:2x2 is:etched not:nonfoil not:foil rarity:rare
+* 40  Mythic  set:2x2 is:etched not:nonfoil not:foil rarity:mythic
+
 
 COLLECTOR'S ONLY
 ----------------
@@ -81,7 +102,7 @@ Contents:
       - NOTE: 3% chance to be textured
 
 Probability * avg_val_of_what?:
-  * (5 Traditional foil commons
+  * 5 Traditional foil commons
   * 2 Traditional foil uncommons
   * 2 Non-foil borderless commons and/or uncommons
   * 2 Traditional foil borderless commons and/or uncommons
@@ -355,6 +376,28 @@ OLD (before getting finishes correctly)
 
 """
 
+class CardUtil(object):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "prices" in card and "usd" in card["prices"] and card["prices"]["usd"] is not None:
+      return float(card["prices"]["usd"])
+    else:
+      return None
+
+  @staticmethod
+  def getFoilPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "prices" in card and "usd_foil" in card["prices"] and card["prices"]["usd_foil"] is not None:
+      return float(card["prices"]["usd_foil"])
+    else:
+      return None
+
+  @staticmethod
+  def getEtchedPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "prices" in card and "usd_etched" in card["prices"] and card["prices"]["usd_etched"] is not None:
+      return float(card["prices"]["usd_etched"])
+    else:
+      return None
+
 
 # ------------------------------------------------------------------------------
 #                                 CATEGORIZERS
@@ -370,13 +413,17 @@ class CardCategorizer(Protocol):
   def getCatName() -> str:
     """Get the name of this category"""
 
+  @staticmethod
+  def getProbability() -> float:
+    """Get the probability of having this card in a pack"""
+
   @classmethod
   def updateCatToPrice(cls, catToPrice: Dict[str, float], card: Dict[str, Any]) -> None:
     """Convenience for simple logic elsewhere in `getCatToPriceForCard`"""
     p = cls.getPrice(card)
     if p is not None:
       catToPrice[cls.getCatName()] = p
-
+  
 
 class TexturedCategorizer(CardCategorizer):
   """
@@ -385,13 +432,18 @@ class TexturedCategorizer(CardCategorizer):
   @staticmethod
   def getPrice(card: Dict[str, Any]) -> Optional[float]:
     if "promo_types" in card and "textured" in card["promo_types"]:
-      if "prices" in card and "usd_foil" in card["prices"]:
-        return card["prices"]["usd_foil"]
+      return CardUtil.getFoilPrice(card)
     return None
 
   @staticmethod
   def getCatName() -> str:
     return "Textured Foil"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "Three percent of Collector Boosters contain a textured foil mythic rare"
+    return 0.03
+
 
 #
 # Commons
@@ -400,13 +452,17 @@ class CommonFoilCategorizer(CardCategorizer):
   @staticmethod
   def getPrice(card: Dict[str, Any]) -> Optional[float]:
     if "rarity" in card and card["rarity"] == "common":
-      if "prices" in card and "usd_foil" in card["prices"]:
-        return card["prices"]["usd_foil"]
+      return CardUtil.getFoilPrice(card)
     return None
 
   @staticmethod
   def getCatName() -> str:
     return "Common Foil"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "5 Traditional foil commons"
+    return 5.0
 
 
 class CommonBorderlessCategorizer(CardCategorizer):
@@ -414,13 +470,17 @@ class CommonBorderlessCategorizer(CardCategorizer):
   def getPrice(card: Dict[str, Any]) -> Optional[float]:
     if "rarity" in card and card["rarity"] == "common":
       if "border_color" in card and card["border_color"] == "borderless":
-        if "prices" in card and "usd" in card["prices"]:
-          return card["prices"]["usd"]
+        return CardUtil.getPrice(card)
     return None
 
   @staticmethod
   def getCatName() -> str:
     return "Common Borderless"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "2 Non-foil borderless commons and/or uncommons"
+    return 2.0 * (9.0 / (9.0 + 21.0))
 
 
 class CommonBorderlessFoilCategorizer(CardCategorizer):
@@ -428,13 +488,17 @@ class CommonBorderlessFoilCategorizer(CardCategorizer):
   def getPrice(card: Dict[str, Any]) -> Optional[float]:
     if "rarity" in card and card["rarity"] == "common":
       if "border_color" in card and card["border_color"] == "borderless":
-        if "prices" in card and "usd_foil" in card["prices"]:
-          return card["prices"]["usd_foil"]
+        return CardUtil.getFoilPrice(card)
     return None
 
   @staticmethod
   def getCatName() -> str:
     return "Common Borderless Foil"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "2 Traditional foil borderless commons and/or uncommons"
+    return 2.0 * (9.0 / (9.0 + 21.0))
 
 
 #
@@ -444,13 +508,17 @@ class UncommonFoilCategorizer(CardCategorizer):
   @staticmethod
   def getPrice(card: Dict[str, Any]) -> Optional[float]:
     if "rarity" in card and card["rarity"] == "uncommon":
-      if "prices" in card and "usd_foil" in card["prices"]:
-        return card["prices"]["usd_foil"]
+      return CardUtil.getFoilPrice(card)
     return None
 
   @staticmethod
   def getCatName() -> str:
     return "Uncommon Foil"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "2 Traditional foil uncommons"
+    return 2.0
 
 
 class UncommonBorderlessCategorizer(CardCategorizer):
@@ -458,13 +526,17 @@ class UncommonBorderlessCategorizer(CardCategorizer):
   def getPrice(card: Dict[str, Any]) -> Optional[float]:
     if "rarity" in card and card["rarity"] == "uncommon":
       if "border_color" in card and card["border_color"] == "borderless":
-        if "prices" in card and "usd" in card["prices"]:
-          return card["prices"]["usd"]
+        return CardUtil.getPrice(card)
     return None
 
   @staticmethod
   def getCatName() -> str:
     return "Uncommon Borderless"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "2 Non-foil borderless commons and/or uncommons"
+    return 2.0 * (21.0 / (9.0 + 21.0))
 
 
 class UncommonBorderlessFoilCategorizer(CardCategorizer):
@@ -472,13 +544,192 @@ class UncommonBorderlessFoilCategorizer(CardCategorizer):
   def getPrice(card: Dict[str, Any]) -> Optional[float]:
     if "rarity" in card and card["rarity"] == "uncommon":
       if "border_color" in card and card["border_color"] == "borderless":
-        if "prices" in card and "usd_foil" in card["prices"]:
-          return card["prices"]["usd_foil"]
+        return CardUtil.getFoilPrice(card)
     return None
 
   @staticmethod
   def getCatName() -> str:
     return "Uncommon Borderless Foil"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "2 Traditional foil borderless commons and/or uncommons"
+    return 2.0 * (21.0 / (9.0 + 21.0))
+
+
+#
+# Rares
+#
+class RareCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "rare":
+      return CardUtil.getPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Rare"
+
+
+class RareFoilCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "rare":
+      return CardUtil.getFoilPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Rare Foil"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "1 Traditional foil Rare/Mythic"
+    return 120.0 / (120.0 + 40.0)
+
+
+class RareBorderlessCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "rare":
+      if "border_color" in card and "borderless" in card["border_color"]:
+        return CardUtil.getPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Rare Borderless"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "1 Non-foil borderless Rare/Mythic"
+    return 30.0 / (30.0 + 20.0)
+
+
+class RareFoilEtchedCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "rare":
+      if "finishes" in card and "etched" in card["finishes"]:
+        return CardUtil.getEtchedPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Rare Foil-etched"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "1 Foil-etched Rare/Mythic"
+    return 120.0 / (120.0 + 40.0)
+
+
+class RareFoilBorderlessCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "rare":
+      if "border_color" in card and "borderless" in card["border_color"]:
+        return CardUtil.getFoilPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Rare Foil Borderless"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "1 Traditional foil borderless Rare/Mythic"
+    # This slot also has a 3% chance of being Textured
+    return 0.97 * (30.0 / (30.0 + 20.0))
+
+
+#
+# Mythics
+#
+class MythicCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "mythic":
+      return CardUtil.getPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Mythic"
+
+
+class MythicFoilCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "mythic":
+      return CardUtil.getFoilPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Mythic Foil"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "1 Traditional foil Rare/Mythic"
+    return 40.0 / (120.0 + 40.0)
+
+
+class MythicBorderlessCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "mythic":
+      if "border_color" in card and "borderless" in card["border_color"]:
+        return CardUtil.getPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Mythic Borderless"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "1 Non-foil borderless Rare/Mythic"
+    return 20.0 / (30.0 + 20.0)
+
+
+class MythicFoilEtchedCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "mythic":
+      if "finishes" in card and "etched" in card["finishes"]:
+        return CardUtil.getEtchedPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Mythic Foil-etched"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "1 Foil-etched Rare/Mythic"
+    return 40.0 / (120.0 + 40.0)
+
+
+class MythicFoilBorderlessCategorizer(CardCategorizer):
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "mythic":
+      if "border_color" in card and "borderless" in card["border_color"]:
+        return CardUtil.getFoilPrice(card)
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "Mythic Foil Borderless"
+  
+  @staticmethod
+  def getProbability() -> float:
+    # "1 Traditional foil borderless Rare/Mythic"
+    # This slot also has a 3% chance of being Textured
+    return 0.97 * (20.0 / (30.0 + 20.0))
+
 
 
 # ------------------------------------------------------------------------------
@@ -499,11 +750,11 @@ class DoubleMasters2022Collectors(object):
       - NOTE: 3% chance to be textured
   """
   @staticmethod
-  def categorizePrices(cards: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+  def categorizePrices(cards: List[Dict[str, Any]]) -> Dict[str, Dict[str, float]]:
     """
     Returns a map from category to card name to price.
     """
-    catToNameToPrice: Dict[str, Dict[str, Any]] = {}
+    catToNameToPrice: Dict[str, Dict[str, float]] = {}
 
     # For each card, get the price of each category it is
     for card in cards:
@@ -513,6 +764,12 @@ class DoubleMasters2022Collectors(object):
         if cat not in catToNameToPrice:
           catToNameToPrice[cat] = {}
         catToNameToPrice[cat][name] = price
+
+      if len(catToPrice) == 0:
+        cat = "UNCATEGORIZABLE"
+        if cat not in catToNameToPrice:
+          catToNameToPrice[cat] = {}
+        catToNameToPrice[cat][name] = 0.0
 
     return catToNameToPrice
 
@@ -536,8 +793,43 @@ class DoubleMasters2022Collectors(object):
     UncommonBorderlessCategorizer.updateCatToPrice(catToPrice, card)
     UncommonBorderlessFoilCategorizer.updateCatToPrice(catToPrice, card)
 
+    # Rares
+    RareFoilCategorizer.updateCatToPrice(catToPrice, card)
+    RareBorderlessCategorizer.updateCatToPrice(catToPrice, card)
+    RareFoilEtchedCategorizer.updateCatToPrice(catToPrice, card)
+    RareFoilBorderlessCategorizer.updateCatToPrice(catToPrice, card)
+
+    # Mythics
+    MythicFoilCategorizer.updateCatToPrice(catToPrice, card)
+    MythicBorderlessCategorizer.updateCatToPrice(catToPrice, card)
+    MythicFoilEtchedCategorizer.updateCatToPrice(catToPrice, card)
+    MythicFoilBorderlessCategorizer.updateCatToPrice(catToPrice, card)
+
     return catToPrice
 
+
+
+class DistUtil(object):
+  @staticmethod
+  def getDistInfo(catToPrices: Dict[str, List[float]], exclPrice: float = 0.0) -> Dict[str, Any]:
+    catToDistInfo = {}
+    for cat, prices in catToPrices.items():
+      pricesFiltered: List[float] = [
+        p
+        for p in prices
+        if p >= exclPrice
+      ]
+      if len(pricesFiltered) > 0:
+        catToDistInfo[cat] = {
+          "n": len(pricesFiltered),
+          "n_orig": len(prices),
+          "sum": round(sum(pricesFiltered), 2),
+          "med": round(median(pricesFiltered), 2),
+          "avg": round(mean(pricesFiltered), 2),
+          "avg_orig": round(sum(pricesFiltered) / len(prices), 2),
+        }
+    return catToDistInfo
+    
 
 
 name = "2x2"
@@ -548,12 +840,33 @@ cards = SetUtil.loadFromFile(setName=name)
 
 print(f"{name} has {len(cards)} cards")
 
-categorized = DoubleMasters2022Collectors.categorizePrices(cards)
+catToNameToPrice = DoubleMasters2022Collectors.categorizePrices(cards)
 
-pprint(categorized)
+# Try also looking at it a bit of a different way
+nameToCatToPrice: Dict[str, Dict[str, float]] = {}
+for cat, nameToPrice in catToNameToPrice.items():
+  for name, price in nameToPrice.items():
+    if name not in nameToCatToPrice:
+      nameToCatToPrice[name] = {}
+    nameToCatToPrice[name][cat] = price
 
+print("\nCategory to name to price:\n")
+pprint(catToNameToPrice)
+print("\nName to category to price:\n")
+pprint(nameToCatToPrice)
 
+catToPrices: Dict[str, List[float]] = {
+  cat: list(nameToPrice.values())
+  for cat, nameToPrice in catToNameToPrice.items()
+}
+catToDistInfo = DistUtil.getDistInfo(catToPrices)
+ep = 5.0
+catToDistInfoEP = DistUtil.getDistInfo(catToPrices, exclPrice=ep)
 
+print("\n\nCategory to distribution info:\n")
+pprint(catToDistInfo)
+print(f"\n\nCategory to distribution info (exclusive price = ${ep}):\n")
+pprint(catToDistInfoEP)
 
 
 

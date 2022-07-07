@@ -142,10 +142,10 @@ class SetUtil(object):
     setName: Optional[str] = None
     mpName: Optional[str] = None
     if setCode is not None:
-      setName: Optional[str] = SetUtil.coerceToName(setCode)
+      setName = SetUtil.coerceToName(setCode)
       print('Getting cards for %s' % setName)
     elif mpCode is not None:
-      mpName: Optional[str] = SetUtil.masterpieces[mpCode]['name']
+      mpName = SetUtil.masterpieces[mpCode]['name']
       print('Getting %s cards' % mpName)
     else:
       raise Exception("Must have a non-null setCode or mpCode!")
