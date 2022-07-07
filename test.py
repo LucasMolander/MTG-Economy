@@ -417,13 +417,37 @@ class CardCategorizer(Protocol):
   def getProbability() -> float:
     """Get the probability of having this card in a pack"""
 
+  # def __str__(self) -> str:
+  #   return self.getCatName()
+
+  # def __repr__(self) -> str:
+  #   return self.getCatName()
+
+
   @classmethod
-  def updateCatToPrice(cls, catToPrice: Dict[str, float], card: Dict[str, Any]) -> None:
+  def updateCatToPrice(cls, catToPrice: Dict[Type["CardCategorizer"], float], card: Dict[str, Any]) -> None:
     """Convenience for simple logic elsewhere in `getCatToPriceForCard`"""
     p = cls.getPrice(card)
     if p is not None:
-      catToPrice[cls.getCatName()] = p
+      catToPrice[cls] = p
   
+
+class Uncategorizable(CardCategorizer):
+  """
+  Just a placeholder/dummy class
+  """
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    return None
+
+  @staticmethod
+  def getCatName() -> str:
+    return "UNCATEGORIZABLE"
+  
+  @staticmethod
+  def getProbability() -> float:
+    return 0.0
+
 
 class TexturedCategorizer(CardCategorizer):
   """
@@ -750,11 +774,11 @@ class DoubleMasters2022Collectors(object):
       - NOTE: 3% chance to be textured
   """
   @staticmethod
-  def categorizePrices(cards: List[Dict[str, Any]]) -> Dict[str, Dict[str, float]]:
+  def categorizePrices(cards: List[Dict[str, Any]]) -> Dict[Type[CardCategorizer], Dict[str, float]]:
     """
     Returns a map from category to card name to price.
     """
-    catToNameToPrice: Dict[str, Dict[str, float]] = {}
+    catToNameToPrice: Dict[Type[CardCategorizer], Dict[str, float]] = {}
 
     # For each card, get the price of each category it is
     for card in cards:
@@ -766,7 +790,7 @@ class DoubleMasters2022Collectors(object):
         catToNameToPrice[cat][name] = price
 
       if len(catToPrice) == 0:
-        cat = "UNCATEGORIZABLE"
+        cat = Uncategorizable
         if cat not in catToNameToPrice:
           catToNameToPrice[cat] = {}
         catToNameToPrice[cat][name] = 0.0
@@ -774,13 +798,13 @@ class DoubleMasters2022Collectors(object):
     return catToNameToPrice
 
   @staticmethod
-  def getCatToPriceForCard(card: Dict[str, Any]) -> Dict[str, float]:
-    catToPrice: Dict[str, float] = {}
+  def getCatToPriceForCard(card: Dict[str, Any]) -> Dict[Type[CardCategorizer], float]:
+    catToPrice: Dict[Type[CardCategorizer], float] = {}
 
     # Textured first (and if so, that's it)
     p = TexturedCategorizer.getPrice(card)
     if p is not None:
-      catToPrice[TexturedCategorizer.getCatName()] = p
+      catToPrice[TexturedCategorizer] = p
       return catToPrice
     
     # Commons
@@ -811,7 +835,7 @@ class DoubleMasters2022Collectors(object):
 
 class DistUtil(object):
   @staticmethod
-  def getDistInfo(catToPrices: Dict[str, List[float]], exclPrice: float = 0.0) -> Dict[str, Any]:
+  def getDistInfo(catToPrices: Dict[Type[CardCategorizer], List[float]], exclPrice: float = 0.0) -> Dict[Type[CardCategorizer], Any]:
     catToDistInfo = {}
     for cat, prices in catToPrices.items():
       pricesFiltered: List[float] = [
@@ -820,14 +844,67 @@ class DistUtil(object):
         if p >= exclPrice
       ]
       if len(pricesFiltered) > 0:
+        # n = len(pricesFiltered)
+        # total = sum(pricesFiltered)
+        # med = median(pricesFiltered)
+        # avg = mean(pricesFiltered)
+        # prob = cat.getProbability()
+        # ev = prob * avg
+
+        # if exclPrice == 0.0:
+        #   catToDistInfo[cat] = {
+        #     "n": n,
+        #     "prob": round(prob, 5),
+        #     "ev": round(ev, 2),
+        #     "sum": round(total, 2),
+        #     "med": round(med, 2),
+        #     "avg": round(avg, 2),
+        #   }
+        # else:
+        #   orig_n = len(prices)
+        #   orig_total = sum(prices)
+        #   orig_med = median(prices)
+        #   orig_avg = mean(prices)
+        #   orig_ev = prob * orig_avg
+        #   catToDistInfo[cat] = {
+        #     "orig_n": orig_n,
+        #     "orig_ev": round(orig_ev, 2),
+        #     "orig_sum": round(orig_total, 2),
+        #     "orig_med": round(orig_med, 2),
+        #     "orig_avg": round(orig_avg, 2),
+        #   }
+
+        orig_n = len(prices)
+        n = len(pricesFiltered)
+        total = sum(pricesFiltered)
+        med = median(pricesFiltered)
+        avg = mean(pricesFiltered)
+        avg_ep = total / orig_n
+        prob = cat.getProbability()
+        ev = prob * avg_ep
+
         catToDistInfo[cat] = {
-          "n": len(pricesFiltered),
-          "n_orig": len(prices),
-          "sum": round(sum(pricesFiltered), 2),
-          "med": round(median(pricesFiltered), 2),
-          "avg": round(mean(pricesFiltered), 2),
-          "avg_orig": round(sum(pricesFiltered) / len(prices), 2),
+          "n": n,
+          "prob": round(prob, 5),
+          "ev": round(ev, 2),
+          "sum": round(total, 2),
+          "med": round(med, 2),
+          "avg": round(avg, 2),
         }
+
+        if exclPrice > 0.0:
+          orig_total = sum(prices)
+          orig_med = median(prices)
+          orig_avg = mean(prices)
+          orig_ev = prob * orig_avg
+          catToDistInfo[cat].update({
+            "orig_n": orig_n,
+            "orig_ev": round(orig_ev, 2),
+            "orig_sum": round(orig_total, 2),
+            "orig_med": round(orig_med, 2),
+            "orig_avg": round(orig_avg, 2),
+          })
+
     return catToDistInfo
     
 
@@ -843,7 +920,7 @@ print(f"{name} has {len(cards)} cards")
 catToNameToPrice = DoubleMasters2022Collectors.categorizePrices(cards)
 
 # Try also looking at it a bit of a different way
-nameToCatToPrice: Dict[str, Dict[str, float]] = {}
+nameToCatToPrice: Dict[str, Dict[Type[CardCategorizer], float]] = {}
 for cat, nameToPrice in catToNameToPrice.items():
   for name, price in nameToPrice.items():
     if name not in nameToCatToPrice:
@@ -851,11 +928,13 @@ for cat, nameToPrice in catToNameToPrice.items():
     nameToCatToPrice[name][cat] = price
 
 print("\nCategory to name to price:\n")
-pprint(catToNameToPrice)
+# print(json.dumps(catToNameToPrice, indent=2))
+print(catToNameToPrice)
 print("\nName to category to price:\n")
-pprint(nameToCatToPrice)
+# print(json.dumps(nameToCatToPrice, indent=2))
+print(nameToCatToPrice)
 
-catToPrices: Dict[str, List[float]] = {
+catToPrices: Dict[Type[CardCategorizer], List[float]] = {
   cat: list(nameToPrice.values())
   for cat, nameToPrice in catToNameToPrice.items()
 }
@@ -868,7 +947,23 @@ pprint(catToDistInfo)
 print(f"\n\nCategory to distribution info (exclusive price = ${ep}):\n")
 pprint(catToDistInfoEP)
 
+catnameToEV = {
+  cat.getCatName(): distInfo['ev']
+  for cat, distInfo in catToDistInfo.items()
+}
+catnameToEVEP = {
+  cat.getCatName(): distInfo['ev']
+  for cat, distInfo in catToDistInfoEP.items()
+}
+print("\n\nCategory to EV:\n")
+pprint(catnameToEV)
+print(f"\n\nCategory to EV (exclusive price = ${ep}):\n")
+pprint(catnameToEVEP)
 
+totalEV = round(sum(list(catnameToEV.values())), 2)
+totalEVEP = round(sum(list(catnameToEVEP.values())), 2)
+print(f"\n\nTotal EV: {totalEV}")
+print(f"\n\nTotal EV (exclusive price = ${ep}): {totalEVEP}")
 
 
 
