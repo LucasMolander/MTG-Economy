@@ -10,6 +10,13 @@ from file_util import FileUtil
 
 # TODO @nocommit Make this a singleton because there is state associated with it
 class TCGPlayerAPI(object):
+  """
+  General workflow for onboarding new sets:
+    1. Get the product ID from the URL manually via the page in TCGPlayer
+    2. getProductSKUIDs(<the product ID you got from step 1>)
+    3. Put the SKU ID into sets.json
+    4. Run `python main.py storeboxes --set=<new set code or name>`
+  """
   KEYS_PATH = 'keys.json'
   KEY_NAME = 'tcgplayer'
 

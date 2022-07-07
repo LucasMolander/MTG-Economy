@@ -28,7 +28,7 @@ class SetUtil(object):
     'reserved',
     'foil',
     'nonfoil',
-    'fininshes',
+    'finishes',
     'variation',
     'set_type',
     'rarity',
@@ -39,6 +39,8 @@ class SetUtil(object):
     'textless',
     'booster',
     'prices',
+    'prices',
+    'promo_types',
   }
 
 

@@ -1,4 +1,37 @@
 {
+  "Double Masters": {
+    "code":            "2xm",
+    "productID":       214823,
+    "skuID":           4432837,
+    "masterpieceCode": null,
+    "collectorEdInfo": null,
+    "nPacks":          24,
+    "packsPerFoil":    0.5,
+    "rarityCounts": {
+      "basicLand": 0,
+      "common":    91,
+      "uncommon":  80,
+      "rare":      121,
+      "mythic":    40
+    }
+  },
+  "Double Masters 2022": {
+    "code":            "2x2",
+    "productID":       271506,
+    "skuID":           5589871,
+    "masterpieceCode": null,
+    "collectorEdInfo": null,
+    "nPacks":          24,
+    "packsPerFoil":    0.5,
+    "rarityCounts": {
+      "basicLand": 0,
+      "common":    91,
+      "uncommon":  80,
+      "rare":      121,
+      "mythic":    40
+    },
+    "TODO @nocommit UPDATE THE RARITY COUNTS ONCE THEY ARE PUBLIC": 42069696969
+  },
   "Modern Masters": {
     "code":            "mma",
     "productID":       68104,

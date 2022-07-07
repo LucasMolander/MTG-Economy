@@ -39,6 +39,14 @@
     "code": "dom",
     "marketPrice": 233.15
   },
+  "Double Masters": {
+    "code": "2xm",
+    "marketPrice": 632.12
+  },
+  "Double Masters 2022": {
+    "code": "2x2",
+    "marketPrice": 340.64
+  },
   "Eternal Masters": {
     "code": "ema",
     "marketPrice": 487.96
