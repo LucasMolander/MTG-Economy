@@ -667,14 +667,15 @@ class DistInfoEP(DistInfo):
 
   @staticmethod
   def fromRegular(ep: DistInfo, allPrices: List[float]) -> "DistInfoEP":
+    ratio = ep.n / len(allPrices)
     return DistInfoEP(
       prob=ep.prob,
       n=ep.n,
       n_exp=ep.n_exp,
-      ev=ep.ev,
-      sum=ep.sum,
-      med=ep.med,
-      avg=ep.avg,
+      ev=ep.ev * ratio,
+      sum=ep.sum * ratio,
+      med=ep.med * ratio,
+      avg=ep.avg * ratio,
       orig_n=len(allPrices),
       orig_ev=mean(allPrices) * ep.prob,
       orig_sum=sum(allPrices),
@@ -805,6 +806,14 @@ class DoubleMasters2022Collectors(MTGSetHandler):
   NAME = "Double Masters 2022"
   CODE = "2x2"
 
+  # Based on this post from reddit:
+  # /r/mtgfinance/comments/vqj904/2x2_collector_mythic_pull_rates/
+  # The raios for Mythic / Rare are:
+  #   * Foil: 7:1
+  #   * Foil-etched: 7:1
+  #   * Borderless: 4:1
+  #   * Borderless Foil: 4:1
+
   # Regular, borderless, foil-etched
   n_c =  92; n_bl_c =  9
   n_u =  80; n_bl_u = 21
@@ -817,16 +826,16 @@ class DoubleMasters2022Collectors(MTGSetHandler):
   two_bl_u = 2.0 * (n_bl_u / (n_bl_c + n_bl_u))
 
   # 1 Foil Rare/Mythic
-  f_r = n_r / (n_r + n_m)
-  f_m = n_m / (n_r + n_m)
+  f_r = 6 / 7
+  f_m = 1 / 7
 
   # 1 Foil-etched Rare/Mythic
-  fe_r = n_fe_r / (n_fe_r + n_fe_m)
-  fe_m = n_fe_m / (n_fe_r + n_fe_m)
+  fe_r = 6 / 7
+  fe_m = 1 / 7
 
   # 1 Non-foil borderless Rare/Mythic
-  bl_r = n_bl_r / (n_bl_r + n_bl_m)
-  bl_m = n_bl_m / (n_bl_r + n_bl_m)
+  bl_r = 3 / 4
+  bl_m = 1 / 4
 
   # 1 Foil borderless Rare/Mythic
   # This slot also has a 3% chance of being Textured
