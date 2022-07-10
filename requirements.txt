@@ -2,3 +2,4 @@ scipy
 requests
 prettytable
 sanitize_filename
+matplotlib

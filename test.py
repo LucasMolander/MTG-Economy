@@ -6,6 +6,7 @@ import json
 from enum import Enum, IntEnum
 from typing import ClassVar, Optional, Tuple, Dict, Any, List, Type
 from card_categorizers import CardCategorizer
+from plot_util import PlotUtil
 from set_handlers import DoubleMasters2022Collectors
 
 from tcgplayer_api import TCGPlayerAPI
@@ -200,6 +201,10 @@ cards = SetUtil.loadFromFile(setName=name)
 print(f"{name} has {len(cards)} cards")
 
 catToNameToPrice = mtgSet.categorizePrices(cards)
+catToPrices = {
+  cat: list(nameToPrice.values())
+  for cat, nameToPrice in catToNameToPrice.items()
+}
 # Try also looking at it a bit of a different way
 nameToCatToPrice = mtgSet.reorderCatToNameToPrice(catToNameToPrice)
 
@@ -228,8 +233,44 @@ print(json.dumps(catToEVEP, indent=2, cls=MyJSONEncoder))
 totalEV = round(sum(list(catToEV.values())), 2)
 totalEVEP = round(sum(list(catToEVEP.values())), 2)
 print(f"\n\nTotal EV: {totalEV}")
-print(f"\n\nTotal EV (exclusive price = ${ep}): {totalEVEP}")
+print(f"Total EV (EP = ${ep}): {totalEVEP}")
 
+
+def binarySearch(v: float, vals: List[float]) -> int:
+  def binarySearchImpl(v: float, vals: List[float], lo: int, hi: int) -> int:
+    mid = ((hi - lo) // 2) + lo
+    if lo > hi or lo <= -1 or hi >= len(vals):
+      return mid
+    if vals[mid] == v:
+      return mid
+    elif vals[mid] < v:
+      return binarySearchImpl(v, vals, mid + 1, hi)
+    else:
+      return binarySearchImpl(v, vals, lo, mid - 1)
+
+  return binarySearchImpl(v, vals, 0, len(vals) - 1)
+
+nPacks = 10000
+packVals = sorted([mtgSet.randomPackVal(catToPrices) for _ in range(nPacks)])
+packValsEP = sorted([mtgSet.randomPackVal(catToPrices, exclPrice=ep) for _ in range(nPacks)])
+
+packsMean = round(mean(packVals), 2)
+packsMed  = round(median(packVals), 2)
+packsMeanEP = round(mean(packValsEP), 2)
+packsMedEP  = round(median(packValsEP), 2)
+print(f"\n\nMean:   ${packsMean}\nMedian: ${packsMed}")
+print(f"\nEP ${ep} Mean:   ${packsMeanEP}\nEP ${ep} Median: ${packsMedEP}")
+
+wantVal = round(257 / 4, 2)
+wantIdx = binarySearch(wantVal, packVals)
+wantPct = round(100.0 * (wantIdx / nPacks), 2)
+wantIdxEP = binarySearch(wantVal, packValsEP)
+wantPctEP = round(100.0 * (wantIdxEP / nPacks), 2)
+print(f"\nWant val: ${wantVal}")
+print(f"Percentile:           {wantPct}")
+print(f"Percentile EP ${ep}:   {wantPctEP}")
+
+# PlotUtil.makeHist(randomPackVals)
 
 
 # TCGPlayerAPI.init()

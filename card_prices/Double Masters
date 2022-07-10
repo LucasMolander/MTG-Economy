@@ -44,9 +44,9 @@
       "eur": "7.45",
       "eur_foil": "7.99",
       "tix": "0.13",
-      "usd": "11.17",
+      "usd": "11.18",
       "usd_etched": null,
-      "usd_foil": "12.34"
+      "usd_foil": "12.42"
     },
     "rarity": "rare",
     "reserved": false,
@@ -73,9 +73,9 @@
       "eur": "12.50",
       "eur_foil": "15.94",
       "tix": null,
-      "usd": "18.23",
+      "usd": "17.93",
       "usd_etched": null,
-      "usd_foil": "18.60"
+      "usd_foil": "18.57"
     },
     "promo_types": [
       "boxtopper",
@@ -126,10 +126,10 @@
     "name": "Adaptive Automaton",
     "nonfoil": true,
     "prices": {
-      "eur": "2.34",
+      "eur": "2.81",
       "eur_foil": "3.10",
       "tix": "0.02",
-      "usd": "3.57",
+      "usd": "3.45",
       "usd_etched": null,
       "usd_foil": "4.68"
     },
@@ -152,12 +152,12 @@
     "name": "Ad Nauseam",
     "nonfoil": true,
     "prices": {
-      "eur": "4.34",
-      "eur_foil": "9.50",
+      "eur": "5.22",
+      "eur_foil": "12.95",
       "tix": "0.06",
-      "usd": "8.63",
+      "usd": "9.35",
       "usd_etched": null,
-      "usd_foil": "16.46"
+      "usd_foil": "16.49"
     },
     "rarity": "rare",
     "reserved": false,
@@ -230,12 +230,12 @@
     "name": "Ancient Stirrings",
     "nonfoil": true,
     "prices": {
-      "eur": "0.16",
-      "eur_foil": "0.49",
+      "eur": "0.21",
+      "eur_foil": "0.28",
       "tix": "0.03",
       "usd": "0.22",
       "usd_etched": null,
-      "usd_foil": "0.23"
+      "usd_foil": "0.24"
     },
     "rarity": "common",
     "reserved": false,
@@ -259,7 +259,7 @@
       "eur": "0.15",
       "eur_foil": "0.10",
       "tix": "0.04",
-      "usd": "0.04",
+      "usd": "0.03",
       "usd_etched": null,
       "usd_foil": "0.09"
     },
@@ -282,8 +282,8 @@
     "name": "Apprentice Wizard",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
-      "eur_foil": "0.24",
+      "eur": "0.07",
+      "eur_foil": "0.04",
       "tix": "0.03",
       "usd": "0.13",
       "usd_etched": null,
@@ -308,10 +308,10 @@
     "name": "Archangel of Thune",
     "nonfoil": true,
     "prices": {
-      "eur": "19.89",
-      "eur_foil": "23.31",
-      "tix": "0.85",
-      "usd": "26.44",
+      "eur": "18.00",
+      "eur_foil": "20.00",
+      "tix": "0.81",
+      "usd": "26.01",
       "usd_etched": null,
       "usd_foil": "29.21"
     },
@@ -337,10 +337,10 @@
     "name": "Arcum Dagsson",
     "nonfoil": true,
     "prices": {
-      "eur": "3.37",
-      "eur_foil": "4.49",
+      "eur": "3.65",
+      "eur_foil": "3.00",
       "tix": "0.07",
-      "usd": "4.78",
+      "usd": "4.68",
       "usd_etched": null,
       "usd_foil": "6.54"
     },
@@ -363,8 +363,8 @@
     "name": "Argivian Restoration",
     "nonfoil": true,
     "prices": {
-      "eur": "0.08",
-      "eur_foil": "0.15",
+      "eur": "0.04",
+      "eur_foil": "0.25",
       "tix": "0.03",
       "usd": "0.07",
       "usd_etched": null,
@@ -392,10 +392,10 @@
     "name": "Arixmethes, Slumbering Isle",
     "nonfoil": true,
     "prices": {
-      "eur": "2.85",
+      "eur": "3.10",
       "eur_foil": "7.74",
-      "tix": "0.36",
-      "usd": "5.46",
+      "tix": "0.35",
+      "usd": "6.31",
       "usd_etched": null,
       "usd_foil": "7.81"
     },
@@ -418,12 +418,12 @@
     "name": "Ash Barrens",
     "nonfoil": true,
     "prices": {
-      "eur": "0.37",
-      "eur_foil": "0.30",
+      "eur": "0.22",
+      "eur_foil": "1.67",
       "tix": "2.26",
-      "usd": "0.41",
+      "usd": "0.35",
       "usd_etched": null,
-      "usd_foil": "0.70"
+      "usd_foil": "0.73"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -447,12 +447,12 @@
     "name": "Atraxa, Praetors' Voice",
     "nonfoil": true,
     "prices": {
-      "eur": "20.98",
-      "eur_foil": "35.00",
+      "eur": "26.53",
+      "eur_foil": "24.99",
       "tix": "2.27",
-      "usd": "29.50",
+      "usd": "29.68",
       "usd_etched": null,
-      "usd_foil": "37.33"
+      "usd_foil": "36.51"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -476,8 +476,8 @@
     "name": "Atraxa, Praetors' Voice",
     "nonfoil": true,
     "prices": {
-      "eur": "69.93",
-      "eur_foil": "84.99",
+      "eur": "72.50",
+      "eur_foil": "72.90",
       "tix": null,
       "usd": "77.14",
       "usd_etched": null,
@@ -506,12 +506,12 @@
     "name": "Auriok Salvagers",
     "nonfoil": true,
     "prices": {
-      "eur": "0.04",
-      "eur_foil": "0.70",
+      "eur": "0.12",
+      "eur_foil": "0.05",
       "tix": "0.03",
       "usd": "0.13",
       "usd_etched": null,
-      "usd_foil": "0.19"
+      "usd_foil": "0.18"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -532,10 +532,10 @@
     "name": "Austere Command",
     "nonfoil": true,
     "prices": {
-      "eur": "1.55",
+      "eur": "0.90",
       "eur_foil": "1.95",
       "tix": "0.07",
-      "usd": "2.02",
+      "usd": "1.99",
       "usd_etched": null,
       "usd_foil": "2.75"
     },
@@ -561,12 +561,12 @@
     "name": "Avacyn, Angel of Hope",
     "nonfoil": true,
     "prices": {
-      "eur": "24.95",
+      "eur": "31.08",
       "eur_foil": "30.00",
       "tix": "0.56",
-      "usd": "47.44",
+      "usd": "48.63",
       "usd_etched": null,
-      "usd_foil": "48.35"
+      "usd_foil": "48.36"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -593,7 +593,7 @@
       "eur": "57.44",
       "eur_foil": "82.99",
       "tix": null,
-      "usd": "83.91",
+      "usd": "84.05",
       "usd_etched": null,
       "usd_foil": "112.17"
     },
@@ -623,9 +623,9 @@
       "eur": "3.72",
       "eur_foil": "5.20",
       "tix": "1.18",
-      "usd": "4.07",
+      "usd": "3.77",
       "usd_etched": null,
-      "usd_foil": "8.71"
+      "usd_foil": "8.61"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -646,10 +646,10 @@
     "name": "Awakening Zone",
     "nonfoil": true,
     "prices": {
-      "eur": "0.85",
+      "eur": "1.32",
       "eur_foil": "2.60",
       "tix": "0.02",
-      "usd": "1.63",
+      "usd": "1.64",
       "usd_etched": null,
       "usd_foil": "4.37"
     },
@@ -672,12 +672,12 @@
     "name": "Balduvian Rage",
     "nonfoil": true,
     "prices": {
-      "eur": "0.15",
-      "eur_foil": "0.10",
+      "eur": "0.09",
+      "eur_foil": "0.02",
       "tix": "0.03",
-      "usd": "0.11",
+      "usd": "0.12",
       "usd_etched": null,
-      "usd_foil": "0.09"
+      "usd_foil": "0.10"
     },
     "rarity": "common",
     "reserved": false,
@@ -698,10 +698,10 @@
     "name": "Baleful Strix",
     "nonfoil": true,
     "prices": {
-      "eur": "2.50",
-      "eur_foil": "17.86",
-      "tix": "0.86",
-      "usd": "2.44",
+      "eur": "2.40",
+      "eur_foil": "12.00",
+      "tix": "0.87",
+      "usd": "2.45",
       "usd_etched": null,
       "usd_foil": "12.60"
     },
@@ -724,12 +724,12 @@
     "name": "Basalt Monolith",
     "nonfoil": true,
     "prices": {
-      "eur": "0.99",
-      "eur_foil": "1.32",
-      "tix": "0.08",
-      "usd": "2.52",
+      "eur": "1.00",
+      "eur_foil": "2.49",
+      "tix": "0.11",
+      "usd": "2.39",
       "usd_etched": null,
-      "usd_foil": "2.40"
+      "usd_foil": "2.35"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -753,7 +753,7 @@
       "eur": "4.42",
       "eur_foil": "4.50",
       "tix": "0.13",
-      "usd": "1.16",
+      "usd": "1.13",
       "usd_etched": null,
       "usd_foil": "4.66"
     },
@@ -776,10 +776,10 @@
     "name": "Batterskull",
     "nonfoil": true,
     "prices": {
-      "eur": "6.13",
+      "eur": "6.00",
       "eur_foil": "12.84",
       "tix": "1.38",
-      "usd": "7.17",
+      "usd": "6.99",
       "usd_etched": null,
       "usd_foil": "9.25"
     },
@@ -805,9 +805,9 @@
       "eur": "13.00",
       "eur_foil": "18.98",
       "tix": null,
-      "usd": "17.88",
+      "usd": "17.75",
       "usd_etched": null,
-      "usd_foil": "18.07"
+      "usd_foil": "16.01"
     },
     "promo_types": [
       "boxtopper",
@@ -858,10 +858,10 @@
     "name": "Beacon of Unrest",
     "nonfoil": true,
     "prices": {
-      "eur": "0.14",
+      "eur": "0.10",
       "eur_foil": "0.74",
       "tix": "0.02",
-      "usd": "0.29",
+      "usd": "0.30",
       "usd_etched": null,
       "usd_foil": "0.89"
     },
@@ -884,10 +884,10 @@
     "name": "Blade Splicer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.34",
-      "eur_foil": "0.80",
+      "eur": "0.21",
+      "eur_foil": "0.99",
       "tix": "0.03",
-      "usd": "0.53",
+      "usd": "0.54",
       "usd_etched": null,
       "usd_foil": "0.83"
     },
@@ -911,9 +911,9 @@
     "nonfoil": true,
     "prices": {
       "eur": "1.77",
-      "eur_foil": "4.00",
-      "tix": "0.09",
-      "usd": "2.13",
+      "eur_foil": "5.24",
+      "tix": "0.06",
+      "usd": "2.07",
       "usd_etched": null,
       "usd_foil": "4.10"
     },
@@ -936,12 +936,12 @@
     "name": "Blightsteel Colossus",
     "nonfoil": true,
     "prices": {
-      "eur": "44.91",
+      "eur": "41.50",
       "eur_foil": "39.99",
       "tix": "1.14",
-      "usd": "60.14",
+      "usd": "59.54",
       "usd_etched": null,
-      "usd_foil": "83.73"
+      "usd_foil": "82.41"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -962,7 +962,7 @@
     "name": "Blightsteel Colossus",
     "nonfoil": true,
     "prices": {
-      "eur": "74.99",
+      "eur": "75.00",
       "eur_foil": "84.98",
       "tix": null,
       "usd": "106.72",
@@ -992,7 +992,7 @@
     "name": "Blinkmoth Nexus",
     "nonfoil": true,
     "prices": {
-      "eur": "1.63",
+      "eur": "1.50",
       "eur_foil": "2.00",
       "tix": "0.20",
       "usd": "2.47",
@@ -1019,7 +1019,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.09",
-      "eur_foil": "0.14",
+      "eur_foil": "0.02",
       "tix": "0.04",
       "usd": "0.01",
       "usd_etched": null,
@@ -1044,10 +1044,10 @@
     "name": "Blood Moon",
     "nonfoil": true,
     "prices": {
-      "eur": "10.00",
+      "eur": "11.50",
       "eur_foil": "18.90",
       "tix": "3.67",
-      "usd": "8.38",
+      "usd": "8.37",
       "usd_etched": null,
       "usd_foil": "17.74"
     },
@@ -1070,12 +1070,12 @@
     "name": "Blood Moon",
     "nonfoil": true,
     "prices": {
-      "eur": "34.85",
+      "eur": "29.00",
       "eur_foil": "36.90",
       "tix": null,
       "usd": "32.39",
       "usd_etched": null,
-      "usd_foil": "30.04"
+      "usd_foil": "28.63"
     },
     "promo_types": [
       "boxtopper",
@@ -1100,7 +1100,7 @@
     "name": "Bloodshot Trainee",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
+      "eur": "0.01",
       "eur_foil": "0.10",
       "tix": "0.04",
       "usd": "0.01",
@@ -1126,9 +1126,9 @@
     "name": "Bloodspore Thrinax",
     "nonfoil": true,
     "prices": {
-      "eur": "0.23",
+      "eur": "0.20",
       "eur_foil": "1.00",
-      "tix": "0.03",
+      "tix": "0.02",
       "usd": "0.91",
       "usd_etched": null,
       "usd_foil": "1.08"
@@ -1152,8 +1152,8 @@
     "name": "Bone Picker",
     "nonfoil": true,
     "prices": {
-      "eur": "0.04",
-      "eur_foil": "0.25",
+      "eur": "0.10",
+      "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.08",
       "usd_etched": null,
@@ -1178,10 +1178,10 @@
     "name": "Boon Reflection",
     "nonfoil": true,
     "prices": {
-      "eur": "0.90",
-      "eur_foil": "1.45",
+      "eur": "0.66",
+      "eur_foil": "1.50",
       "tix": "0.02",
-      "usd": "3.26",
+      "usd": "3.43",
       "usd_etched": null,
       "usd_foil": "3.40"
     },
@@ -1207,7 +1207,7 @@
     "name": "Bosh, Iron Golem",
     "nonfoil": true,
     "prices": {
-      "eur": "0.02",
+      "eur": "0.12",
       "eur_foil": "0.49",
       "tix": "0.02",
       "usd": "0.10",
@@ -1236,10 +1236,10 @@
     "name": "Braids, Conjurer Adept",
     "nonfoil": true,
     "prices": {
-      "eur": "0.18",
-      "eur_foil": "0.75",
+      "eur": "0.35",
+      "eur_foil": "1.08",
       "tix": "0.02",
-      "usd": "0.90",
+      "usd": "0.85",
       "usd_etched": null,
       "usd_foil": "1.79"
     },
@@ -1262,12 +1262,12 @@
     "name": "Brainstorm",
     "nonfoil": true,
     "prices": {
-      "eur": "0.64",
-      "eur_foil": "0.78",
-      "tix": "0.05",
-      "usd": "0.50",
+      "eur": "0.40",
+      "eur_foil": "0.62",
+      "tix": "0.06",
+      "usd": "0.49",
       "usd_etched": null,
-      "usd_foil": "0.51"
+      "usd_foil": "0.52"
     },
     "rarity": "common",
     "reserved": false,
@@ -1288,12 +1288,12 @@
     "name": "Brainstorm",
     "nonfoil": true,
     "prices": {
-      "eur": "5.99",
-      "eur_foil": "8.00",
+      "eur": "5.95",
+      "eur_foil": "9.07",
       "tix": null,
-      "usd": "5.69",
+      "usd": "5.99",
       "usd_etched": null,
-      "usd_foil": "6.11"
+      "usd_foil": "6.30"
     },
     "promo_types": [
       "boxtopper",
@@ -1321,10 +1321,10 @@
     "name": "Breya, Etherium Shaper",
     "nonfoil": true,
     "prices": {
-      "eur": "4.29",
-      "eur_foil": "10.95",
+      "eur": "4.03",
+      "eur_foil": "6.89",
       "tix": "0.31",
-      "usd": "5.77",
+      "usd": "5.79",
       "usd_etched": null,
       "usd_foil": "10.51"
     },
@@ -1347,10 +1347,10 @@
     "name": "Brimstone Volley",
     "nonfoil": true,
     "prices": {
-      "eur": "0.14",
-      "eur_foil": "0.22",
+      "eur": "0.09",
+      "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.05",
+      "usd": "0.06",
       "usd_etched": null,
       "usd_foil": "0.10"
     },
@@ -1376,10 +1376,10 @@
     "name": "Brudiclad, Telchor Engineer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.64",
+      "eur": "0.25",
       "eur_foil": "0.75",
       "tix": "0.41",
-      "usd": "1.43",
+      "usd": "1.48",
       "usd_etched": null,
       "usd_foil": "3.67"
     },
@@ -1402,10 +1402,10 @@
     "name": "Buried Ruin",
     "nonfoil": true,
     "prices": {
-      "eur": "0.26",
-      "eur_foil": "0.52",
+      "eur": "0.28",
+      "eur_foil": "0.45",
       "tix": "0.03",
-      "usd": "0.49",
+      "usd": "0.50",
       "usd_etched": null,
       "usd_foil": "0.68"
     },
@@ -1428,12 +1428,12 @@
     "name": "Cascade Bluffs",
     "nonfoil": true,
     "prices": {
-      "eur": "4.40",
+      "eur": "4.90",
       "eur_foil": "8.47",
       "tix": "0.17",
       "usd": "3.80",
       "usd_etched": null,
-      "usd_foil": "7.68"
+      "usd_foil": "7.66"
     },
     "rarity": "rare",
     "reserved": false,
@@ -1454,9 +1454,9 @@
     "name": "Cast Down",
     "nonfoil": true,
     "prices": {
-      "eur": "0.21",
-      "eur_foil": "0.41",
-      "tix": "0.13",
+      "eur": "0.16",
+      "eur_foil": "0.22",
+      "tix": "0.15",
       "usd": "0.24",
       "usd_etched": null,
       "usd_foil": "0.23"
@@ -1483,7 +1483,7 @@
       "eur": "0.07",
       "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.20",
+      "usd": "0.19",
       "usd_etched": null,
       "usd_foil": "0.19"
     },
@@ -1509,7 +1509,7 @@
       "eur": "0.02",
       "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.05",
+      "usd": "0.07",
       "usd_etched": null,
       "usd_foil": "0.05"
     },
@@ -1532,12 +1532,12 @@
     "name": "Champion of Lambholt",
     "nonfoil": true,
     "prices": {
-      "eur": "0.19",
-      "eur_foil": "3.00",
+      "eur": "1.10",
+      "eur_foil": "1.65",
       "tix": "0.02",
       "usd": "0.32",
       "usd_etched": null,
-      "usd_foil": "3.58"
+      "usd_foil": "3.56"
     },
     "rarity": "rare",
     "reserved": false,
@@ -1558,12 +1558,12 @@
     "name": "Chatter of the Squirrel",
     "nonfoil": true,
     "prices": {
-      "eur": "0.16",
-      "eur_foil": "0.09",
+      "eur": "0.05",
+      "eur_foil": "0.22",
       "tix": "0.03",
-      "usd": "0.21",
+      "usd": "0.19",
       "usd_etched": null,
-      "usd_foil": "0.27"
+      "usd_foil": "0.26"
     },
     "rarity": "common",
     "reserved": false,
@@ -1584,7 +1584,7 @@
     "name": "Chief of the Foundry",
     "nonfoil": true,
     "prices": {
-      "eur": "0.10",
+      "eur": "0.04",
       "eur_foil": "0.10",
       "tix": "0.03",
       "usd": "0.13",
@@ -1610,10 +1610,10 @@
     "name": "Chord of Calling",
     "nonfoil": true,
     "prices": {
-      "eur": "4.13",
+      "eur": "3.37",
       "eur_foil": "3.00",
       "tix": "0.41",
-      "usd": "6.24",
+      "usd": "6.30",
       "usd_etched": null,
       "usd_foil": "6.46"
     },
@@ -1636,11 +1636,11 @@
     "nonfoil": false,
     "prices": {
       "eur": null,
-      "eur_foil": "2.50",
+      "eur_foil": "2.81",
       "tix": null,
       "usd": null,
       "usd_etched": null,
-      "usd_foil": "6.88"
+      "usd_foil": "7.01"
     },
     "promo_types": [
       "release",
@@ -1665,12 +1665,12 @@
     "name": "Chromatic Star",
     "nonfoil": true,
     "prices": {
-      "eur": "0.20",
-      "eur_foil": "0.27",
-      "tix": "0.23",
-      "usd": "0.34",
+      "eur": "0.14",
+      "eur_foil": "0.44",
+      "tix": "0.14",
+      "usd": "0.31",
       "usd_etched": null,
-      "usd_foil": "0.45"
+      "usd_foil": "0.44"
     },
     "rarity": "common",
     "reserved": false,
@@ -1691,12 +1691,12 @@
     "name": "Chrome Mox",
     "nonfoil": true,
     "prices": {
-      "eur": "39.99",
+      "eur": "49.95",
       "eur_foil": "50.00",
       "tix": "2.74",
-      "usd": "71.85",
+      "usd": "72.07",
       "usd_etched": null,
-      "usd_foil": "81.86"
+      "usd_foil": "81.67"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -1717,12 +1717,12 @@
     "name": "Chrome Mox",
     "nonfoil": true,
     "prices": {
-      "eur": "83.98",
+      "eur": "49.00",
       "eur_foil": "89.99",
       "tix": null,
-      "usd": "107.26",
+      "usd": "104.98",
       "usd_etched": null,
-      "usd_foil": "116.98"
+      "usd_foil": "117.72"
     },
     "promo_types": [
       "boxtopper",
@@ -1773,7 +1773,7 @@
     "name": "Clone Shell",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
+      "eur": "0.10",
       "eur_foil": "0.06",
       "tix": "0.03",
       "usd": "0.10",
@@ -1800,7 +1800,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.02",
-      "eur_foil": "0.05",
+      "eur_foil": "0.09",
       "tix": "0.03",
       "usd": "0.02",
       "usd_etched": null,
@@ -1826,7 +1826,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.19",
-      "eur_foil": "0.25",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.07",
       "usd_etched": null,
@@ -1877,10 +1877,10 @@
     "name": "Conjurer's Closet",
     "nonfoil": true,
     "prices": {
-      "eur": "4.18",
+      "eur": "3.83",
       "eur_foil": "4.99",
-      "tix": "0.03",
-      "usd": "7.93",
+      "tix": "0.02",
+      "usd": "8.32",
       "usd_etched": null,
       "usd_foil": "7.74"
     },
@@ -1929,8 +1929,8 @@
     "name": "Corridor Monitor",
     "nonfoil": true,
     "prices": {
-      "eur": "0.09",
-      "eur_foil": "0.10",
+      "eur": "0.20",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.02",
       "usd_etched": null,
@@ -1955,7 +1955,7 @@
     "name": "Costly Plunder",
     "nonfoil": true,
     "prices": {
-      "eur": "0.14",
+      "eur": "0.11",
       "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.17",
@@ -1981,12 +1981,12 @@
     "name": "Council's Judgment",
     "nonfoil": true,
     "prices": {
-      "eur": "2.00",
+      "eur": "1.90",
       "eur_foil": "3.49",
-      "tix": "0.10",
-      "usd": "2.65",
+      "tix": "0.13",
+      "usd": "2.73",
       "usd_etched": null,
-      "usd_foil": "2.44"
+      "usd_foil": "2.49"
     },
     "rarity": "rare",
     "reserved": false,
@@ -2007,10 +2007,10 @@
     "name": "Council's Judgment",
     "nonfoil": true,
     "prices": {
-      "eur": "4.74",
-      "eur_foil": "5.50",
+      "eur": "5.20",
+      "eur_foil": "7.00",
       "tix": null,
-      "usd": "5.63",
+      "usd": "5.55",
       "usd_etched": null,
       "usd_foil": "5.31"
     },
@@ -2037,7 +2037,7 @@
     "name": "Cragganwick Cremator",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
+      "eur": "0.02",
       "eur_foil": "0.35",
       "tix": "0.02",
       "usd": "0.09",
@@ -2063,10 +2063,10 @@
     "name": "Cranial Plating",
     "nonfoil": true,
     "prices": {
-      "eur": "0.20",
+      "eur": "0.33",
       "eur_foil": "0.50",
-      "tix": "0.34",
-      "usd": "0.49",
+      "tix": "0.37",
+      "usd": "0.46",
       "usd_etched": null,
       "usd_foil": "0.62"
     },
@@ -2089,7 +2089,7 @@
     "name": "Crib Swap",
     "nonfoil": true,
     "prices": {
-      "eur": "0.10",
+      "eur": "0.02",
       "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.20",
@@ -2115,12 +2115,12 @@
     "name": "Crop Rotation",
     "nonfoil": true,
     "prices": {
-      "eur": "0.83",
-      "eur_foil": "1.25",
-      "tix": "2.04",
-      "usd": "1.36",
+      "eur": "0.72",
+      "eur_foil": "1.19",
+      "tix": "1.98",
+      "usd": "1.38",
       "usd_etched": null,
-      "usd_foil": "1.44"
+      "usd_foil": "1.40"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -2141,12 +2141,12 @@
     "name": "Crop Rotation",
     "nonfoil": true,
     "prices": {
-      "eur": "9.00",
-      "eur_foil": "12.49",
+      "eur": "7.85",
+      "eur_foil": "12.99",
       "tix": null,
       "usd": "13.51",
       "usd_etched": null,
-      "usd_foil": "13.24"
+      "usd_foil": "13.04"
     },
     "promo_types": [
       "boxtopper",
@@ -2171,12 +2171,12 @@
     "name": "Crusader of Odric",
     "nonfoil": true,
     "prices": {
-      "eur": "0.09",
-      "eur_foil": "0.10",
+      "eur": "0.01",
+      "eur_foil": "0.11",
       "tix": "0.03",
       "usd": "0.06",
       "usd_etched": null,
-      "usd_foil": "0.09"
+      "usd_foil": "0.11"
     },
     "rarity": "common",
     "reserved": false,
@@ -2223,12 +2223,12 @@
     "name": "Culling Dais",
     "nonfoil": true,
     "prices": {
-      "eur": "0.12",
+      "eur": "0.14",
       "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.13",
       "usd_etched": null,
-      "usd_foil": "0.18"
+      "usd_foil": "0.19"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -2249,12 +2249,12 @@
     "name": "Cyclonic Rift",
     "nonfoil": true,
     "prices": {
-      "eur": "27.63",
-      "eur_foil": "35.00",
-      "tix": "0.31",
-      "usd": "33.87",
+      "eur": "25.36",
+      "eur_foil": "34.95",
+      "tix": "0.34",
+      "usd": "34.07",
       "usd_etched": null,
-      "usd_foil": "39.45"
+      "usd_foil": "39.10"
     },
     "rarity": "rare",
     "reserved": false,
@@ -2275,12 +2275,12 @@
     "name": "Cyclonic Rift",
     "nonfoil": true,
     "prices": {
-      "eur": "32.00",
-      "eur_foil": "50.95",
+      "eur": "40.00",
+      "eur_foil": "57.47",
       "tix": null,
-      "usd": "60.67",
+      "usd": "60.05",
       "usd_etched": null,
-      "usd_foil": "62.64"
+      "usd_foil": "61.29"
     },
     "promo_types": [
       "boxtopper",
@@ -2305,12 +2305,12 @@
     "name": "Dark Confidant",
     "nonfoil": true,
     "prices": {
-      "eur": "22.50",
+      "eur": "18.20",
       "eur_foil": "24.99",
       "tix": "2.17",
-      "usd": "26.79",
+      "usd": "26.58",
       "usd_etched": null,
-      "usd_foil": "35.01"
+      "usd_foil": "34.94"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -2336,7 +2336,7 @@
       "tix": null,
       "usd": "40.37",
       "usd_etched": null,
-      "usd_foil": "37.58"
+      "usd_foil": "37.03"
     },
     "promo_types": [
       "boxtopper",
@@ -2364,10 +2364,10 @@
     "name": "Dark Depths",
     "nonfoil": true,
     "prices": {
-      "eur": "12.49",
-      "eur_foil": "16.00",
+      "eur": "13.88",
+      "eur_foil": "16.17",
       "tix": "2.73",
-      "usd": "16.55",
+      "usd": "16.61",
       "usd_etched": null,
       "usd_foil": "19.52"
     },
@@ -2390,7 +2390,7 @@
     "name": "Darksteel Axe",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
+      "eur": "0.14",
       "eur_foil": "0.05",
       "tix": "0.03",
       "usd": "0.08",
@@ -2416,12 +2416,12 @@
     "name": "Darksteel Citadel",
     "nonfoil": true,
     "prices": {
-      "eur": "0.29",
+      "eur": "0.39",
       "eur_foil": "0.44",
       "tix": "0.06",
-      "usd": "0.45",
+      "usd": "0.41",
       "usd_etched": null,
-      "usd_foil": "0.64"
+      "usd_foil": "0.70"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -2442,10 +2442,10 @@
     "name": "Darksteel Forge",
     "nonfoil": true,
     "prices": {
-      "eur": "9.81",
-      "eur_foil": "12.00",
+      "eur": "12.05",
+      "eur_foil": "12.50",
       "tix": "0.13",
-      "usd": "18.87",
+      "usd": "19.45",
       "usd_etched": null,
       "usd_foil": "24.68"
     },
@@ -2469,7 +2469,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.05",
-      "eur_foil": "0.15",
+      "eur_foil": "0.02",
       "tix": "0.02",
       "usd": "0.04",
       "usd_etched": null,
@@ -2494,8 +2494,8 @@
     "name": "Deathreap Ritual",
     "nonfoil": true,
     "prices": {
-      "eur": "0.36",
-      "eur_foil": "0.19",
+      "eur": "0.13",
+      "eur_foil": "0.39",
       "tix": "0.04",
       "usd": "0.21",
       "usd_etched": null,
@@ -2520,12 +2520,12 @@
     "name": "Death's Shadow",
     "nonfoil": true,
     "prices": {
-      "eur": "4.53",
+      "eur": "4.90",
       "eur_foil": "12.11",
-      "tix": "0.83",
-      "usd": "4.37",
+      "tix": "0.87",
+      "usd": "4.41",
       "usd_etched": null,
-      "usd_foil": "8.81"
+      "usd_foil": "8.72"
     },
     "rarity": "rare",
     "reserved": false,
@@ -2546,10 +2546,10 @@
     "name": "Deepglow Skate",
     "nonfoil": true,
     "prices": {
-      "eur": "1.21",
+      "eur": "1.46",
       "eur_foil": "2.99",
       "tix": "0.64",
-      "usd": "3.20",
+      "usd": "3.36",
       "usd_etched": null,
       "usd_foil": "6.04"
     },
@@ -2572,7 +2572,7 @@
     "name": "Defiant Salvager",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
+      "eur": "0.02",
       "eur_foil": "0.04",
       "tix": "0.03",
       "usd": "0.03",
@@ -2624,12 +2624,12 @@
     "name": "Disciple of Bolas",
     "nonfoil": true,
     "prices": {
-      "eur": "0.19",
+      "eur": "0.34",
       "eur_foil": "1.06",
       "tix": "0.02",
       "usd": "0.28",
       "usd_etched": null,
-      "usd_foil": "0.89"
+      "usd_foil": "0.90"
     },
     "rarity": "rare",
     "reserved": false,
@@ -2650,12 +2650,12 @@
     "name": "Disciple of the Vault",
     "nonfoil": true,
     "prices": {
-      "eur": "0.21",
-      "eur_foil": "0.25",
-      "tix": "0.04",
-      "usd": "1.07",
+      "eur": "0.49",
+      "eur_foil": "0.20",
+      "tix": "0.03",
+      "usd": "1.14",
       "usd_etched": null,
-      "usd_foil": "2.51"
+      "usd_foil": "2.47"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -2677,7 +2677,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.02",
-      "eur_foil": "0.02",
+      "eur_foil": "0.10",
       "tix": "0.02",
       "usd": "0.02",
       "usd_etched": null,
@@ -2702,7 +2702,7 @@
     "name": "Divest",
     "nonfoil": true,
     "prices": {
-      "eur": "0.02",
+      "eur": "0.11",
       "eur_foil": "0.18",
       "tix": "0.03",
       "usd": "0.10",
@@ -2728,10 +2728,10 @@
     "name": "Doomed Necromancer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.30",
+      "eur": "0.25",
       "eur_foil": "0.20",
       "tix": "0.02",
-      "usd": "0.24",
+      "usd": "0.25",
       "usd_etched": null,
       "usd_foil": "0.73"
     },
@@ -2754,12 +2754,12 @@
     "name": "Doubling Season",
     "nonfoil": true,
     "prices": {
-      "eur": "52.95",
-      "eur_foil": "54.85",
-      "tix": "0.55",
-      "usd": "84.82",
+      "eur": "37.00",
+      "eur_foil": "53.90",
+      "tix": "0.64",
+      "usd": "84.61",
       "usd_etched": null,
-      "usd_foil": "86.00"
+      "usd_foil": "86.31"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -2781,11 +2781,11 @@
     "nonfoil": true,
     "prices": {
       "eur": "79.95",
-      "eur_foil": "88.00",
+      "eur_foil": "119.99",
       "tix": null,
-      "usd": "123.98",
+      "usd": "123.48",
       "usd_etched": null,
-      "usd_foil": "156.02"
+      "usd_foil": "156.60"
     },
     "promo_types": [
       "boxtopper",
@@ -2813,9 +2813,9 @@
       "eur": "0.15",
       "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.51",
+      "usd": "0.48",
       "usd_etched": null,
-      "usd_foil": "0.62"
+      "usd_foil": "0.61"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -2862,10 +2862,10 @@
     "name": "Drown in Sorrow",
     "nonfoil": true,
     "prices": {
-      "eur": "0.02",
-      "eur_foil": "0.22",
+      "eur": "0.01",
+      "eur_foil": "0.25",
       "tix": "0.03",
-      "usd": "0.04",
+      "usd": "0.06",
       "usd_etched": null,
       "usd_foil": "0.13"
     },
@@ -2888,9 +2888,9 @@
     "name": "Dualcaster Mage",
     "nonfoil": true,
     "prices": {
-      "eur": "0.27",
+      "eur": "0.23",
       "eur_foil": "4.00",
-      "tix": "0.42",
+      "tix": "0.46",
       "usd": "0.29",
       "usd_etched": null,
       "usd_foil": "4.32"
@@ -2914,12 +2914,12 @@
     "name": "Duplicant",
     "nonfoil": true,
     "prices": {
-      "eur": "0.29",
+      "eur": "0.30",
       "eur_foil": "2.00",
       "tix": "0.02",
-      "usd": "0.30",
+      "usd": "0.29",
       "usd_etched": null,
-      "usd_foil": "1.05"
+      "usd_foil": "1.03"
     },
     "rarity": "rare",
     "reserved": false,
@@ -2967,7 +2967,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.09",
-      "eur_foil": "0.02",
+      "eur_foil": "0.19",
       "tix": "0.03",
       "usd": "0.07",
       "usd_etched": null,
@@ -2992,12 +2992,12 @@
     "name": "Endless Atlas",
     "nonfoil": true,
     "prices": {
-      "eur": "1.72",
+      "eur": "0.85",
       "eur_foil": "2.40",
-      "tix": "0.73",
-      "usd": "3.30",
+      "tix": "0.71",
+      "usd": "3.63",
       "usd_etched": null,
-      "usd_foil": "5.60"
+      "usd_foil": "5.64"
     },
     "rarity": "rare",
     "reserved": false,
@@ -3018,12 +3018,12 @@
     "name": "Engineered Explosives",
     "nonfoil": true,
     "prices": {
-      "eur": "12.00",
-      "eur_foil": "17.00",
-      "tix": "10.92",
-      "usd": "11.33",
+      "eur": "16.52",
+      "eur_foil": "17.95",
+      "tix": "10.98",
+      "usd": "11.24",
       "usd_etched": null,
-      "usd_foil": "17.06"
+      "usd_foil": "16.88"
     },
     "rarity": "rare",
     "reserved": false,
@@ -3070,12 +3070,12 @@
     "name": "Ensnaring Bridge",
     "nonfoil": true,
     "prices": {
-      "eur": "16.95",
+      "eur": "17.00",
       "eur_foil": "24.90",
-      "tix": "6.00",
-      "usd": "18.55",
+      "tix": "5.97",
+      "usd": "18.74",
       "usd_etched": null,
-      "usd_foil": "22.93"
+      "usd_foil": "22.85"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -3122,10 +3122,10 @@
     "name": "Ethersworn Canonist",
     "nonfoil": true,
     "prices": {
-      "eur": "5.23",
-      "eur_foil": "12.99",
-      "tix": "0.22",
-      "usd": "5.46",
+      "eur": "4.50",
+      "eur_foil": "10.00",
+      "tix": "0.24",
+      "usd": "5.47",
       "usd_etched": null,
       "usd_foil": "10.57"
     },
@@ -3148,10 +3148,10 @@
     "name": "Everflowing Chalice",
     "nonfoil": true,
     "prices": {
-      "eur": "0.02",
-      "eur_foil": "0.18",
+      "eur": "0.24",
+      "eur_foil": "0.37",
       "tix": "0.03",
-      "usd": "0.49",
+      "usd": "0.47",
       "usd_etched": null,
       "usd_foil": "0.55"
     },
@@ -3174,8 +3174,8 @@
     "name": "Executioner's Capsule",
     "nonfoil": true,
     "prices": {
-      "eur": "0.07",
-      "eur_foil": "0.49",
+      "eur": "0.12",
+      "eur_foil": "0.50",
       "tix": "0.03",
       "usd": "0.10",
       "usd_etched": null,
@@ -3200,12 +3200,12 @@
     "name": "Expedition Map",
     "nonfoil": true,
     "prices": {
-      "eur": "0.73",
-      "eur_foil": "1.66",
-      "tix": "0.04",
-      "usd": "2.11",
+      "eur": "0.87",
+      "eur_foil": "1.36",
+      "tix": "0.05",
+      "usd": "2.31",
       "usd_etched": null,
-      "usd_foil": "2.20"
+      "usd_foil": "2.24"
     },
     "rarity": "common",
     "reserved": false,
@@ -3226,12 +3226,12 @@
     "name": "Expedition Map",
     "nonfoil": true,
     "prices": {
-      "eur": "22.95",
+      "eur": "18.00",
       "eur_foil": "31.74",
       "tix": null,
-      "usd": "19.62",
+      "usd": "19.52",
       "usd_etched": null,
-      "usd_foil": "23.00"
+      "usd_foil": "21.61"
     },
     "promo_types": [
       "boxtopper",
@@ -3256,10 +3256,10 @@
     "name": "Exploration",
     "nonfoil": true,
     "prices": {
-      "eur": "17.96",
-      "eur_foil": "18.99",
-      "tix": "7.20",
-      "usd": "21.48",
+      "eur": "16.67",
+      "eur_foil": "23.31",
+      "tix": "6.79",
+      "usd": "22.80",
       "usd_etched": null,
       "usd_foil": "27.46"
     },
@@ -3283,11 +3283,11 @@
     "nonfoil": true,
     "prices": {
       "eur": "25.00",
-      "eur_foil": "33.50",
+      "eur_foil": "33.00",
       "tix": null,
-      "usd": "37.38",
+      "usd": "37.30",
       "usd_etched": null,
-      "usd_foil": "39.42"
+      "usd_foil": "39.19"
     },
     "promo_types": [
       "boxtopper",
@@ -3338,12 +3338,12 @@
     "name": "Falkenrath Aristocrat",
     "nonfoil": true,
     "prices": {
-      "eur": "0.22",
+      "eur": "0.10",
       "eur_foil": "0.60",
       "tix": "0.02",
       "usd": "0.35",
       "usd_etched": null,
-      "usd_foil": "0.69"
+      "usd_foil": "0.68"
     },
     "rarity": "rare",
     "reserved": false,
@@ -3364,12 +3364,12 @@
     "name": "Fatal Push",
     "nonfoil": true,
     "prices": {
-      "eur": "1.51",
-      "eur_foil": "1.64",
-      "tix": "0.30",
-      "usd": "3.44",
+      "eur": "1.54",
+      "eur_foil": "1.95",
+      "tix": "0.44",
+      "usd": "3.39",
       "usd_etched": null,
-      "usd_foil": "3.24"
+      "usd_foil": "3.30"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -3390,12 +3390,12 @@
     "name": "Fatal Push",
     "nonfoil": true,
     "prices": {
-      "eur": "10.79",
+      "eur": "12.00",
       "eur_foil": "12.00",
       "tix": null,
-      "usd": "13.16",
+      "usd": "13.68",
       "usd_etched": null,
-      "usd_foil": "13.09"
+      "usd_foil": "13.65"
     },
     "promo_types": [
       "boxtopper",
@@ -3446,10 +3446,10 @@
     "name": "Fetid Heath",
     "nonfoil": true,
     "prices": {
-      "eur": "4.56",
+      "eur": "4.00",
       "eur_foil": "3.99",
       "tix": "0.19",
-      "usd": "3.29",
+      "usd": "3.25",
       "usd_etched": null,
       "usd_foil": "8.99"
     },
@@ -3472,8 +3472,8 @@
     "name": "Fierce Empath",
     "nonfoil": true,
     "prices": {
-      "eur": "0.09",
-      "eur_foil": "0.13",
+      "eur": "0.02",
+      "eur_foil": "0.03",
       "tix": "0.03",
       "usd": "0.14",
       "usd_etched": null,
@@ -3498,12 +3498,12 @@
     "name": "Fire-Lit Thicket",
     "nonfoil": true,
     "prices": {
-      "eur": "3.96",
-      "eur_foil": "5.90",
+      "eur": "4.52",
+      "eur_foil": "3.50",
       "tix": "0.14",
-      "usd": "7.15",
+      "usd": "7.27",
       "usd_etched": null,
-      "usd_foil": "8.63"
+      "usd_foil": "8.70"
     },
     "rarity": "rare",
     "reserved": false,
@@ -3525,7 +3525,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.10",
-      "eur_foil": "0.05",
+      "eur_foil": "0.12",
       "tix": "0.03",
       "usd": "0.06",
       "usd_etched": null,
@@ -3550,8 +3550,8 @@
     "name": "Flickerwisp",
     "nonfoil": true,
     "prices": {
-      "eur": "0.21",
-      "eur_foil": "0.36",
+      "eur": "0.15",
+      "eur_foil": "0.05",
       "tix": "0.04",
       "usd": "0.10",
       "usd_etched": null,
@@ -3576,12 +3576,12 @@
     "name": "Flooded Grove",
     "nonfoil": true,
     "prices": {
-      "eur": "3.91",
+      "eur": "4.76",
       "eur_foil": "7.95",
-      "tix": "0.17",
-      "usd": "3.58",
+      "tix": "0.14",
+      "usd": "3.53",
       "usd_etched": null,
-      "usd_foil": "5.39"
+      "usd_foil": "5.30"
     },
     "rarity": "rare",
     "reserved": false,
@@ -3602,10 +3602,10 @@
     "name": "Force of Will",
     "nonfoil": true,
     "prices": {
-      "eur": "83.33",
-      "eur_foil": "137.98",
-      "tix": "31.23",
-      "usd": "103.88",
+      "eur": "85.00",
+      "eur_foil": "138.99",
+      "tix": "31.87",
+      "usd": "106.16",
       "usd_etched": null,
       "usd_foil": "165.23"
     },
@@ -3628,12 +3628,12 @@
     "name": "Force of Will",
     "nonfoil": true,
     "prices": {
-      "eur": "188.00",
-      "eur_foil": "289.00",
+      "eur": "170.00",
+      "eur_foil": "289.99",
       "tix": null,
-      "usd": "230.35",
+      "usd": "231.46",
       "usd_etched": null,
-      "usd_foil": "294.27"
+      "usd_foil": "293.34"
     },
     "promo_types": [
       "boxtopper",
@@ -3658,12 +3658,12 @@
     "name": "Forest",
     "nonfoil": true,
     "prices": {
-      "eur": "1.45",
+      "eur": "1.47",
       "eur_foil": "3.90",
       "tix": null,
-      "usd": "1.50",
+      "usd": "1.57",
       "usd_etched": null,
-      "usd_foil": "3.29"
+      "usd_foil": "3.26"
     },
     "promo_types": [
       "boosterfun"
@@ -3690,9 +3690,9 @@
       "eur": "0.35",
       "eur_foil": "1.45",
       "tix": null,
-      "usd": "0.38",
+      "usd": "0.39",
       "usd_etched": null,
-      "usd_foil": "0.83"
+      "usd_foil": "0.84"
     },
     "promo_types": [
       "boosterfun"
@@ -3742,8 +3742,8 @@
     "name": "Frogify",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
-      "eur_foil": "0.45",
+      "eur": "0.09",
+      "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.17",
       "usd_etched": null,
@@ -3768,10 +3768,10 @@
     "name": "Fulminator Mage",
     "nonfoil": true,
     "prices": {
-      "eur": "1.81",
+      "eur": "0.69",
       "eur_foil": "2.38",
-      "tix": "1.05",
-      "usd": "1.04",
+      "tix": "1.04",
+      "usd": "0.99",
       "usd_etched": null,
       "usd_foil": "1.88"
     },
@@ -3794,12 +3794,12 @@
     "name": "Galvanic Blast",
     "nonfoil": true,
     "prices": {
-      "eur": "0.59",
-      "eur_foil": "0.82",
-      "tix": "0.26",
-      "usd": "0.44",
+      "eur": "0.34",
+      "eur_foil": "1.00",
+      "tix": "0.22",
+      "usd": "0.45",
       "usd_etched": null,
-      "usd_foil": "0.60"
+      "usd_foil": "0.61"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -3823,10 +3823,10 @@
     "name": "Geist of Saint Traft",
     "nonfoil": true,
     "prices": {
-      "eur": "1.39",
+      "eur": "1.50",
       "eur_foil": "2.60",
       "tix": "0.34",
-      "usd": "0.54",
+      "usd": "0.55",
       "usd_etched": null,
       "usd_foil": "2.89"
     },
@@ -3849,10 +3849,10 @@
     "name": "Gelatinous Genesis",
     "nonfoil": true,
     "prices": {
-      "eur": "0.10",
+      "eur": "0.34",
       "eur_foil": "0.02",
       "tix": "0.03",
-      "usd": "0.25",
+      "usd": "0.24",
       "usd_etched": null,
       "usd_foil": "0.26"
     },
@@ -3878,12 +3878,12 @@
     "name": "Geth, Lord of the Vault",
     "nonfoil": true,
     "prices": {
-      "eur": "0.98",
+      "eur": "1.00",
       "eur_foil": "2.39",
       "tix": "0.06",
-      "usd": "0.82",
+      "usd": "0.88",
       "usd_etched": null,
-      "usd_foil": "2.64"
+      "usd_foil": "2.68"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -3904,10 +3904,10 @@
     "name": "Ghor-Clan Rampager",
     "nonfoil": true,
     "prices": {
-      "eur": "0.13",
+      "eur": "0.20",
       "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.06",
+      "usd": "0.05",
       "usd_etched": null,
       "usd_foil": "0.06"
     },
@@ -3935,7 +3935,7 @@
       "tix": "0.03",
       "usd": "0.06",
       "usd_etched": null,
-      "usd_foil": "0.08"
+      "usd_foil": "0.07"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -3957,9 +3957,9 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.06",
-      "eur_foil": "0.20",
+      "eur_foil": "0.14",
       "tix": "0.03",
-      "usd": "0.05",
+      "usd": "0.06",
       "usd_etched": null,
       "usd_foil": "0.09"
     },
@@ -3982,8 +3982,8 @@
     "name": "Gleaming Barrier",
     "nonfoil": true,
     "prices": {
-      "eur": "0.10",
-      "eur_foil": "0.15",
+      "eur": "0.09",
+      "eur_foil": "0.10",
       "tix": "0.03",
       "usd": "0.12",
       "usd_etched": null,
@@ -4008,12 +4008,12 @@
     "name": "Glimmervoid",
     "nonfoil": true,
     "prices": {
-      "eur": "3.80",
-      "eur_foil": "8.22",
-      "tix": "0.21",
-      "usd": "3.68",
+      "eur": "5.00",
+      "eur_foil": "12.85",
+      "tix": "0.22",
+      "usd": "3.69",
       "usd_etched": null,
-      "usd_foil": "9.34"
+      "usd_foil": "9.18"
     },
     "rarity": "rare",
     "reserved": false,
@@ -4034,8 +4034,8 @@
     "name": "Glint-Sleeve Artisan",
     "nonfoil": true,
     "prices": {
-      "eur": "0.20",
-      "eur_foil": "0.02",
+      "eur": "0.09",
+      "eur_foil": "0.10",
       "tix": "0.02",
       "usd": "0.02",
       "usd_etched": null,
@@ -4060,8 +4060,8 @@
     "name": "Goblin Gaveleer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
-      "eur_foil": "0.15",
+      "eur": "0.14",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.10",
       "usd_etched": null,
@@ -4086,12 +4086,12 @@
     "name": "Goblin Guide",
     "nonfoil": true,
     "prices": {
-      "eur": "3.75",
+      "eur": "3.20",
       "eur_foil": "13.39",
-      "tix": "2.60",
-      "usd": "3.71",
+      "tix": "2.85",
+      "usd": "3.68",
       "usd_etched": null,
-      "usd_foil": "5.84"
+      "usd_foil": "5.85"
     },
     "rarity": "rare",
     "reserved": false,
@@ -4112,12 +4112,12 @@
     "name": "Goblin Guide",
     "nonfoil": true,
     "prices": {
-      "eur": "7.00",
-      "eur_foil": "8.69",
+      "eur": "11.90",
+      "eur_foil": "9.50",
       "tix": null,
-      "usd": "7.76",
+      "usd": "7.90",
       "usd_etched": null,
-      "usd_foil": "6.40"
+      "usd_foil": "6.38"
     },
     "promo_types": [
       "boxtopper",
@@ -4145,12 +4145,12 @@
     "name": "Godo, Bandit Warlord",
     "nonfoil": true,
     "prices": {
-      "eur": "1.01",
+      "eur": "0.25",
       "eur_foil": "4.00",
       "tix": "0.02",
-      "usd": "2.84",
+      "usd": "3.01",
       "usd_etched": null,
-      "usd_foil": "7.85"
+      "usd_foil": "7.84"
     },
     "rarity": "rare",
     "reserved": false,
@@ -4171,7 +4171,7 @@
     "name": "Golem Artisan",
     "nonfoil": true,
     "prices": {
-      "eur": "0.01",
+      "eur": "0.07",
       "eur_foil": "0.02",
       "tix": "0.02",
       "usd": "0.02",
@@ -4197,8 +4197,8 @@
     "name": "Golem-Skin Gauntlets",
     "nonfoil": true,
     "prices": {
-      "eur": "0.09",
-      "eur_foil": "0.22",
+      "eur": "0.17",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.18",
       "usd_etched": null,
@@ -4223,10 +4223,10 @@
     "name": "Grand Architect",
     "nonfoil": true,
     "prices": {
-      "eur": "0.53",
+      "eur": "0.30",
       "eur_foil": "0.81",
       "tix": "0.07",
-      "usd": "0.86",
+      "usd": "0.90",
       "usd_etched": null,
       "usd_foil": "1.49"
     },
@@ -4249,10 +4249,10 @@
     "name": "Graven Cairns",
     "nonfoil": true,
     "prices": {
-      "eur": "5.91",
+      "eur": "4.50",
       "eur_foil": "8.00",
-      "tix": "0.12",
-      "usd": "8.46",
+      "tix": "0.13",
+      "usd": "8.65",
       "usd_etched": null,
       "usd_foil": "10.62"
     },
@@ -4275,12 +4275,12 @@
     "name": "Greater Good",
     "nonfoil": true,
     "prices": {
-      "eur": "1.98",
-      "eur_foil": "2.59",
+      "eur": "2.29",
+      "eur_foil": "4.40",
       "tix": "0.02",
-      "usd": "2.18",
+      "usd": "2.14",
       "usd_etched": null,
-      "usd_foil": "3.87"
+      "usd_foil": "3.93"
     },
     "rarity": "rare",
     "reserved": false,
@@ -4301,12 +4301,12 @@
     "name": "Grim Lavamancer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.90",
-      "eur_foil": "2.99",
+      "eur": "0.50",
+      "eur_foil": "1.49",
       "tix": "0.07",
       "usd": "0.26",
       "usd_etched": null,
-      "usd_foil": "0.78"
+      "usd_foil": "0.81"
     },
     "rarity": "rare",
     "reserved": false,
@@ -4330,10 +4330,10 @@
     "name": "Hammer of Nazahn",
     "nonfoil": true,
     "prices": {
-      "eur": "8.64",
-      "eur_foil": "18.45",
+      "eur": "9.40",
+      "eur_foil": "17.84",
       "tix": "0.96",
-      "usd": "13.90",
+      "usd": "13.43",
       "usd_etched": null,
       "usd_foil": "22.29"
     },
@@ -4359,12 +4359,12 @@
     "name": "Hanna, Ship's Navigator",
     "nonfoil": true,
     "prices": {
-      "eur": "0.29",
-      "eur_foil": "1.50",
+      "eur": "0.70",
+      "eur_foil": "0.75",
       "tix": "0.03",
-      "usd": "0.36",
+      "usd": "0.37",
       "usd_etched": null,
-      "usd_foil": "3.24"
+      "usd_foil": "3.27"
     },
     "rarity": "rare",
     "reserved": false,
@@ -4385,10 +4385,10 @@
     "name": "Heartbeat of Spring",
     "nonfoil": true,
     "prices": {
-      "eur": "0.67",
-      "eur_foil": "1.45",
+      "eur": "1.00",
+      "eur_foil": "0.60",
       "tix": "0.02",
-      "usd": "2.25",
+      "usd": "2.33",
       "usd_etched": null,
       "usd_foil": "2.89"
     },
@@ -4437,12 +4437,12 @@
     "name": "Heat Shimmer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.55",
+      "eur": "0.40",
       "eur_foil": "0.60",
       "tix": "0.02",
-      "usd": "3.68",
+      "usd": "4.18",
       "usd_etched": null,
-      "usd_foil": "4.25"
+      "usd_foil": "4.17"
     },
     "rarity": "rare",
     "reserved": false,
@@ -4463,8 +4463,8 @@
     "name": "Hidden Stockpile",
     "nonfoil": true,
     "prices": {
-      "eur": "0.12",
-      "eur_foil": "0.12",
+      "eur": "0.08",
+      "eur_foil": "0.15",
       "tix": "0.04",
       "usd": "0.13",
       "usd_etched": null,
@@ -4489,10 +4489,10 @@
     "name": "High Market",
     "nonfoil": true,
     "prices": {
-      "eur": "0.71",
+      "eur": "1.33",
       "eur_foil": "3.49",
       "tix": "1.22",
-      "usd": "1.05",
+      "usd": "0.96",
       "usd_etched": null,
       "usd_foil": "3.58"
     },
@@ -4541,12 +4541,12 @@
     "name": "Ichor Wellspring",
     "nonfoil": true,
     "prices": {
-      "eur": "0.17",
-      "eur_foil": "0.13",
-      "tix": "0.10",
+      "eur": "0.30",
+      "eur_foil": "0.46",
+      "tix": "0.06",
       "usd": "0.24",
       "usd_etched": null,
-      "usd_foil": "0.23"
+      "usd_foil": "0.24"
     },
     "rarity": "common",
     "reserved": false,
@@ -4567,10 +4567,10 @@
     "name": "Imperial Recruiter",
     "nonfoil": true,
     "prices": {
-      "eur": "5.48",
-      "eur_foil": "12.50",
+      "eur": "6.99",
+      "eur_foil": "11.89",
       "tix": "0.93",
-      "usd": "5.84",
+      "usd": "5.81",
       "usd_etched": null,
       "usd_foil": "11.03"
     },
@@ -4593,10 +4593,10 @@
     "name": "Inkwell Leviathan",
     "nonfoil": true,
     "prices": {
-      "eur": "0.38",
-      "eur_foil": "0.36",
+      "eur": "0.20",
+      "eur_foil": "0.99",
       "tix": "0.02",
-      "usd": "0.40",
+      "usd": "0.39",
       "usd_etched": null,
       "usd_foil": "0.73"
     },
@@ -4619,8 +4619,8 @@
     "name": "Invigorate",
     "nonfoil": true,
     "prices": {
-      "eur": "0.13",
-      "eur_foil": "0.49",
+      "eur": "0.15",
+      "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.16",
       "usd_etched": null,
@@ -4645,12 +4645,12 @@
     "name": "Ion Storm",
     "nonfoil": true,
     "prices": {
-      "eur": "0.06",
+      "eur": "0.02",
       "eur_foil": "0.15",
       "tix": "0.02",
       "usd": "0.10",
       "usd_etched": null,
-      "usd_foil": "0.16"
+      "usd_foil": "0.15"
     },
     "rarity": "rare",
     "reserved": false,
@@ -4672,7 +4672,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.09",
-      "eur_foil": "0.15",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.03",
       "usd_etched": null,
@@ -4723,12 +4723,12 @@
     "name": "Island",
     "nonfoil": true,
     "prices": {
-      "eur": "1.19",
-      "eur_foil": "4.00",
+      "eur": "1.10",
+      "eur_foil": "4.25",
       "tix": null,
-      "usd": "1.36",
+      "usd": "1.35",
       "usd_etched": null,
-      "usd_foil": "4.06"
+      "usd_foil": "4.01"
     },
     "promo_types": [
       "boosterfun"
@@ -4753,11 +4753,11 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.35",
-      "eur_foil": "0.87",
+      "eur_foil": "0.86",
       "tix": null,
-      "usd": "0.29",
+      "usd": "0.31",
       "usd_etched": null,
-      "usd_foil": "1.12"
+      "usd_foil": "1.39"
     },
     "promo_types": [
       "boosterfun"
@@ -4781,12 +4781,12 @@
     "name": "Isochron Scepter",
     "nonfoil": true,
     "prices": {
-      "eur": "5.50",
+      "eur": "3.79",
       "eur_foil": "7.00",
-      "tix": "0.40",
-      "usd": "10.13",
+      "tix": "0.38",
+      "usd": "10.53",
       "usd_etched": null,
-      "usd_foil": "11.12"
+      "usd_foil": "11.07"
     },
     "rarity": "rare",
     "reserved": false,
@@ -4807,12 +4807,12 @@
     "name": "Izzet Charm",
     "nonfoil": true,
     "prices": {
-      "eur": "0.21",
-      "eur_foil": "0.71",
-      "tix": "0.05",
-      "usd": "0.36",
+      "eur": "0.14",
+      "eur_foil": "0.30",
+      "tix": "0.04",
+      "usd": "0.37",
       "usd_etched": null,
-      "usd_foil": "0.34"
+      "usd_foil": "0.35"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -4833,10 +4833,10 @@
     "name": "Jace, the Mind Sculptor",
     "nonfoil": true,
     "prices": {
-      "eur": "39.45",
+      "eur": "38.00",
       "eur_foil": "64.04",
-      "tix": "3.88",
-      "usd": "46.67",
+      "tix": "3.91",
+      "usd": "47.00",
       "usd_etched": null,
       "usd_foil": "55.22"
     },
@@ -4859,12 +4859,12 @@
     "name": "Jace, the Mind Sculptor",
     "nonfoil": true,
     "prices": {
-      "eur": "48.95",
+      "eur": "59.95",
       "eur_foil": "88.00",
       "tix": null,
-      "usd": "72.04",
+      "usd": "72.27",
       "usd_etched": null,
-      "usd_foil": "78.97"
+      "usd_foil": "78.73"
     },
     "promo_types": [
       "boxtopper",
@@ -4889,8 +4889,8 @@
     "name": "Jhoira's Familiar",
     "nonfoil": true,
     "prices": {
-      "eur": "0.17",
-      "eur_foil": "0.27",
+      "eur": "0.10",
+      "eur_foil": "0.23",
       "tix": "0.03",
       "usd": "0.41",
       "usd_etched": null,
@@ -4918,10 +4918,10 @@
     "name": "Jhoira, Weatherlight Captain",
     "nonfoil": true,
     "prices": {
-      "eur": "0.99",
-      "eur_foil": "2.99",
+      "eur": "1.23",
+      "eur_foil": "4.75",
       "tix": "0.02",
-      "usd": "2.04",
+      "usd": "2.07",
       "usd_etched": null,
       "usd_foil": "3.74"
     },
@@ -4977,11 +4977,11 @@
     "nonfoil": true,
     "prices": {
       "eur": "48.00",
-      "eur_foil": "63.90",
+      "eur_foil": "89.99",
       "tix": null,
-      "usd": "68.70",
+      "usd": "68.59",
       "usd_etched": null,
-      "usd_foil": "83.80"
+      "usd_foil": "83.34"
     },
     "promo_types": [
       "boxtopper",
@@ -5006,12 +5006,12 @@
     "name": "Karn Liberated",
     "nonfoil": true,
     "prices": {
-      "eur": "25.98",
-      "eur_foil": "30.95",
-      "tix": "4.19",
-      "usd": "20.85",
+      "eur": "22.30",
+      "eur_foil": "29.00",
+      "tix": "4.08",
+      "usd": "20.97",
       "usd_etched": null,
-      "usd_foil": "29.15"
+      "usd_foil": "28.86"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -5033,11 +5033,11 @@
     "nonfoil": true,
     "prices": {
       "eur": "37.85",
-      "eur_foil": "54.99",
+      "eur_foil": "49.99",
       "tix": null,
       "usd": "43.34",
       "usd_etched": null,
-      "usd_foil": "47.83"
+      "usd_foil": "47.23"
     },
     "promo_types": [
       "boxtopper",
@@ -5065,12 +5065,12 @@
     "name": "Karrthus, Tyrant of Jund",
     "nonfoil": true,
     "prices": {
-      "eur": "2.22",
+      "eur": "1.65",
       "eur_foil": "1.50",
       "tix": "0.17",
-      "usd": "4.99",
+      "usd": "4.92",
       "usd_etched": null,
-      "usd_foil": "5.37"
+      "usd_foil": "5.09"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -5092,7 +5092,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.02",
-      "eur_foil": "0.02",
+      "eur_foil": "0.04",
       "tix": "0.03",
       "usd": "0.10",
       "usd_etched": null,
@@ -5120,8 +5120,8 @@
     "name": "Kemba, Kha Regent",
     "nonfoil": true,
     "prices": {
-      "eur": "0.02",
-      "eur_foil": "0.54",
+      "eur": "0.10",
+      "eur_foil": "0.59",
       "tix": "0.02",
       "usd": "0.21",
       "usd_etched": null,
@@ -5147,7 +5147,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.12",
-      "eur_foil": "0.20",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.08",
       "usd_etched": null,
@@ -5198,12 +5198,12 @@
     "name": "Kuldotha Forgemaster",
     "nonfoil": true,
     "prices": {
-      "eur": "2.00",
+      "eur": "0.85",
       "eur_foil": "2.20",
       "tix": "0.02",
-      "usd": "3.93",
+      "usd": "3.95",
       "usd_etched": null,
-      "usd_foil": "4.92"
+      "usd_foil": "4.88"
     },
     "rarity": "rare",
     "reserved": false,
@@ -5224,12 +5224,12 @@
     "name": "Land Tax",
     "nonfoil": true,
     "prices": {
-      "eur": "24.89",
-      "eur_foil": "26.12",
-      "tix": "7.69",
-      "usd": "33.72",
+      "eur": "24.95",
+      "eur_foil": "29.95",
+      "tix": "7.56",
+      "usd": "33.69",
       "usd_etched": null,
-      "usd_foil": "41.01"
+      "usd_foil": "41.10"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -5250,12 +5250,12 @@
     "name": "Leonin Abunas",
     "nonfoil": true,
     "prices": {
-      "eur": "0.48",
-      "eur_foil": "2.18",
+      "eur": "0.74",
+      "eur_foil": "0.99",
       "tix": "0.02",
-      "usd": "1.67",
+      "usd": "1.61",
       "usd_etched": null,
-      "usd_foil": "1.42"
+      "usd_foil": "1.40"
     },
     "rarity": "rare",
     "reserved": false,
@@ -5276,10 +5276,10 @@
     "name": "Liege of the Tangle",
     "nonfoil": true,
     "prices": {
-      "eur": "0.20",
+      "eur": "0.09",
       "eur_foil": "0.50",
       "tix": "0.02",
-      "usd": "0.61",
+      "usd": "0.59",
       "usd_etched": null,
       "usd_foil": "0.85"
     },
@@ -5302,8 +5302,8 @@
     "name": "Lightning Axe",
     "nonfoil": true,
     "prices": {
-      "eur": "0.12",
-      "eur_foil": "1.54",
+      "eur": "0.11",
+      "eur_foil": "0.16",
       "tix": "0.03",
       "usd": "0.14",
       "usd_etched": null,
@@ -5328,12 +5328,12 @@
     "name": "Lightning Greaves",
     "nonfoil": true,
     "prices": {
-      "eur": "4.99",
-      "eur_foil": "4.50",
-      "tix": "0.08",
-      "usd": "5.89",
+      "eur": "4.83",
+      "eur_foil": "4.38",
+      "tix": "0.09",
+      "usd": "5.86",
       "usd_etched": null,
-      "usd_foil": "6.58"
+      "usd_foil": "6.56"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -5354,12 +5354,12 @@
     "name": "Lightning Greaves",
     "nonfoil": true,
     "prices": {
-      "eur": "19.89",
-      "eur_foil": "24.99",
+      "eur": "20.50",
+      "eur_foil": "24.49",
       "tix": null,
       "usd": "29.00",
       "usd_etched": null,
-      "usd_foil": "29.48"
+      "usd_foil": "28.17"
     },
     "promo_types": [
       "boxtopper",
@@ -5384,10 +5384,10 @@
     "name": "Lux Cannon",
     "nonfoil": true,
     "prices": {
-      "eur": "0.63",
-      "eur_foil": "0.94",
+      "eur": "0.99",
+      "eur_foil": "1.25",
       "tix": "0.02",
-      "usd": "1.47",
+      "usd": "1.48",
       "usd_etched": null,
       "usd_foil": "2.01"
     },
@@ -5411,11 +5411,11 @@
     "nonfoil": true,
     "prices": {
       "eur": "1.06",
-      "eur_foil": "1.99",
+      "eur_foil": "1.70",
       "tix": "0.03",
-      "usd": "2.58",
+      "usd": "2.65",
       "usd_etched": null,
-      "usd_foil": "3.02"
+      "usd_foil": "3.05"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -5436,10 +5436,10 @@
     "name": "Maelstrom Pulse",
     "nonfoil": true,
     "prices": {
-      "eur": "1.83",
+      "eur": "1.88",
       "eur_foil": "2.29",
       "tix": "0.13",
-      "usd": "1.16",
+      "usd": "1.15",
       "usd_etched": null,
       "usd_foil": "1.85"
     },
@@ -5489,7 +5489,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.12",
-      "eur_foil": "1.23",
+      "eur_foil": "0.49",
       "tix": "0.02",
       "usd": "0.17",
       "usd_etched": null,
@@ -5514,7 +5514,7 @@
     "name": "Magus of the Will",
     "nonfoil": true,
     "prices": {
-      "eur": "0.15",
+      "eur": "0.09",
       "eur_foil": "0.54",
       "tix": "0.02",
       "usd": "0.23",
@@ -5540,12 +5540,12 @@
     "name": "Mana Crypt",
     "nonfoil": true,
     "prices": {
-      "eur": "121.00",
+      "eur": "114.00",
       "eur_foil": "120.00",
       "tix": "10.14",
-      "usd": "172.21",
+      "usd": "170.29",
       "usd_etched": null,
-      "usd_foil": "206.71"
+      "usd_foil": "206.98"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -5566,12 +5566,12 @@
     "name": "Mana Crypt",
     "nonfoil": true,
     "prices": {
-      "eur": "100.00",
+      "eur": "165.42",
       "eur_foil": "234.75",
       "tix": null,
-      "usd": "274.95",
+      "usd": "274.82",
       "usd_etched": null,
-      "usd_foil": "313.54"
+      "usd_foil": "312.03"
     },
     "promo_types": [
       "boxtopper",
@@ -5596,12 +5596,12 @@
     "name": "Mana Echoes",
     "nonfoil": true,
     "prices": {
-      "eur": "8.88",
-      "eur_foil": "11.00",
+      "eur": "8.67",
+      "eur_foil": "7.35",
       "tix": "0.76",
-      "usd": "14.95",
+      "usd": "15.68",
       "usd_etched": null,
-      "usd_foil": "19.97"
+      "usd_foil": "19.83"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -5622,12 +5622,12 @@
     "name": "Manamorphose",
     "nonfoil": true,
     "prices": {
-      "eur": "2.32",
-      "eur_foil": "2.50",
-      "tix": "3.26",
-      "usd": "3.00",
+      "eur": "2.25",
+      "eur_foil": "2.97",
+      "tix": "3.30",
+      "usd": "3.18",
       "usd_etched": null,
-      "usd_foil": "3.13"
+      "usd_foil": "3.20"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -5648,12 +5648,12 @@
     "name": "Mana Reflection",
     "nonfoil": true,
     "prices": {
-      "eur": "4.27",
+      "eur": "3.80",
       "eur_foil": "10.05",
-      "tix": "0.02",
-      "usd": "11.19",
+      "tix": "0.03",
+      "usd": "11.37",
       "usd_etched": null,
-      "usd_foil": "13.80"
+      "usd_foil": "13.65"
     },
     "rarity": "rare",
     "reserved": false,
@@ -5674,12 +5674,12 @@
     "name": "Master of Etherium",
     "nonfoil": true,
     "prices": {
-      "eur": "0.54",
+      "eur": "0.75",
       "eur_foil": "1.31",
       "tix": "0.12",
       "usd": "0.35",
       "usd_etched": null,
-      "usd_foil": "0.95"
+      "usd_foil": "0.90"
     },
     "rarity": "rare",
     "reserved": false,
@@ -5700,8 +5700,8 @@
     "name": "Master Splicer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.08",
-      "eur_foil": "0.15",
+      "eur": "0.09",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.08",
       "usd_etched": null,
@@ -5726,10 +5726,10 @@
     "name": "Master Transmuter",
     "nonfoil": true,
     "prices": {
-      "eur": "1.21",
-      "eur_foil": "2.00",
+      "eur": "0.93",
+      "eur_foil": "2.60",
       "tix": "0.02",
-      "usd": "2.81",
+      "usd": "2.91",
       "usd_etched": null,
       "usd_foil": "4.99"
     },
@@ -5752,12 +5752,12 @@
     "name": "Masterwork of Ingenuity",
     "nonfoil": true,
     "prices": {
-      "eur": "0.19",
+      "eur": "0.40",
       "eur_foil": "1.70",
-      "tix": "0.42",
-      "usd": "0.45",
+      "tix": "0.41",
+      "usd": "0.47",
       "usd_etched": null,
-      "usd_foil": "3.14"
+      "usd_foil": "3.13"
     },
     "rarity": "rare",
     "reserved": false,
@@ -5778,12 +5778,12 @@
     "name": "Maze of Ith",
     "nonfoil": true,
     "prices": {
-      "eur": "9.97",
+      "eur": "8.63",
       "eur_foil": "13.00",
-      "tix": "1.13",
-      "usd": "12.55",
+      "tix": "1.04",
+      "usd": "12.25",
       "usd_etched": null,
-      "usd_foil": "16.59"
+      "usd_foil": "16.49"
     },
     "rarity": "rare",
     "reserved": false,
@@ -5807,10 +5807,10 @@
     "name": "Mazirek, Kraul Death Priest",
     "nonfoil": true,
     "prices": {
-      "eur": "2.81",
-      "eur_foil": "4.80",
-      "tix": "0.65",
-      "usd": "7.71",
+      "eur": "3.73",
+      "eur_foil": "5.00",
+      "tix": "0.71",
+      "usd": "8.06",
       "usd_etched": null,
       "usd_foil": "11.18"
     },
@@ -5833,10 +5833,10 @@
     "name": "Meddling Mage",
     "nonfoil": true,
     "prices": {
-      "eur": "1.33",
+      "eur": "1.82",
       "eur_foil": "2.49",
       "tix": "0.49",
-      "usd": "1.67",
+      "usd": "1.77",
       "usd_etched": null,
       "usd_foil": "2.14"
     },
@@ -5859,12 +5859,12 @@
     "name": "Meddling Mage",
     "nonfoil": true,
     "prices": {
-      "eur": "4.50",
+      "eur": "3.95",
       "eur_foil": "4.95",
       "tix": null,
       "usd": "3.84",
       "usd_etched": null,
-      "usd_foil": "3.89"
+      "usd_foil": "3.87"
     },
     "promo_types": [
       "boxtopper",
@@ -5889,12 +5889,12 @@
     "name": "Merciless Eviction",
     "nonfoil": true,
     "prices": {
-      "eur": "1.90",
+      "eur": "1.96",
       "eur_foil": "2.45",
       "tix": "0.02",
-      "usd": "1.57",
+      "usd": "1.59",
       "usd_etched": null,
-      "usd_foil": "3.83"
+      "usd_foil": "3.78"
     },
     "rarity": "rare",
     "reserved": false,
@@ -5915,10 +5915,10 @@
     "name": "Mesmeric Orb",
     "nonfoil": true,
     "prices": {
-      "eur": "5.75",
+      "eur": "4.76",
       "eur_foil": "8.99",
-      "tix": "0.32",
-      "usd": "10.92",
+      "tix": "0.34",
+      "usd": "10.85",
       "usd_etched": null,
       "usd_foil": "13.88"
     },
@@ -5941,10 +5941,10 @@
     "name": "Metallic Rebuke",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
-      "eur_foil": "0.22",
+      "eur": "0.08",
+      "eur_foil": "0.13",
       "tix": "0.04",
-      "usd": "0.21",
+      "usd": "0.19",
       "usd_etched": null,
       "usd_foil": "0.23"
     },
@@ -5968,11 +5968,11 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.05",
-      "eur_foil": "0.02",
+      "eur_foil": "0.10",
       "tix": "0.03",
       "usd": "0.01",
       "usd_etched": null,
-      "usd_foil": "0.06"
+      "usd_foil": "0.07"
     },
     "rarity": "common",
     "reserved": false,
@@ -5993,7 +5993,7 @@
     "name": "Might of the Masses",
     "nonfoil": true,
     "prices": {
-      "eur": "0.02",
+      "eur": "0.15",
       "eur_foil": "0.10",
       "tix": "0.04",
       "usd": "0.05",
@@ -6019,12 +6019,12 @@
     "name": "Mishra's Bauble",
     "nonfoil": true,
     "prices": {
-      "eur": "8.05",
-      "eur_foil": "10.13",
-      "tix": "18.97",
-      "usd": "7.73",
+      "eur": "7.95",
+      "eur_foil": "10.50",
+      "tix": "22.83",
+      "usd": "7.80",
       "usd_etched": null,
-      "usd_foil": "8.07"
+      "usd_foil": "8.27"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -6045,12 +6045,12 @@
     "name": "Mishra's Factory",
     "nonfoil": true,
     "prices": {
-      "eur": "0.11",
+      "eur": "0.14",
       "eur_foil": "0.25",
-      "tix": "0.03",
-      "usd": "0.11",
+      "tix": "0.04",
+      "usd": "0.12",
       "usd_etched": null,
-      "usd_foil": "0.10"
+      "usd_foil": "0.09"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -6097,12 +6097,12 @@
     "name": "Mountain",
     "nonfoil": true,
     "prices": {
-      "eur": "1.17",
-      "eur_foil": "2.90",
+      "eur": "0.90",
+      "eur_foil": "2.45",
       "tix": null,
-      "usd": "1.25",
+      "usd": "1.20",
       "usd_etched": null,
-      "usd_foil": "2.74"
+      "usd_foil": "2.76"
     },
     "promo_types": [
       "boosterfun"
@@ -6126,12 +6126,12 @@
     "name": "Mountain",
     "nonfoil": true,
     "prices": {
-      "eur": "0.35",
+      "eur": "0.75",
       "eur_foil": "0.40",
       "tix": null,
       "usd": "0.32",
       "usd_etched": null,
-      "usd_foil": "0.86"
+      "usd_foil": "0.89"
     },
     "promo_types": [
       "boosterfun"
@@ -6158,10 +6158,10 @@
     "name": "Mox Opal",
     "nonfoil": true,
     "prices": {
-      "eur": "59.99",
+      "eur": "46.48",
       "eur_foil": "49.00",
       "tix": "4.76",
-      "usd": "59.47",
+      "usd": "61.73",
       "usd_etched": null,
       "usd_foil": "72.83"
     },
@@ -6187,12 +6187,12 @@
     "name": "Mox Opal",
     "nonfoil": true,
     "prices": {
-      "eur": "65.00",
-      "eur_foil": "84.00",
+      "eur": "79.99",
+      "eur_foil": "84.99",
       "tix": null,
-      "usd": "94.96",
+      "usd": "95.00",
       "usd_etched": null,
-      "usd_foil": "104.67"
+      "usd_foil": "105.26"
     },
     "promo_types": [
       "boxtopper",
@@ -6217,9 +6217,9 @@
     "name": "Myr Battlesphere",
     "nonfoil": true,
     "prices": {
-      "eur": "0.20",
-      "eur_foil": "0.88",
-      "tix": "0.02",
+      "eur": "0.21",
+      "eur_foil": "1.10",
+      "tix": "0.03",
       "usd": "0.32",
       "usd_etched": null,
       "usd_foil": "3.10"
@@ -6243,8 +6243,8 @@
     "name": "Myr Retriever",
     "nonfoil": true,
     "prices": {
-      "eur": "0.18",
-      "eur_foil": "0.45",
+      "eur": "0.13",
+      "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.33",
       "usd_etched": null,
@@ -6269,12 +6269,12 @@
     "name": "Myrsmith",
     "nonfoil": true,
     "prices": {
-      "eur": "0.14",
-      "eur_foil": "0.08",
+      "eur": "0.08",
+      "eur_foil": "0.24",
       "tix": "0.03",
       "usd": "0.09",
       "usd_etched": null,
-      "usd_foil": "0.12"
+      "usd_foil": "0.11"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -6295,10 +6295,10 @@
     "name": "Mystic Gate",
     "nonfoil": true,
     "prices": {
-      "eur": "20.08",
-      "eur_foil": "27.50",
-      "tix": "0.89",
-      "usd": "23.95",
+      "eur": "23.46",
+      "eur_foil": "28.98",
+      "tix": "0.85",
+      "usd": "24.35",
       "usd_etched": null,
       "usd_foil": "35.41"
     },
@@ -6321,10 +6321,10 @@
     "name": "Noble Hierarch",
     "nonfoil": true,
     "prices": {
-      "eur": "13.50",
+      "eur": "10.49",
       "eur_foil": "15.77",
-      "tix": "1.16",
-      "usd": "11.00",
+      "tix": "1.20",
+      "usd": "10.94",
       "usd_etched": null,
       "usd_foil": "14.26"
     },
@@ -6350,9 +6350,9 @@
       "eur": "18.00",
       "eur_foil": "24.00",
       "tix": null,
-      "usd": "19.55",
+      "usd": "19.51",
       "usd_etched": null,
-      "usd_foil": "19.93"
+      "usd_foil": "19.79"
     },
     "promo_types": [
       "boxtopper",
@@ -6379,8 +6379,8 @@
     "prices": {
       "eur": "1.43",
       "eur_foil": "3.90",
-      "tix": "1.32",
-      "usd": "1.94",
+      "tix": "1.22",
+      "usd": "1.89",
       "usd_etched": null,
       "usd_foil": "2.93"
     },
@@ -6403,8 +6403,8 @@
     "name": "O-Naginata",
     "nonfoil": true,
     "prices": {
-      "eur": "0.13",
-      "eur_foil": "0.50",
+      "eur": "0.09",
+      "eur_foil": "0.23",
       "tix": "0.03",
       "usd": "0.19",
       "usd_etched": null,
@@ -6429,12 +6429,12 @@
     "name": "Open the Vaults",
     "nonfoil": true,
     "prices": {
-      "eur": "0.79",
+      "eur": "0.74",
       "eur_foil": "1.45",
       "tix": "0.02",
-      "usd": "2.09",
+      "usd": "2.06",
       "usd_etched": null,
-      "usd_foil": "2.68"
+      "usd_foil": "2.62"
     },
     "rarity": "rare",
     "reserved": false,
@@ -6481,12 +6481,12 @@
     "name": "Oubliette",
     "nonfoil": true,
     "prices": {
-      "eur": "0.76",
-      "eur_foil": "0.90",
-      "tix": "0.21",
-      "usd": "0.73",
+      "eur": "0.90",
+      "eur_foil": "0.50",
+      "tix": "0.20",
+      "usd": "0.87",
       "usd_etched": null,
-      "usd_foil": "1.01"
+      "usd_foil": "1.04"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -6507,10 +6507,10 @@
     "name": "Ovalchase Daredevil",
     "nonfoil": true,
     "prices": {
-      "eur": "0.23",
-      "eur_foil": "0.05",
+      "eur": "0.43",
+      "eur_foil": "0.49",
       "tix": "0.03",
-      "usd": "0.42",
+      "usd": "0.40",
       "usd_etched": null,
       "usd_foil": "0.51"
     },
@@ -6534,7 +6534,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.02",
-      "eur_foil": "0.10",
+      "eur_foil": "0.20",
       "tix": "0.02",
       "usd": "0.01",
       "usd_etched": null,
@@ -6560,7 +6560,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.02",
-      "eur_foil": "0.05",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.02",
       "usd_etched": null,
@@ -6585,12 +6585,12 @@
     "name": "Path to Exile",
     "nonfoil": true,
     "prices": {
-      "eur": "2.24",
-      "eur_foil": "2.95",
-      "tix": "0.11",
-      "usd": "2.84",
+      "eur": "2.91",
+      "eur_foil": "3.14",
+      "tix": "0.08",
+      "usd": "2.94",
       "usd_etched": null,
-      "usd_foil": "3.01"
+      "usd_foil": "3.05"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -6637,8 +6637,8 @@
     "name": "Pentad Prism",
     "nonfoil": true,
     "prices": {
-      "eur": "0.19",
-      "eur_foil": "0.19",
+      "eur": "0.15",
+      "eur_foil": "0.10",
       "tix": "0.03",
       "usd": "0.17",
       "usd_etched": null,
@@ -6663,12 +6663,12 @@
     "name": "Phyrexian Metamorph",
     "nonfoil": true,
     "prices": {
-      "eur": "3.15",
+      "eur": "1.80",
       "eur_foil": "3.00",
       "tix": "0.22",
-      "usd": "6.71",
+      "usd": "6.56",
       "usd_etched": null,
-      "usd_foil": "8.19"
+      "usd_foil": "7.56"
     },
     "rarity": "rare",
     "reserved": false,
@@ -6689,12 +6689,12 @@
     "name": "Phyrexian Metamorph",
     "nonfoil": true,
     "prices": {
-      "eur": "8.70",
-      "eur_foil": "9.98",
+      "eur": "9.45",
+      "eur_foil": "11.75",
       "tix": null,
-      "usd": "15.41",
+      "usd": "15.45",
       "usd_etched": null,
-      "usd_foil": "14.11"
+      "usd_foil": "14.35"
     },
     "promo_types": [
       "boxtopper",
@@ -6720,9 +6720,9 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.39",
-      "eur_foil": "2.98",
-      "tix": "0.06",
-      "usd": "0.85",
+      "eur_foil": "3.69",
+      "tix": "0.07",
+      "usd": "0.62",
       "usd_etched": null,
       "usd_foil": "2.85"
     },
@@ -6745,12 +6745,12 @@
     "name": "Plains",
     "nonfoil": true,
     "prices": {
-      "eur": "0.68",
-      "eur_foil": "2.48",
+      "eur": "0.69",
+      "eur_foil": "2.38",
       "tix": null,
-      "usd": "0.73",
+      "usd": "0.72",
       "usd_etched": null,
-      "usd_foil": "1.74"
+      "usd_foil": "1.80"
     },
     "promo_types": [
       "boosterfun"
@@ -6774,10 +6774,10 @@
     "name": "Plains",
     "nonfoil": true,
     "prices": {
-      "eur": "0.35",
+      "eur": "0.40",
       "eur_foil": "1.18",
       "tix": null,
-      "usd": "0.27",
+      "usd": "0.26",
       "usd_etched": null,
       "usd_foil": "0.54"
     },
@@ -6803,12 +6803,12 @@
     "name": "Pongify",
     "nonfoil": true,
     "prices": {
-      "eur": "1.17",
-      "eur_foil": "1.06",
+      "eur": "0.96",
+      "eur_foil": "2.29",
       "tix": "0.04",
-      "usd": "2.89",
+      "usd": "2.78",
       "usd_etched": null,
-      "usd_foil": "2.65"
+      "usd_foil": "2.74"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -6829,10 +6829,10 @@
     "name": "Progenitor Mimic",
     "nonfoil": true,
     "prices": {
-      "eur": "1.04",
-      "eur_foil": "1.00",
-      "tix": "0.02",
-      "usd": "1.62",
+      "eur": "0.73",
+      "eur_foil": "1.33",
+      "tix": "0.03",
+      "usd": "1.92",
       "usd_etched": null,
       "usd_foil": "2.52"
     },
@@ -6855,10 +6855,10 @@
     "name": "Puresteel Paladin",
     "nonfoil": true,
     "prices": {
-      "eur": "7.33",
+      "eur": "7.95",
       "eur_foil": "21.99",
-      "tix": "4.18",
-      "usd": "5.05",
+      "tix": "4.48",
+      "usd": "5.06",
       "usd_etched": null,
       "usd_foil": "11.94"
     },
@@ -6907,12 +6907,12 @@
     "name": "Pyrite Spellbomb",
     "nonfoil": true,
     "prices": {
-      "eur": "0.08",
+      "eur": "0.27",
       "eur_foil": "0.10",
       "tix": "0.03",
       "usd": "0.17",
       "usd_etched": null,
-      "usd_foil": "0.22"
+      "usd_foil": "0.23"
     },
     "rarity": "common",
     "reserved": false,
@@ -6933,12 +6933,12 @@
     "name": "Rage Reflection",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
-      "eur_foil": "0.95",
+      "eur": "0.39",
+      "eur_foil": "0.75",
       "tix": "0.02",
-      "usd": "0.54",
+      "usd": "0.57",
       "usd_etched": null,
-      "usd_foil": "0.88"
+      "usd_foil": "0.82"
     },
     "rarity": "rare",
     "reserved": false,
@@ -6959,8 +6959,8 @@
     "name": "Rapacious Dragon",
     "nonfoil": true,
     "prices": {
-      "eur": "0.09",
-      "eur_foil": "0.15",
+      "eur": "0.11",
+      "eur_foil": "0.18",
       "tix": "0.03",
       "usd": "0.13",
       "usd_etched": null,
@@ -6985,10 +6985,10 @@
     "name": "Ratchet Bomb",
     "nonfoil": true,
     "prices": {
-      "eur": "0.60",
+      "eur": "0.80",
       "eur_foil": "0.93",
-      "tix": "0.15",
-      "usd": "0.75",
+      "tix": "0.12",
+      "usd": "0.78",
       "usd_etched": null,
       "usd_foil": "1.10"
     },
@@ -7011,7 +7011,7 @@
     "name": "Ravenous Intruder",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
+      "eur": "0.03",
       "eur_foil": "0.10",
       "tix": "0.03",
       "usd": "0.04",
@@ -7037,10 +7037,10 @@
     "name": "Ravenous Trap",
     "nonfoil": true,
     "prices": {
-      "eur": "0.02",
+      "eur": "0.10",
       "eur_foil": "0.30",
-      "tix": "0.03",
-      "usd": "0.16",
+      "tix": "0.02",
+      "usd": "0.17",
       "usd_etched": null,
       "usd_foil": "0.36"
     },
@@ -7063,12 +7063,12 @@
     "name": "Reclamation Sage",
     "nonfoil": true,
     "prices": {
-      "eur": "0.14",
-      "eur_foil": "0.60",
+      "eur": "0.15",
+      "eur_foil": "0.35",
       "tix": "0.04",
-      "usd": "0.36",
+      "usd": "0.38",
       "usd_etched": null,
-      "usd_foil": "0.45"
+      "usd_foil": "0.47"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -7141,10 +7141,10 @@
     "name": "Reshape",
     "nonfoil": true,
     "prices": {
-      "eur": "0.84",
+      "eur": "0.50",
       "eur_foil": "1.40",
-      "tix": "0.03",
-      "usd": "2.38",
+      "tix": "0.02",
+      "usd": "2.35",
       "usd_etched": null,
       "usd_foil": "4.15"
     },
@@ -7167,8 +7167,8 @@
     "name": "Revoke Existence",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
-      "eur_foil": "0.49",
+      "eur": "0.04",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.08",
       "usd_etched": null,
@@ -7196,12 +7196,12 @@
     "name": "Rhys the Redeemed",
     "nonfoil": true,
     "prices": {
-      "eur": "1.49",
-      "eur_foil": "3.90",
+      "eur": "1.52",
+      "eur_foil": "3.99",
       "tix": "0.10",
-      "usd": "4.59",
+      "usd": "4.79",
       "usd_etched": null,
-      "usd_foil": "5.93"
+      "usd_foil": "6.05"
     },
     "rarity": "rare",
     "reserved": false,
@@ -7222,7 +7222,7 @@
     "name": "Riddlesmith",
     "nonfoil": true,
     "prices": {
-      "eur": "0.09",
+      "eur": "0.07",
       "eur_foil": "0.12",
       "tix": "0.03",
       "usd": "0.09",
@@ -7251,10 +7251,10 @@
     "name": "Riku of Two Reflections",
     "nonfoil": true,
     "prices": {
-      "eur": "3.19",
-      "eur_foil": "5.98",
+      "eur": "3.31",
+      "eur_foil": "3.95",
       "tix": "0.07",
-      "usd": "6.18",
+      "usd": "6.25",
       "usd_etched": null,
       "usd_foil": "12.49"
     },
@@ -7277,12 +7277,12 @@
     "name": "Rolling Earthquake",
     "nonfoil": true,
     "prices": {
-      "eur": "0.98",
+      "eur": "0.73",
       "eur_foil": "1.00",
       "tix": "0.21",
-      "usd": "2.93",
+      "usd": "3.05",
       "usd_etched": null,
-      "usd_foil": "4.54"
+      "usd_foil": "4.50"
     },
     "rarity": "rare",
     "reserved": false,
@@ -7303,12 +7303,12 @@
     "name": "Rugged Prairie",
     "nonfoil": true,
     "prices": {
-      "eur": "2.90",
+      "eur": "3.10",
       "eur_foil": "9.00",
       "tix": "0.13",
-      "usd": "2.79",
+      "usd": "2.76",
       "usd_etched": null,
-      "usd_foil": "6.37"
+      "usd_foil": "6.14"
     },
     "rarity": "rare",
     "reserved": false,
@@ -7329,12 +7329,12 @@
     "name": "Rush of Knowledge",
     "nonfoil": true,
     "prices": {
-      "eur": "0.02",
+      "eur": "0.13",
       "eur_foil": "0.10",
       "tix": "0.03",
-      "usd": "0.20",
+      "usd": "0.19",
       "usd_etched": null,
-      "usd_foil": "0.24"
+      "usd_foil": "0.23"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -7356,7 +7356,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.02",
-      "eur_foil": "0.10",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.02",
       "usd_etched": null,
@@ -7381,7 +7381,7 @@
     "name": "Salvage Titan",
     "nonfoil": true,
     "prices": {
-      "eur": "0.08",
+      "eur": "0.10",
       "eur_foil": "0.20",
       "tix": "0.02",
       "usd": "0.21",
@@ -7407,8 +7407,8 @@
     "name": "Sanctum Gargoyle",
     "nonfoil": true,
     "prices": {
-      "eur": "0.07",
-      "eur_foil": "0.09",
+      "eur": "0.02",
+      "eur_foil": "0.10",
       "tix": "0.04",
       "usd": "0.01",
       "usd_etched": null,
@@ -7460,7 +7460,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.05",
-      "eur_foil": "0.15",
+      "eur_foil": "0.12",
       "tix": "0.03",
       "usd": "0.08",
       "usd_etched": null,
@@ -7485,12 +7485,12 @@
     "name": "Savageborn Hydra",
     "nonfoil": true,
     "prices": {
-      "eur": "0.06",
+      "eur": "0.10",
       "eur_foil": "0.49",
       "tix": "0.03",
       "usd": "0.33",
       "usd_etched": null,
-      "usd_foil": "0.38"
+      "usd_foil": "0.39"
     },
     "rarity": "rare",
     "reserved": false,
@@ -7511,10 +7511,10 @@
     "name": "Sculpting Steel",
     "nonfoil": true,
     "prices": {
-      "eur": "0.73",
+      "eur": "0.60",
       "eur_foil": "2.25",
       "tix": "0.02",
-      "usd": "1.08",
+      "usd": "1.09",
       "usd_etched": null,
       "usd_foil": "2.85"
     },
@@ -7538,7 +7538,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.05",
-      "eur_foil": "0.13",
+      "eur_foil": "0.21",
       "tix": "0.02",
       "usd": "0.04",
       "usd_etched": null,
@@ -7592,10 +7592,10 @@
     "name": "Sen Triplets",
     "nonfoil": true,
     "prices": {
-      "eur": "2.49",
+      "eur": "1.89",
       "eur_foil": "4.45",
       "tix": "0.10",
-      "usd": "3.53",
+      "usd": "3.63",
       "usd_etched": null,
       "usd_foil": "6.43"
     },
@@ -7644,10 +7644,10 @@
     "name": "Shamanic Revelation",
     "nonfoil": true,
     "prices": {
-      "eur": "0.27",
+      "eur": "0.35",
       "eur_foil": "0.79",
       "tix": "0.03",
-      "usd": "0.38",
+      "usd": "0.39",
       "usd_etched": null,
       "usd_foil": "0.99"
     },
@@ -7673,12 +7673,12 @@
     "name": "Sharuum the Hegemon",
     "nonfoil": true,
     "prices": {
-      "eur": "0.51",
-      "eur_foil": "0.25",
+      "eur": "0.13",
+      "eur_foil": "0.35",
       "tix": "0.02",
-      "usd": "0.32",
+      "usd": "0.31",
       "usd_etched": null,
-      "usd_foil": "0.66"
+      "usd_foil": "0.67"
     },
     "rarity": "rare",
     "reserved": false,
@@ -7699,7 +7699,7 @@
     "name": "Sickleslicer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
+      "eur": "0.15",
       "eur_foil": "0.07",
       "tix": "0.03",
       "usd": "0.03",
@@ -7754,7 +7754,7 @@
       "eur": "0.20",
       "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.02",
+      "usd": "0.03",
       "usd_etched": null,
       "usd_foil": "0.04"
     },
@@ -7803,7 +7803,7 @@
     "name": "Skinwing",
     "nonfoil": true,
     "prices": {
-      "eur": "0.01",
+      "eur": "0.14",
       "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.02",
@@ -7829,12 +7829,12 @@
     "name": "Skirsdag High Priest",
     "nonfoil": true,
     "prices": {
-      "eur": "0.28",
-      "eur_foil": "0.75",
+      "eur": "0.25",
+      "eur_foil": "0.61",
       "tix": "0.02",
-      "usd": "0.26",
+      "usd": "0.25",
       "usd_etched": null,
-      "usd_foil": "0.36"
+      "usd_foil": "0.35"
     },
     "rarity": "rare",
     "reserved": false,
@@ -7858,12 +7858,12 @@
     "name": "Skithiryx, the Blight Dragon",
     "nonfoil": true,
     "prices": {
-      "eur": "8.49",
-      "eur_foil": "10.00",
-      "tix": "0.15",
-      "usd": "14.79",
+      "eur": "9.95",
+      "eur_foil": "10.95",
+      "tix": "0.17",
+      "usd": "15.03",
       "usd_etched": null,
-      "usd_foil": "23.66"
+      "usd_foil": "23.89"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -7887,7 +7887,7 @@
       "eur": "0.09",
       "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.12",
+      "usd": "0.13",
       "usd_etched": null,
       "usd_foil": "0.17"
     },
@@ -7910,10 +7910,10 @@
     "name": "Sneak Attack",
     "nonfoil": true,
     "prices": {
-      "eur": "10.78",
-      "eur_foil": "12.50",
-      "tix": "1.59",
-      "usd": "16.84",
+      "eur": "13.35",
+      "eur_foil": "12.99",
+      "tix": "1.57",
+      "usd": "16.66",
       "usd_etched": null,
       "usd_foil": "17.44"
     },
@@ -7936,12 +7936,12 @@
     "name": "Sneak Attack",
     "nonfoil": true,
     "prices": {
-      "eur": "17.50",
-      "eur_foil": "20.95",
+      "eur": "22.90",
+      "eur_foil": "19.94",
       "tix": null,
       "usd": "21.32",
       "usd_etched": null,
-      "usd_foil": "25.55"
+      "usd_foil": "24.69"
     },
     "promo_types": [
       "boxtopper",
@@ -7966,10 +7966,10 @@
     "name": "Spellskite",
     "nonfoil": true,
     "prices": {
-      "eur": "2.72",
-      "eur_foil": "4.95",
-      "tix": "0.32",
-      "usd": "3.58",
+      "eur": "2.50",
+      "eur_foil": "1.95",
+      "tix": "0.34",
+      "usd": "3.36",
       "usd_etched": null,
       "usd_foil": "5.29"
     },
@@ -7992,12 +7992,12 @@
     "name": "Sphinx of the Guildpact",
     "nonfoil": true,
     "prices": {
-      "eur": "0.10",
-      "eur_foil": "0.05",
+      "eur": "0.15",
+      "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.03",
       "usd_etched": null,
-      "usd_foil": "0.05"
+      "usd_foil": "0.06"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -8018,7 +8018,7 @@
     "name": "Sphinx Summoner",
     "nonfoil": true,
     "prices": {
-      "eur": "0.43",
+      "eur": "0.09",
       "eur_foil": "0.50",
       "tix": "0.03",
       "usd": "0.13",
@@ -8044,12 +8044,12 @@
     "name": "Springleaf Drum",
     "nonfoil": true,
     "prices": {
-      "eur": "1.35",
-      "eur_foil": "1.39",
-      "tix": "0.26",
-      "usd": "2.15",
+      "eur": "1.02",
+      "eur_foil": "3.67",
+      "tix": "0.32",
+      "usd": "2.11",
       "usd_etched": null,
-      "usd_foil": "2.48"
+      "usd_foil": "2.47"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -8071,7 +8071,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.05",
-      "eur_foil": "0.05",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.03",
       "usd_etched": null,
@@ -8096,10 +8096,10 @@
     "name": "Stoneforge Mystic",
     "nonfoil": true,
     "prices": {
-      "eur": "31.86",
-      "eur_foil": "43.00",
-      "tix": "2.21",
-      "usd": "37.26",
+      "eur": "33.32",
+      "eur_foil": "44.45",
+      "tix": "2.51",
+      "usd": "36.79",
       "usd_etched": null,
       "usd_foil": "45.10"
     },
@@ -8125,9 +8125,9 @@
       "eur": "66.95",
       "eur_foil": "80.19",
       "tix": null,
-      "usd": "64.40",
+      "usd": "64.94",
       "usd_etched": null,
-      "usd_foil": "66.60"
+      "usd_foil": "66.33"
     },
     "promo_types": [
       "boxtopper",
@@ -8152,10 +8152,10 @@
     "name": "Stonehewer Giant",
     "nonfoil": true,
     "prices": {
-      "eur": "1.65",
-      "eur_foil": "4.05",
+      "eur": "2.42",
+      "eur_foil": "2.00",
       "tix": "0.02",
-      "usd": "3.03",
+      "usd": "2.93",
       "usd_etched": null,
       "usd_foil": "4.69"
     },
@@ -8204,12 +8204,12 @@
     "name": "Sundering Titan",
     "nonfoil": true,
     "prices": {
-      "eur": "0.28",
+      "eur": "0.77",
       "eur_foil": "0.30",
       "tix": "0.19",
-      "usd": "0.62",
+      "usd": "0.64",
       "usd_etched": null,
-      "usd_foil": "1.58"
+      "usd_foil": "1.61"
     },
     "rarity": "rare",
     "reserved": false,
@@ -8230,12 +8230,12 @@
     "name": "Sunforger",
     "nonfoil": true,
     "prices": {
-      "eur": "0.37",
-      "eur_foil": "1.70",
+      "eur": "0.80",
+      "eur_foil": "1.00",
       "tix": "0.02",
-      "usd": "0.36",
+      "usd": "0.35",
       "usd_etched": null,
-      "usd_foil": "4.04"
+      "usd_foil": "4.07"
     },
     "rarity": "rare",
     "reserved": false,
@@ -8256,10 +8256,10 @@
     "name": "Sunken Ruins",
     "nonfoil": true,
     "prices": {
-      "eur": "13.86",
-      "eur_foil": "14.95",
-      "tix": "0.30",
-      "usd": "16.80",
+      "eur": "12.13",
+      "eur_foil": "14.00",
+      "tix": "0.28",
+      "usd": "16.21",
       "usd_etched": null,
       "usd_foil": "18.88"
     },
@@ -8282,7 +8282,7 @@
     "name": "Supernatural Stamina",
     "nonfoil": true,
     "prices": {
-      "eur": "0.03",
+      "eur": "0.12",
       "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.11",
@@ -8334,12 +8334,12 @@
     "name": "Swamp",
     "nonfoil": true,
     "prices": {
-      "eur": "2.15",
-      "eur_foil": "3.50",
+      "eur": "1.94",
+      "eur_foil": "4.18",
       "tix": null,
-      "usd": "1.25",
+      "usd": "1.24",
       "usd_etched": null,
-      "usd_foil": "3.14"
+      "usd_foil": "3.02"
     },
     "promo_types": [
       "boosterfun"
@@ -8392,7 +8392,7 @@
     "name": "Swiftblade Vindicator",
     "nonfoil": true,
     "prices": {
-      "eur": "0.41",
+      "eur": "0.20",
       "eur_foil": "0.50",
       "tix": "0.02",
       "usd": "0.35",
@@ -8418,10 +8418,10 @@
     "name": "Sword of Body and Mind",
     "nonfoil": true,
     "prices": {
-      "eur": "8.93",
+      "eur": "8.47",
       "eur_foil": "9.10",
       "tix": "0.35",
-      "usd": "14.09",
+      "usd": "14.78",
       "usd_etched": null,
       "usd_foil": "15.09"
     },
@@ -8444,12 +8444,12 @@
     "name": "Sword of Body and Mind",
     "nonfoil": true,
     "prices": {
-      "eur": "19.00",
+      "eur": "19.10",
       "eur_foil": "24.45",
       "tix": null,
-      "usd": "25.60",
+      "usd": "25.63",
       "usd_etched": null,
-      "usd_foil": "29.32"
+      "usd_foil": "29.24"
     },
     "promo_types": [
       "boxtopper",
@@ -8474,10 +8474,10 @@
     "name": "Sword of Feast and Famine",
     "nonfoil": true,
     "prices": {
-      "eur": "41.63",
+      "eur": "34.00",
       "eur_foil": "45.00",
       "tix": "1.62",
-      "usd": "53.61",
+      "usd": "53.90",
       "usd_etched": null,
       "usd_foil": "72.24"
     },
@@ -8505,7 +8505,7 @@
       "tix": null,
       "usd": "122.43",
       "usd_etched": null,
-      "usd_foil": "127.22"
+      "usd_foil": "127.90"
     },
     "promo_types": [
       "boxtopper",
@@ -8531,9 +8531,9 @@
     "nonfoil": true,
     "prices": {
       "eur": "32.02",
-      "eur_foil": "38.99",
+      "eur_foil": "38.00",
       "tix": "2.37",
-      "usd": "44.72",
+      "usd": "43.53",
       "usd_etched": null,
       "usd_foil": "60.08"
     },
@@ -8561,7 +8561,7 @@
       "tix": null,
       "usd": "93.52",
       "usd_etched": null,
-      "usd_foil": "97.82"
+      "usd_foil": "96.17"
     },
     "promo_types": [
       "boxtopper",
@@ -8586,10 +8586,10 @@
     "name": "Sword of Light and Shadow",
     "nonfoil": true,
     "prices": {
-      "eur": "13.60",
+      "eur": "11.00",
       "eur_foil": "13.45",
       "tix": "0.79",
-      "usd": "16.66",
+      "usd": "16.32",
       "usd_etched": null,
       "usd_foil": "25.96"
     },
@@ -8612,12 +8612,12 @@
     "name": "Sword of Light and Shadow",
     "nonfoil": true,
     "prices": {
-      "eur": "25.00",
-      "eur_foil": "30.00",
+      "eur": "26.00",
+      "eur_foil": "29.98",
       "tix": null,
-      "usd": "38.98",
+      "usd": "39.14",
       "usd_etched": null,
-      "usd_foil": "42.30"
+      "usd_foil": "42.28"
     },
     "promo_types": [
       "boxtopper",
@@ -8642,12 +8642,12 @@
     "name": "Sword of the Meek",
     "nonfoil": true,
     "prices": {
-      "eur": "1.30",
+      "eur": "1.77",
       "eur_foil": "3.24",
       "tix": "0.53",
-      "usd": "2.82",
+      "usd": "2.64",
       "usd_etched": null,
-      "usd_foil": "4.98"
+      "usd_foil": "4.89"
     },
     "rarity": "rare",
     "reserved": false,
@@ -8668,12 +8668,12 @@
     "name": "Sword of War and Peace",
     "nonfoil": true,
     "prices": {
-      "eur": "8.33",
+      "eur": "8.00",
       "eur_foil": "14.40",
       "tix": "0.71",
-      "usd": "11.12",
+      "usd": "11.88",
       "usd_etched": null,
-      "usd_foil": "15.56"
+      "usd_foil": "14.42"
     },
     "rarity": "mythic",
     "reserved": false,
@@ -8699,7 +8699,7 @@
       "tix": null,
       "usd": "28.48",
       "usd_etched": null,
-      "usd_foil": "32.61"
+      "usd_foil": "31.38"
     },
     "promo_types": [
       "boxtopper",
@@ -8725,7 +8725,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.20",
-      "eur_foil": "0.04",
+      "eur_foil": "0.15",
       "tix": "0.03",
       "usd": "0.02",
       "usd_etched": null,
@@ -8750,10 +8750,10 @@
     "name": "Tempered Steel",
     "nonfoil": true,
     "prices": {
-      "eur": "0.61",
+      "eur": "0.42",
       "eur_foil": "0.29",
       "tix": "0.03",
-      "usd": "1.79",
+      "usd": "1.77",
       "usd_etched": null,
       "usd_foil": "2.59"
     },
@@ -8776,8 +8776,8 @@
     "name": "Temur Battle Rage",
     "nonfoil": true,
     "prices": {
-      "eur": "0.14",
-      "eur_foil": "0.19",
+      "eur": "0.23",
+      "eur_foil": "0.18",
       "tix": "0.03",
       "usd": "0.11",
       "usd_etched": null,
@@ -8804,7 +8804,7 @@
     "prices": {
       "eur": "0.20",
       "eur_foil": "0.70",
-      "tix": "0.06",
+      "tix": "0.03",
       "usd": "0.25",
       "usd_etched": null,
       "usd_foil": "0.65"
@@ -8831,10 +8831,10 @@
     "name": "The Scarab God",
     "nonfoil": true,
     "prices": {
-      "eur": "21.50",
-      "eur_foil": "32.99",
-      "tix": "0.75",
-      "usd": "28.64",
+      "eur": "21.90",
+      "eur_foil": "40.00",
+      "tix": "0.77",
+      "usd": "28.60",
       "usd_etched": null,
       "usd_foil": "42.12"
     },
@@ -8857,10 +8857,10 @@
     "name": "Thespian's Stage",
     "nonfoil": true,
     "prices": {
-      "eur": "1.02",
+      "eur": "1.51",
       "eur_foil": "10.00",
-      "tix": "0.55",
-      "usd": "0.74",
+      "tix": "0.52",
+      "usd": "0.47",
       "usd_etched": null,
       "usd_foil": "10.56"
     },
@@ -8883,7 +8883,7 @@
     "name": "Thirst for Knowledge",
     "nonfoil": true,
     "prices": {
-      "eur": "0.04",
+      "eur": "0.07",
       "eur_foil": "0.50",
       "tix": "0.03",
       "usd": "0.08",
@@ -8935,12 +8935,12 @@
     "name": "Thopter Foundry",
     "nonfoil": true,
     "prices": {
-      "eur": "0.15",
-      "eur_foil": "0.50",
-      "tix": "0.04",
+      "eur": "0.16",
+      "eur_foil": "0.30",
+      "tix": "0.03",
       "usd": "0.20",
       "usd_etched": null,
-      "usd_foil": "0.27"
+      "usd_foil": "0.25"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -8961,12 +8961,12 @@
     "name": "Thought Reflection",
     "nonfoil": true,
     "prices": {
-      "eur": "0.27",
+      "eur": "0.23",
       "eur_foil": "0.65",
       "tix": "0.02",
       "usd": "1.06",
       "usd_etched": null,
-      "usd_foil": "1.22"
+      "usd_foil": "1.23"
     },
     "rarity": "rare",
     "reserved": false,
@@ -8987,12 +8987,12 @@
     "name": "Thoughtseize",
     "nonfoil": true,
     "prices": {
-      "eur": "15.00",
+      "eur": "13.49",
       "eur_foil": "27.50",
-      "tix": "10.87",
-      "usd": "15.64",
+      "tix": "10.92",
+      "usd": "15.70",
       "usd_etched": null,
-      "usd_foil": "18.01"
+      "usd_foil": "18.00"
     },
     "rarity": "rare",
     "reserved": false,
@@ -9013,12 +9013,12 @@
     "name": "Thoughtseize",
     "nonfoil": true,
     "prices": {
-      "eur": "25.90",
+      "eur": "30.90",
       "eur_foil": "34.95",
       "tix": null,
       "usd": "33.10",
       "usd_etched": null,
-      "usd_foil": "29.32"
+      "usd_foil": "28.03"
     },
     "promo_types": [
       "boxtopper",
@@ -9043,10 +9043,10 @@
     "name": "Thraben Inspector",
     "nonfoil": true,
     "prices": {
-      "eur": "0.10",
+      "eur": "0.13",
       "eur_foil": "0.10",
       "tix": "0.03",
-      "usd": "0.23",
+      "usd": "0.24",
       "usd_etched": null,
       "usd_foil": "0.27"
     },
@@ -9069,9 +9069,9 @@
     "name": "Thragtusk",
     "nonfoil": true,
     "prices": {
-      "eur": "0.09",
-      "eur_foil": "1.79",
-      "tix": "0.15",
+      "eur": "0.20",
+      "eur_foil": "2.00",
+      "tix": "0.20",
       "usd": "0.23",
       "usd_etched": null,
       "usd_foil": "1.20"
@@ -9095,12 +9095,12 @@
     "name": "Throne of Geth",
     "nonfoil": true,
     "prices": {
-      "eur": "0.18",
+      "eur": "0.25",
       "eur_foil": "0.20",
       "tix": "0.03",
       "usd": "0.22",
       "usd_etched": null,
-      "usd_foil": "0.23"
+      "usd_foil": "0.22"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -9121,10 +9121,10 @@
     "name": "Time Sieve",
     "nonfoil": true,
     "prices": {
-      "eur": "4.09",
-      "eur_foil": "11.69",
-      "tix": "0.56",
-      "usd": "8.89",
+      "eur": "5.13",
+      "eur_foil": "11.36",
+      "tix": "0.53",
+      "usd": "9.02",
       "usd_etched": null,
       "usd_foil": "14.84"
     },
@@ -9147,10 +9147,10 @@
     "name": "Topple the Statue",
     "nonfoil": true,
     "prices": {
-      "eur": "0.02",
+      "eur": "0.04",
       "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.01",
+      "usd": "0.03",
       "usd_etched": null,
       "usd_foil": "0.08"
     },
@@ -9173,10 +9173,10 @@
     "name": "Toxic Deluge",
     "nonfoil": true,
     "prices": {
-      "eur": "13.30",
-      "eur_foil": "11.99",
-      "tix": "1.51",
-      "usd": "14.33",
+      "eur": "11.89",
+      "eur_foil": "19.99",
+      "tix": "1.54",
+      "usd": "14.46",
       "usd_etched": null,
       "usd_foil": "23.75"
     },
@@ -9199,12 +9199,12 @@
     "name": "Toxic Deluge",
     "nonfoil": true,
     "prices": {
-      "eur": "27.00",
-      "eur_foil": "29.50",
+      "eur": "21.00",
+      "eur_foil": "34.99",
       "tix": null,
       "usd": "33.69",
       "usd_etched": null,
-      "usd_foil": "34.05"
+      "usd_foil": "33.61"
     },
     "promo_types": [
       "boxtopper",
@@ -9229,12 +9229,12 @@
     "name": "Trash for Treasure",
     "nonfoil": true,
     "prices": {
-      "eur": "0.10",
-      "eur_foil": "0.20",
+      "eur": "0.23",
+      "eur_foil": "0.14",
       "tix": "0.03",
-      "usd": "0.31",
+      "usd": "0.32",
       "usd_etched": null,
-      "usd_foil": "0.36"
+      "usd_foil": "0.38"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -9255,8 +9255,8 @@
     "name": "Treasure Keeper",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
-      "eur_foil": "0.32",
+      "eur": "0.04",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.10",
       "usd_etched": null,
@@ -9281,10 +9281,10 @@
     "name": "Treasure Mage",
     "nonfoil": true,
     "prices": {
-      "eur": "0.05",
-      "eur_foil": "0.10",
+      "eur": "0.08",
+      "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.13",
+      "usd": "0.12",
       "usd_etched": null,
       "usd_foil": "0.17"
     },
@@ -9307,10 +9307,10 @@
     "name": "Trinisphere",
     "nonfoil": true,
     "prices": {
-      "eur": "8.00",
+      "eur": "9.15",
       "eur_foil": "12.95",
-      "tix": "2.23",
-      "usd": "14.61",
+      "tix": "2.18",
+      "usd": "14.90",
       "usd_etched": null,
       "usd_foil": "19.43"
     },
@@ -9336,7 +9336,7 @@
     "name": "Tuktuk the Explorer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.15",
+      "eur": "0.10",
       "eur_foil": "0.29",
       "tix": "0.02",
       "usd": "0.20",
@@ -9388,10 +9388,10 @@
     "name": "Twilight Mire",
     "nonfoil": true,
     "prices": {
-      "eur": "5.77",
+      "eur": "5.00",
       "eur_foil": "11.25",
       "tix": "0.26",
-      "usd": "4.27",
+      "usd": "4.32",
       "usd_etched": null,
       "usd_foil": "12.81"
     },
@@ -9415,7 +9415,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.02",
-      "eur_foil": "0.05",
+      "eur_foil": "0.10",
       "tix": "0.03",
       "usd": "0.02",
       "usd_etched": null,
@@ -9440,8 +9440,8 @@
     "name": "Ulvenwald Mysteries",
     "nonfoil": true,
     "prices": {
-      "eur": "0.24",
-      "eur_foil": "0.13",
+      "eur": "0.12",
+      "eur_foil": "0.05",
       "tix": "0.03",
       "usd": "0.18",
       "usd_etched": null,
@@ -9466,10 +9466,10 @@
     "name": "Unlicensed Disintegration",
     "nonfoil": true,
     "prices": {
-      "eur": "0.09",
+      "eur": "0.30",
       "eur_foil": "0.10",
       "tix": "0.03",
-      "usd": "0.08",
+      "usd": "0.09",
       "usd_etched": null,
       "usd_foil": "0.10"
     },
@@ -9492,12 +9492,12 @@
     "name": "Urza's Mine",
     "nonfoil": true,
     "prices": {
-      "eur": "0.44",
-      "eur_foil": "0.74",
-      "tix": "0.05",
-      "usd": "0.96",
+      "eur": "0.57",
+      "eur_foil": "0.88",
+      "tix": "0.06",
+      "usd": "0.98",
       "usd_etched": null,
-      "usd_foil": "1.14"
+      "usd_foil": "1.16"
     },
     "rarity": "common",
     "reserved": false,
@@ -9519,7 +9519,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "16.00",
-      "eur_foil": "19.05",
+      "eur_foil": "14.00",
       "tix": null,
       "usd": "15.67",
       "usd_etched": null,
@@ -9548,12 +9548,12 @@
     "name": "Urza's Power Plant",
     "nonfoil": true,
     "prices": {
-      "eur": "0.48",
-      "eur_foil": "0.82",
-      "tix": "0.05",
-      "usd": "1.10",
+      "eur": "0.55",
+      "eur_foil": "1.09",
+      "tix": "0.08",
+      "usd": "1.13",
       "usd_etched": null,
-      "usd_foil": "1.22"
+      "usd_foil": "1.28"
     },
     "rarity": "common",
     "reserved": false,
@@ -9574,12 +9574,12 @@
     "name": "Urza's Power Plant",
     "nonfoil": true,
     "prices": {
-      "eur": "14.85",
-      "eur_foil": "18.42",
+      "eur": "14.80",
+      "eur_foil": "14.00",
       "tix": null,
-      "usd": "16.28",
+      "usd": "16.19",
       "usd_etched": null,
-      "usd_foil": "17.93"
+      "usd_foil": "17.81"
     },
     "promo_types": [
       "boxtopper",
@@ -9604,12 +9604,12 @@
     "name": "Urza's Tower",
     "nonfoil": true,
     "prices": {
-      "eur": "0.47",
-      "eur_foil": "1.29",
-      "tix": "0.05",
-      "usd": "1.04",
+      "eur": "0.48",
+      "eur_foil": "1.22",
+      "tix": "0.10",
+      "usd": "1.12",
       "usd_etched": null,
-      "usd_foil": "0.96"
+      "usd_foil": "1.04"
     },
     "rarity": "common",
     "reserved": false,
@@ -9630,10 +9630,10 @@
     "name": "Urza's Tower",
     "nonfoil": true,
     "prices": {
-      "eur": "17.00",
-      "eur_foil": "19.92",
+      "eur": "16.00",
+      "eur_foil": "21.89",
       "tix": null,
-      "usd": "15.73",
+      "usd": "15.76",
       "usd_etched": null,
       "usd_foil": "15.42"
     },
@@ -9660,10 +9660,10 @@
     "name": "Valor in Akros",
     "nonfoil": true,
     "prices": {
-      "eur": "0.22",
+      "eur": "0.02",
       "eur_foil": "0.18",
       "tix": "0.03",
-      "usd": "0.10",
+      "usd": "0.09",
       "usd_etched": null,
       "usd_foil": "0.12"
     },
@@ -9712,7 +9712,7 @@
     "name": "Vampire Hexmage",
     "nonfoil": true,
     "prices": {
-      "eur": "0.07",
+      "eur": "0.13",
       "eur_foil": "0.05",
       "tix": "0.03",
       "usd": "0.16",
@@ -9741,7 +9741,7 @@
       "eur": "0.02",
       "eur_foil": "0.02",
       "tix": "0.03",
-      "usd": "0.01",
+      "usd": "0.02",
       "usd_etched": null,
       "usd_foil": "0.02"
     },
@@ -9764,10 +9764,10 @@
     "name": "Vengevine",
     "nonfoil": true,
     "prices": {
-      "eur": "10.50",
+      "eur": "10.84",
       "eur_foil": "12.00",
-      "tix": "2.76",
-      "usd": "9.84",
+      "tix": "2.48",
+      "usd": "9.55",
       "usd_etched": null,
       "usd_foil": "12.40"
     },
@@ -9790,8 +9790,8 @@
     "name": "Veteran Explorer",
     "nonfoil": true,
     "prices": {
-      "eur": "0.11",
-      "eur_foil": "0.15",
+      "eur": "0.25",
+      "eur_foil": "0.30",
       "tix": "0.04",
       "usd": "0.19",
       "usd_etched": null,
@@ -9816,12 +9816,12 @@
     "name": "Vexing Shusher",
     "nonfoil": true,
     "prices": {
-      "eur": "2.24",
+      "eur": "2.05",
       "eur_foil": "3.49",
       "tix": "0.02",
-      "usd": "4.84",
+      "usd": "5.20",
       "usd_etched": null,
-      "usd_foil": "5.07"
+      "usd_foil": "5.05"
     },
     "rarity": "rare",
     "reserved": false,
@@ -9845,10 +9845,10 @@
     "name": "Vish Kal, Blood Arbiter",
     "nonfoil": true,
     "prices": {
-      "eur": "0.44",
+      "eur": "0.25",
       "eur_foil": "0.40",
       "tix": "0.03",
-      "usd": "0.54",
+      "usd": "0.56",
       "usd_etched": null,
       "usd_foil": "1.32"
     },
@@ -9871,10 +9871,10 @@
     "name": "Voice of Resurgence",
     "nonfoil": true,
     "prices": {
-      "eur": "4.50",
+      "eur": "3.00",
       "eur_foil": "5.50",
-      "tix": "0.73",
-      "usd": "5.00",
+      "tix": "0.79",
+      "usd": "4.90",
       "usd_etched": null,
       "usd_foil": "9.31"
     },
@@ -9898,7 +9898,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.05",
-      "eur_foil": "0.05",
+      "eur_foil": "0.10",
       "tix": "0.02",
       "usd": "0.02",
       "usd_etched": null,
@@ -9923,12 +9923,12 @@
     "name": "Walking Ballista",
     "nonfoil": true,
     "prices": {
-      "eur": "14.92",
+      "eur": "16.27",
       "eur_foil": "20.36",
       "tix": "1.69",
-      "usd": "13.46",
+      "usd": "13.37",
       "usd_etched": null,
-      "usd_foil": "22.47"
+      "usd_foil": "22.64"
     },
     "rarity": "rare",
     "reserved": false,
@@ -9976,7 +9976,7 @@
     "nonfoil": true,
     "prices": {
       "eur": "0.02",
-      "eur_foil": "0.05",
+      "eur_foil": "0.02",
       "tix": "0.03",
       "usd": "0.02",
       "usd_etched": null,
@@ -10001,12 +10001,12 @@
     "name": "Welding Jar",
     "nonfoil": true,
     "prices": {
-      "eur": "0.25",
-      "eur_foil": "0.15",
-      "tix": "0.17",
-      "usd": "0.68",
+      "eur": "0.44",
+      "eur_foil": "0.25",
+      "tix": "0.15",
+      "usd": "0.71",
       "usd_etched": null,
-      "usd_foil": "1.07"
+      "usd_foil": "1.09"
     },
     "rarity": "uncommon",
     "reserved": false,
@@ -10027,12 +10027,12 @@
     "name": "Well of Ideas",
     "nonfoil": true,
     "prices": {
-      "eur": "0.20",
+      "eur": "0.27",
       "eur_foil": "0.99",
       "tix": "0.06",
-      "usd": "0.50",
+      "usd": "0.54",
       "usd_etched": null,
-      "usd_foil": "0.93"
+      "usd_foil": "0.95"
     },
     "rarity": "rare",
     "reserved": false,
@@ -10053,8 +10053,8 @@
     "name": "Whisperer of the Wilds",
     "nonfoil": true,
     "prices": {
-      "eur": "0.10",
-      "eur_foil": "0.32",
+      "eur": "0.02",
+      "eur_foil": "0.02",
       "tix": "0.04",
       "usd": "0.09",
       "usd_etched": null,
@@ -10079,12 +10079,12 @@
     "name": "Wooded Bastion",
     "nonfoil": true,
     "prices": {
-      "eur": "4.69",
+      "eur": "4.26",
       "eur_foil": "5.45",
-      "tix": "0.24",
-      "usd": "6.72",
+      "tix": "0.21",
+      "usd": "7.46",
       "usd_etched": null,
-      "usd_foil": "7.77"
+      "usd_foil": "7.79"
     },
     "rarity": "rare",
     "reserved": false,
@@ -10105,10 +10105,10 @@
     "name": "Woodland Champion",
     "nonfoil": true,
     "prices": {
-      "eur": "0.11",
-      "eur_foil": "0.10",
+      "eur": "0.30",
+      "eur_foil": "0.15",
       "tix": "0.03",
-      "usd": "0.07",
+      "usd": "0.08",
       "usd_etched": null,
       "usd_foil": "0.11"
     },
@@ -10131,10 +10131,10 @@
     "name": "Wound Reflection",
     "nonfoil": true,
     "prices": {
-      "eur": "4.93",
-      "eur_foil": "4.90",
+      "eur": "4.04",
+      "eur_foil": "6.99",
       "tix": "0.02",
-      "usd": "8.12",
+      "usd": "8.03",
       "usd_etched": null,
       "usd_foil": "10.86"
     },
@@ -10157,10 +10157,10 @@
     "name": "Wrath of God",
     "nonfoil": true,
     "prices": {
-      "eur": "4.33",
-      "eur_foil": "5.95",
+      "eur": "4.50",
+      "eur_foil": "3.29",
       "tix": "0.21",
-      "usd": "4.58",
+      "usd": "4.77",
       "usd_etched": null,
       "usd_foil": "4.85"
     },
@@ -10183,11 +10183,11 @@
     "nonfoil": false,
     "prices": {
       "eur": null,
-      "eur_foil": "3.02",
+      "eur_foil": "1.79",
       "tix": null,
       "usd": null,
       "usd_etched": null,
-      "usd_foil": "4.87"
+      "usd_foil": "4.84"
     },
     "promo_types": [
       "release",
@@ -10212,9 +10212,9 @@
     "name": "Wurmcoil Engine",
     "nonfoil": true,
     "prices": {
-      "eur": "16.99",
-      "eur_foil": "26.99",
-      "tix": "3.89",
+      "eur": "17.33",
+      "eur_foil": "18.99",
+      "tix": "3.91",
       "usd": "21.60",
       "usd_etched": null,
       "usd_foil": "25.16"
@@ -10243,7 +10243,7 @@
       "tix": null,
       "usd": "34.09",
       "usd_etched": null,
-      "usd_foil": "33.69"
+      "usd_foil": "33.65"
     },
     "promo_types": [
       "boxtopper",
