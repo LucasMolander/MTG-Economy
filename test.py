@@ -123,7 +123,7 @@ DRAFT BOOSTERS
 --------------
 24 packs per box
 
-Common and Uncommon that can be borderless, are, 2:1 (one third)
+Common/Uncommon that can be borderless, are, 2:1 (one third)
 Same goes for the foil versions
 
 (rare slot being borderless)
@@ -131,14 +131,14 @@ Same goes for the foil versions
 You can get 2 of them in a single pack.
 
 (foil slot borderless Rare/Mythic)
-Each foil slot has 1.25% chance to be traditional foil borderless borderless Rare/Mythic.
+Each foil slot has 1.25% chance to be foil borderless Rare/Mythic.
 You can get 2 of them in a single pack.
 
 Contents:
   * 8 Commons
   * 3 Uncommons
   * 2 Rares and/or mythic rares
-  * 2 Traditional foil cards of any rarity
+  * 2 Foil cards of any rarity
   * 1 Cryptic Spires
   * 1 Token or ad card
 """
