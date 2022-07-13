@@ -393,7 +393,8 @@ def downloadBoxesAndPersist(args):
   nameToInfo: Dict[str, Dict[str, Any]] = SetUtil.readBoxPrices()
 
   def getInfoForSet(name: str, setInfo: Dict[str, Any]):
-    name = SetUtil.coerceToName(name)
+    names = SetUtil.coerceToNames(name)
+    name = list(names)[0]
     code = SetUtil.coerceToCode(name)
     skuID = int(setInfo['skuID'])
     price = TCGPlayerAPI.getMarketPrice(skuID)
@@ -403,12 +404,13 @@ def downloadBoxesAndPersist(args):
     }
 
   if (args.set):
-    name = SetUtil.coerceToName(args.set)
-    print(f"Getting price for a box of {name}...")
-    nameToInfo[name] = getInfoForSet(
-      name,
-      SetUtil.sets[name],
-    )
+    names = SetUtil.coerceToNames(args.set)
+    for name in names:
+      print(f"Getting price for a box of {name}...")
+      nameToInfo[name] = getInfoForSet(
+        name,
+        SetUtil.sets[name],
+      )
   else:
     for i, (name, setInfo) in enumerate(SetUtil.sets.items()):
       print(f"Getting price for a box of {name}...")

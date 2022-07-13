@@ -196,14 +196,17 @@ class MyJSONEncoder(json.JSONEncoder):
     return super().encode(theObj)
 
 
-# mtgSet = DoubleMasters2022Collectors
-mtgSet = DoubleMasters2022
+mtgSet = DoubleMasters2022Collectors
+# mtgSet = DoubleMasters2022
 
-code = SetUtil.coerceToCode(mtgSet.NAME)
-name = SetUtil.coerceToName(mtgSet.NAME)
+code = mtgSet.CODE
+name = mtgSet.NAME
+
+boxPrice = SetUtil.readBoxPrices()[name]['marketPrice']
+print(f"{name} box market price: ${boxPrice}")
 
 cards = SetUtil.loadFromFile(setName=name)
-print(f"{name} has {len(cards)} cards")
+print(f"\n{name} has {len(cards)} cards")
 
 catToNameToPrice = mtgSet.categorizePrices(cards)
 catToPrices = {
@@ -266,17 +269,21 @@ packsMedEP  = round(median(packValsEP), 2)
 print(f"\n\nMean:   ${packsMean}\nMedian: ${packsMed}")
 print(f"\nEP ${ep} Mean:   ${packsMeanEP}\nEP ${ep} Median: ${packsMedEP}")
 
-wantVal = round(257 / 4, 2)
-wantIdx = binarySearch(wantVal, packVals)
+packPrice = round(boxPrice / mtgSet.PACKS_PER_BOX, 2)
+wantIdx = binarySearch(packPrice, packVals)
 wantPct = round(100.0 * (wantIdx / nPacks), 2)
-wantIdxEP = binarySearch(wantVal, packValsEP)
+wantIdxEP = binarySearch(packPrice, packValsEP)
 wantPctEP = round(100.0 * (wantIdxEP / nPacks), 2)
-print(f"\nWant val: ${wantVal}")
-print(f"Percentile:           {wantPct}")
-print(f"Percentile EP ${ep}:   {wantPctEP}")
+print(f"\nPack price: ${packPrice}")
+print(f"Percentile:          {wantPct}")
+print(f"Percentile EP ${ep}:  {wantPctEP}")
+print(f"\ti.e. {round(100-wantPct, 2)}% or {round(100-wantPctEP, 2)}% chance of breaking even")
 
-print("\nSet category to info:")
-print(json.dumps(mtgSet.CAT_TO_INFO, indent=2, cls=MyJSONEncoder))
+# print("\nSet category to info:")
+# print(json.dumps(mtgSet.CAT_TO_INFO, indent=2, cls=MyJSONEncoder))
+
+
+
 
 
 

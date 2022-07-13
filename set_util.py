@@ -59,7 +59,6 @@ class SetUtil(object):
       for setName in SetUtil.sets.keys()
     }
 
-
   #
   # Assumes that the set of all codes AND names are unique with each other.
   #
@@ -83,25 +82,29 @@ class SetUtil(object):
   # Also assumes that there's a 1:1 mapping between set names and codes.
   #
   @staticmethod
-  def coerceToName(setCodeOrName: str) -> str:
+  def coerceToNames(setCodeOrName: str) -> Set[str]:
     setToCode = SetUtil.getSetToCode()
 
     # Set name return it
     if setCodeOrName in setToCode:
-      return setCodeOrName
+      return {setCodeOrName}
 
     # Set code; return the name
     if setCodeOrName in setToCode.values():
-      codeToSet = {setCode: setName for setName, setCode in setToCode.items()}
-      return codeToSet[setCodeOrName]
+      codeToSets: Dict[str, Set[str]] = {}
+      for setName, code in setToCode.items():
+        if code not in codeToSets:
+          codeToSets[code] = set()
+        codeToSets[code].add(setName)
+      return codeToSets[setCodeOrName]
 
     raise Exception('Invalid set name or code: %s' % setCodeOrName)
 
 
   @staticmethod
   def isCollectorsEd(setCodeOrName: str) -> bool:
-    setName = SetUtil.coerceToName(setCodeOrName)
-    setInfo = SetUtil.sets[setName]
+    setNames = SetUtil.coerceToNames(setCodeOrName)
+    setInfo = SetUtil.sets[list(setNames)[0]]
     return setInfo['collectorEdInfo'] is not None
 
 
@@ -142,7 +145,8 @@ class SetUtil(object):
     setName: Optional[str] = None
     mpName: Optional[str] = None
     if setCode is not None:
-      setName = SetUtil.coerceToName(setCode)
+      setNames = SetUtil.coerceToNames(setCode)
+      setName = list(setNames)[0]
       print('Getting cards for %s' % setName)
     elif mpCode is not None:
       mpName = SetUtil.masterpieces[mpCode]['name']

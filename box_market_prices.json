@@ -41,11 +41,15 @@
   },
   "Double Masters": {
     "code": "2xm",
-    "marketPrice": 632.12
+    "marketPrice": 635.81
   },
   "Double Masters 2022": {
     "code": "2x2",
     "marketPrice": 351.27
+  },
+  "Double Masters 2022 Collectors": {
+    "code": "2x2",
+    "marketPrice": 287.12
   },
   "Eternal Masters": {
     "code": "ema",

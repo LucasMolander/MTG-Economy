@@ -45,6 +45,8 @@ class DoubleMasters2022(MTGSetHandler):
   NAME = "Double Masters 2022"
   CODE = "2x2"
 
+  PACKS_PER_BOX = 24
+
   # Regular, borderless, foil-etched
   n_c =  92; n_bl_c =  9
   n_u =  80; n_bl_u = 21
@@ -161,6 +163,8 @@ class DoubleMasters2022Collectors(MTGSetHandler):
   NAME = "Double Masters 2022"
   CODE = "2x2"
 
+  PACKS_PER_BOX = 4
+
   # Based on this post from reddit:
   # /r/mtgfinance/comments/vqj904/2x2_collector_mythic_pull_rates/
   # The raios for Mythic / Rare are:
@@ -239,12 +243,12 @@ class DoubleMasters2022Collectors(MTGSetHandler):
     RareFoilCat.updateCatToPrice(catToPrice, card)
     RareBorderlessCat.updateCatToPrice(catToPrice, card)
     RareFoilEtchedCat.updateCatToPrice(catToPrice, card)
-    RareFoilBorderlessCat.updateCatToPrice(catToPrice, card)
+    RareBorderlessFoilCat.updateCatToPrice(catToPrice, card)
 
     # Mythics
     MythicFoilCat.updateCatToPrice(catToPrice, card)
     MythicBorderlessCat.updateCatToPrice(catToPrice, card)
     MythicFoilEtchedCat.updateCatToPrice(catToPrice, card)
-    MythicFoilBorderlessCat.updateCatToPrice(catToPrice, card)
+    MythicBorderlessFoilCat.updateCatToPrice(catToPrice, card)
 
     return catToPrice
