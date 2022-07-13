@@ -26,7 +26,7 @@ class TCGPlayerAPI(object):
   keyInfo = FileUtil.getJSONContents(KEYS_PATH)[KEY_NAME]
   USER_AGENT: str = keyInfo['user_agent_header']
 
-  bearerToken = None
+  bearerToken: Optional[str] = None
 
   @staticmethod
   def getMarketpriceURL(skuID: int):
@@ -49,7 +49,7 @@ class TCGPlayerAPI(object):
     try:
       # Bearer tokens last 2 weeks so this shouldn't happen too often
       tokenInfo = FileUtil.getJSONContents(tokenFP)['bearer_token']
-      tokenValue = tokenInfo['value']
+      tokenValue = str(tokenInfo['value'])
       expireTime = int(tokenInfo['expires'])
       if expireTime >= (currTime + 180):
         TCGPlayerAPI.bearerToken = tokenValue

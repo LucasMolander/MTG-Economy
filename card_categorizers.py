@@ -78,6 +78,15 @@ class TexturedCat(CardCategorizer):
 #
 # Commons
 #
+class CommonCat(CardCategorizer):
+  CAT_NAME = 'Common'
+
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "common":
+      return CardUtil.getPrice(card)
+    return None
+
 class CommonFoilCat(CardCategorizer):
   CAT_NAME = 'Common Foil'
 
@@ -111,6 +120,15 @@ class CommonBorderlessFoilCat(CardCategorizer):
 #
 # Uncommons
 #
+class UncommonCat(CardCategorizer):
+  CAT_NAME = 'Uncommon'
+
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "uncommon":
+      return CardUtil.getPrice(card)
+    return None
+
 class UncommonFoilCat(CardCategorizer):
   CAT_NAME = 'Uncommon Foil'
 
@@ -172,6 +190,16 @@ class RareBorderlessCat(CardCategorizer):
         return CardUtil.getPrice(card)
     return None
 
+class RareBorderlessFoilCat(CardCategorizer):
+  CAT_NAME = 'Rare Borderless Foil'
+
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "rare":
+      if "border_color" in card and card["border_color"] == "borderless":
+        return CardUtil.getFoilPrice(card)
+    return None
+
 class RareFoilEtchedCat(CardCategorizer):
   CAT_NAME = 'Rare Foil-etched'
 
@@ -180,16 +208,6 @@ class RareFoilEtchedCat(CardCategorizer):
     if "rarity" in card and card["rarity"] == "rare":
       if "finishes" in card and "etched" in card["finishes"]:
         return CardUtil.getEtchedPrice(card)
-    return None
-
-class RareFoilBorderlessCat(CardCategorizer):
-  CAT_NAME = 'Rare Foil Borderless'
-
-  @staticmethod
-  def getPrice(card: Dict[str, Any]) -> Optional[float]:
-    if "rarity" in card and card["rarity"] == "rare":
-      if "border_color" in card and "borderless" in card["border_color"]:
-        return CardUtil.getFoilPrice(card)
     return None
 
 
@@ -224,6 +242,17 @@ class MythicBorderlessCat(CardCategorizer):
         return CardUtil.getPrice(card)
     return None
 
+class MythicBorderlessFoilCat(CardCategorizer):
+  CAT_NAME = 'Mythic Borderless Foil'
+
+  @staticmethod
+  def getPrice(card: Dict[str, Any]) -> Optional[float]:
+    if "rarity" in card and card["rarity"] == "mythic":
+      if "border_color" in card and card["border_color"] == "borderless":
+        return CardUtil.getFoilPrice(card)
+    return None
+
+
 class MythicFoilEtchedCat(CardCategorizer):
   CAT_NAME = 'Mythic Foil-etched'
 
@@ -232,14 +261,4 @@ class MythicFoilEtchedCat(CardCategorizer):
     if "rarity" in card and card["rarity"] == "mythic":
       if "finishes" in card and "etched" in card["finishes"]:
         return CardUtil.getEtchedPrice(card)
-    return None
-
-class MythicFoilBorderlessCat(CardCategorizer):
-  CAT_NAME = 'Mythic Foil Borderless'
-
-  @staticmethod
-  def getPrice(card: Dict[str, Any]) -> Optional[float]:
-    if "rarity" in card and card["rarity"] == "mythic":
-      if "border_color" in card and "borderless" in card["border_color"]:
-        return CardUtil.getFoilPrice(card)
     return None

@@ -73,7 +73,6 @@ class DoubleMasters2022(MTGSetHandler):
   # Borderless = bl-potential*bl-rate
   c = (n_regular_c + (n_bl_c * 2/3)) / n_c
   u = (n_regular_u + (n_bl_u * 2/3)) / n_u
-
   bl_c = (n_bl_c * 1/3) / n_c
   bl_u = (n_bl_u * 1/3) / n_u
 
@@ -82,7 +81,6 @@ class DoubleMasters2022(MTGSetHandler):
   # Borderless Rare = borderless * rare
   r = (1 - p_rm_bl) * 7/8
   m = (1 - p_rm_bl) * 1/8
-
   bl_r = p_rm_bl * 7/8
   bl_m = p_rm_bl * 1/8
 
@@ -109,57 +107,40 @@ class DoubleMasters2022(MTGSetHandler):
 
 
   CAT_TO_INFO = {
-    TexturedCat:               CatInfoForSet(prob=0.03, actualN=5),
-    CommonFoilCat:             CatInfoForSet(prob=5.0, actualN=n_c),
-    CommonBorderlessCat:       CatInfoForSet(prob=two_bl_c, actualN=n_bl_c),
-    CommonBorderlessFoilCat:   CatInfoForSet(prob=two_bl_c, actualN=n_bl_c),
-    UncommonFoilCat:           CatInfoForSet(prob=2.0, actualN=n_u),
-    UncommonBorderlessCat:     CatInfoForSet(prob=two_bl_u, actualN=n_bl_u),
-    UncommonBorderlessFoilCat: CatInfoForSet(prob=two_bl_u, actualN=n_bl_u),
-    RareFoilCat:               CatInfoForSet(prob=f_r, actualN=n_r),
-    RareBorderlessCat:         CatInfoForSet(prob=bl_r, actualN=n_bl_r),
-    RareFoilEtchedCat:         CatInfoForSet(prob=fe_r, actualN=n_fe_r),
-    RareFoilBorderlessCat:     CatInfoForSet(prob=f_bl_r, actualN=n_bl_r),
-    MythicFoilCat:             CatInfoForSet(prob=f_m, actualN=n_m),
-    MythicBorderlessCat:       CatInfoForSet(prob=bl_m, actualN=n_bl_m),
-    MythicFoilEtchedCat:       CatInfoForSet(prob=fe_m, actualN=n_fe_m),
-    MythicFoilBorderlessCat:   CatInfoForSet(prob=f_bl_m, actualN=n_bl_m),
+    # Regular
+    CommonCat:   CatInfoForSet(prob=8*c, actualN=n_c),
+    UncommonCat: CatInfoForSet(prob=3*u, actualN=n_u),
+    RareCat:     CatInfoForSet(prob=2*r, actualN=n_r),
+    MythicCat:   CatInfoForSet(prob=2*m, actualN=n_m),
+
+    # Borderless
+    CommonBorderlessCat:   CatInfoForSet(prob=8*bl_c, actualN=n_bl_c),
+    UncommonBorderlessCat: CatInfoForSet(prob=3*bl_u, actualN=n_bl_u),
+    RareBorderlessCat:     CatInfoForSet(prob=2*bl_r, actualN=n_bl_r),
+    MythicBorderlessCat:   CatInfoForSet(prob=2*bl_m, actualN=n_bl_m),
+
+    # Foil
+    CommonFoilCat:   CatInfoForSet(prob=2*f_c, actualN=n_c),
+    UncommonFoilCat: CatInfoForSet(prob=2*f_u, actualN=n_u),
+    RareFoilCat:     CatInfoForSet(prob=2*f_r, actualN=n_r),
+    MythicFoilCat:   CatInfoForSet(prob=2*f_m, actualN=n_m),
+
+    # Borderless Foil
+    CommonBorderlessFoilCat:   CatInfoForSet(prob=2*f_bl_c, actualN=n_bl_c),
+    UncommonBorderlessFoilCat: CatInfoForSet(prob=2*f_bl_u, actualN=n_bl_u),
+    RareBorderlessFoilCat:     CatInfoForSet(prob=2*f_bl_r, actualN=n_bl_r),
+    MythicBorderlessFoilCat:   CatInfoForSet(prob=2*f_bl_m, actualN=n_bl_m),
   }
 
   @staticmethod
   def getCatToPriceForCard(card: Dict[str, Any]) -> Dict[Type[CardCategorizer], float]:
     catToPrice: Dict[Type[CardCategorizer], float] = {}
 
-    # Textured first (and if so, that's it)
-    p = TexturedCat.getPrice(card)
-    if p is not None:
-      catToPrice[TexturedCat] = p
-      return catToPrice
-
-    # Commons
-    CommonFoilCat.updateCatToPrice(catToPrice, card)
-    CommonBorderlessCat.updateCatToPrice(catToPrice, card)
-    CommonBorderlessFoilCat.updateCatToPrice(catToPrice, card)
-
-    # Uncommons
-    UncommonFoilCat.updateCatToPrice(catToPrice, card)
-    UncommonBorderlessCat.updateCatToPrice(catToPrice, card)
-    UncommonBorderlessFoilCat.updateCatToPrice(catToPrice, card)
-
-    # Rares
-    RareFoilCat.updateCatToPrice(catToPrice, card)
-    RareBorderlessCat.updateCatToPrice(catToPrice, card)
-    RareFoilEtchedCat.updateCatToPrice(catToPrice, card)
-    RareFoilBorderlessCat.updateCatToPrice(catToPrice, card)
-
-    # Mythics
-    MythicFoilCat.updateCatToPrice(catToPrice, card)
-    MythicBorderlessCat.updateCatToPrice(catToPrice, card)
-    MythicFoilEtchedCat.updateCatToPrice(catToPrice, card)
-    MythicFoilBorderlessCat.updateCatToPrice(catToPrice, card)
+    cats = list(DoubleMasters2022.CAT_TO_INFO.keys())
+    for cat in cats:
+      cat.updateCatToPrice(catToPrice, card)
 
     return catToPrice
-
 
 
 class DoubleMasters2022Collectors(MTGSetHandler):
@@ -227,11 +208,11 @@ class DoubleMasters2022Collectors(MTGSetHandler):
     RareFoilCat:               CatInfoForSet(prob=f_r, actualN=n_r),
     RareBorderlessCat:         CatInfoForSet(prob=bl_r, actualN=n_bl_r),
     RareFoilEtchedCat:         CatInfoForSet(prob=fe_r, actualN=n_fe_r),
-    RareFoilBorderlessCat:     CatInfoForSet(prob=f_bl_r, actualN=n_bl_r),
+    RareBorderlessFoilCat:     CatInfoForSet(prob=f_bl_r, actualN=n_bl_r),
     MythicFoilCat:             CatInfoForSet(prob=f_m, actualN=n_m),
     MythicBorderlessCat:       CatInfoForSet(prob=bl_m, actualN=n_bl_m),
     MythicFoilEtchedCat:       CatInfoForSet(prob=fe_m, actualN=n_fe_m),
-    MythicFoilBorderlessCat:   CatInfoForSet(prob=f_bl_m, actualN=n_bl_m),
+    MythicBorderlessFoilCat:   CatInfoForSet(prob=f_bl_m, actualN=n_bl_m),
   }
 
   @staticmethod

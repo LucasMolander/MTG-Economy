@@ -7,7 +7,7 @@ from enum import Enum, IntEnum
 from typing import ClassVar, Optional, Tuple, Dict, Any, List, Type
 from card_categorizers import CardCategorizer
 from plot_util import PlotUtil
-from set_handlers import DoubleMasters2022Collectors
+from set_handlers import DoubleMasters2022, DoubleMasters2022Collectors
 
 from tcgplayer_api import TCGPlayerAPI
 from set_util import SetUtil
@@ -158,7 +158,11 @@ class MyJSONEncoder(json.JSONEncoder):
   def stringifyObjsRecursive(d: Dict[Any, Any]) -> Dict[Any, Any]:
     out = {}
     for k, v in d.items():
-      theK = k.CAT_NAME if isinstance(k, CardCategorizer) else k
+      theK: Any
+      if isinstance(k, CardCategorizer):
+        theK = k.CAT_NAME
+      else:
+        theK = k
 
       theV: Any
       if isinstance(v, dict):
@@ -192,7 +196,8 @@ class MyJSONEncoder(json.JSONEncoder):
     return super().encode(theObj)
 
 
-mtgSet = DoubleMasters2022Collectors
+# mtgSet = DoubleMasters2022Collectors
+mtgSet = DoubleMasters2022
 
 code = SetUtil.coerceToCode(mtgSet.NAME)
 name = SetUtil.coerceToName(mtgSet.NAME)
@@ -269,6 +274,11 @@ wantPctEP = round(100.0 * (wantIdxEP / nPacks), 2)
 print(f"\nWant val: ${wantVal}")
 print(f"Percentile:           {wantPct}")
 print(f"Percentile EP ${ep}:   {wantPctEP}")
+
+print("\nSet category to info:")
+print(json.dumps(mtgSet.CAT_TO_INFO, indent=2, cls=MyJSONEncoder))
+
+
 
 # PlotUtil.makeHist(randomPackVals)
 

@@ -29,8 +29,23 @@
       "uncommon":  80,
       "rare":      121,
       "mythic":    40
-    },
-    "TODO @nocommit UPDATE THE RARITY COUNTS ONCE THEY ARE PUBLIC": 42069696969
+    }
+  },
+  "Double Masters 2022 Collectors": {
+    "code":            "2x2",
+    "productID":       271509,
+    "skuID":           5589874,
+    "masterpieceCode": null,
+    "collectorEdInfo": null,
+    "nPacks":          24,
+    "packsPerFoil":    0.5,
+    "rarityCounts": {
+      "basicLand": 0,
+      "common":    91,
+      "uncommon":  80,
+      "rare":      121,
+      "mythic":    40
+    }
   },
   "Modern Masters": {
     "code":            "mma",

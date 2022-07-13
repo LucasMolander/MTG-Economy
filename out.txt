@@ -3,319 +3,382 @@ Double Masters 2022 has 579 cards
 
 Category to distribution info:
 {
-  "Rare Foil": {
-    "prob": 0.86,
-    "n": 118,
-    "n_exp": 120,
-    "ev": 5.22,
-    "sum": 718.81,
-    "med": 1.94,
-    "avg": 6.09
-  },
-  "Rare Foil-etched": {
-    "prob": 0.86,
+  "Rare": {
+    "prob": 1.65,
     "n": 120,
     "n_exp": 120,
-    "ev": 7.5,
-    "sum": 1050.0,
-    "med": 5.2,
-    "avg": 8.75
+    "ev": 6.36,
+    "sum": 462.42,
+    "med": 0.56,
+    "avg": 3.85
+  },
+  "Rare Foil": {
+    "prob": 0.07,
+    "n": 119,
+    "n_exp": 120,
+    "ev": 0.41,
+    "sum": 737.4,
+    "med": 1.78,
+    "avg": 6.2
+  },
+  "Uncommon": {
+    "prob": 2.74,
+    "n": 80,
+    "n_exp": 80,
+    "ev": 1.4,
+    "sum": 40.78,
+    "med": 0.24,
+    "avg": 0.51
   },
   "Uncommon Foil": {
-    "prob": 2.0,
-    "n": 74,
+    "prob": 0.44,
+    "n": 75,
     "n_exp": 80,
-    "ev": 1.8,
-    "sum": 66.56,
-    "med": 0.46,
-    "avg": 0.9
+    "ev": 0.42,
+    "sum": 71.33,
+    "med": 0.44,
+    "avg": 0.95
+  },
+  "Common": {
+    "prob": 7.74,
+    "n": 89,
+    "n_exp": 92,
+    "ev": 1.52,
+    "sum": 17.48,
+    "med": 0.13,
+    "avg": 0.2
   },
   "Common Foil": {
-    "prob": 5.0,
-    "n": 77,
+    "prob": 1.39,
+    "n": 83,
     "n_exp": 92,
-    "ev": 1.5,
-    "sum": 23.07,
-    "med": 0.19,
-    "avg": 0.3
+    "ev": 0.44,
+    "sum": 26.02,
+    "med": 0.18,
+    "avg": 0.31
   },
   "Rare Borderless": {
-    "prob": 0.75,
+    "prob": 0.1,
     "n": 30,
     "n_exp": 30,
-    "ev": 8.93,
-    "sum": 357.39,
-    "med": 7.22,
-    "avg": 11.91
+    "ev": 1.24,
+    "sum": 376.45,
+    "med": 7.87,
+    "avg": 12.55
   },
-  "Rare Foil Borderless": {
-    "prob": 0.73,
+  "Rare Borderless Foil": {
+    "prob": 0.01,
     "n": 30,
     "n_exp": 30,
-    "ev": 11.83,
-    "sum": 487.63,
-    "med": 10.05,
-    "avg": 16.25
+    "ev": 0.11,
+    "sum": 526.27,
+    "med": 10.51,
+    "avg": 17.54
   },
-  "Mythic Foil": {
-    "prob": 0.14,
+  "Mythic": {
+    "prob": 0.24,
     "n": 40,
     "n_exp": 40,
-    "ev": 4.92,
-    "sum": 1376.6,
-    "med": 21.85,
-    "avg": 34.41
+    "ev": 5.74,
+    "sum": 973.3,
+    "med": 13.64,
+    "avg": 24.33
   },
-  "Mythic Foil-etched": {
-    "prob": 0.14,
-    "n": 39,
+  "Mythic Foil": {
+    "prob": 0.01,
+    "n": 40,
     "n_exp": 40,
-    "ev": 7.62,
-    "sum": 2080.04,
-    "med": 33.01,
-    "avg": 53.33
+    "ev": 0.48,
+    "sum": 2227.95,
+    "med": 21.42,
+    "avg": 55.7
   },
   "Mythic Borderless": {
-    "prob": 0.25,
+    "prob": 0.01,
     "n": 20,
     "n_exp": 20,
-    "ev": 9.93,
-    "sum": 794.03,
-    "med": 31.55,
-    "avg": 39.7
+    "ev": 0.59,
+    "sum": 831.24,
+    "med": 32.83,
+    "avg": 41.56
   },
-  "Mythic Foil Borderless": {
-    "prob": 0.24,
+  "Mythic Borderless Foil": {
+    "prob": 0.0,
     "n": 20,
     "n_exp": 20,
-    "ev": 13.69,
-    "sum": 1128.67,
-    "med": 45.22,
-    "avg": 56.43
+    "ev": 0.17,
+    "sum": 1987.98,
+    "med": 62.58,
+    "avg": 99.4
   },
   "Uncommon Borderless": {
-    "prob": 1.4,
+    "prob": 0.26,
     "n": 21,
     "n_exp": 21,
-    "ev": 1.53,
-    "sum": 22.93,
-    "med": 1.03,
-    "avg": 1.09
+    "ev": 0.31,
+    "sum": 25.03,
+    "med": 1.07,
+    "avg": 1.19
   },
   "Uncommon Borderless Foil": {
-    "prob": 1.4,
+    "prob": 0.04,
     "n": 21,
     "n_exp": 21,
-    "ev": 2.51,
-    "sum": 37.68,
-    "med": 1.44,
-    "avg": 1.79
+    "ev": 0.09,
+    "sum": 45.24,
+    "med": 1.99,
+    "avg": 2.15
   },
   "Common Borderless": {
-    "prob": 0.6,
+    "prob": 0.26,
     "n": 9,
     "n_exp": 9,
-    "ev": 0.28,
-    "sum": 4.19,
-    "med": 0.43,
-    "avg": 0.47
+    "ev": 0.15,
+    "sum": 5.15,
+    "med": 0.44,
+    "avg": 0.57
   },
   "Common Borderless Foil": {
-    "prob": 0.6,
+    "prob": 0.05,
     "n": 9,
     "n_exp": 9,
-    "ev": 0.51,
-    "sum": 7.71,
-    "med": 0.57,
-    "avg": 0.86
-  },
-  "Textured Foil": {
-    "prob": 0.03,
-    "n": 5,
-    "n_exp": 5,
-    "ev": 7.38,
-    "sum": 1229.32,
-    "med": 264.98,
-    "avg": 245.86
+    "ev": 0.05,
+    "sum": 9.9,
+    "med": 0.76,
+    "avg": 1.1
   }
 }
 
 
 Category to distribution info (exclusive price = $5.0):
 {
-  "Rare Foil": {
-    "prob": 0.86,
-    "n": 36,
+  "Rare": {
+    "prob": 1.65,
+    "n": 22,
     "n_exp": 120,
-    "ev": 4.29,
-    "sum": 180.05,
-    "med": 3.17,
-    "avg": 5.0,
-    "orig_n": 118,
-    "orig_ev": 5.22,
-    "orig_sum": 718.81,
-    "orig_med": 1.94,
-    "orig_avg": 6.09
-  },
-  "Rare Foil-etched": {
-    "prob": 0.86,
-    "n": 61,
-    "n_exp": 120,
-    "ev": 6.16,
-    "sum": 438.13,
-    "med": 4.68,
-    "avg": 7.18,
+    "ev": 5.06,
+    "sum": 67.4,
+    "med": 2.16,
+    "avg": 3.06,
     "orig_n": 120,
-    "orig_ev": 7.5,
-    "orig_sum": 1050.0,
-    "orig_med": 5.2,
-    "orig_avg": 8.75
+    "orig_ev": 6.36,
+    "orig_sum": 462.42,
+    "orig_med": 0.56,
+    "orig_avg": 3.85
+  },
+  "Rare Foil": {
+    "prob": 0.07,
+    "n": 34,
+    "n_exp": 120,
+    "ev": 0.34,
+    "sum": 173.86,
+    "med": 3.32,
+    "avg": 5.11,
+    "orig_n": 119,
+    "orig_ev": 0.41,
+    "orig_sum": 737.4,
+    "orig_med": 1.78,
+    "orig_avg": 6.2
   },
   "Rare Borderless": {
-    "prob": 0.75,
-    "n": 17,
+    "prob": 0.1,
+    "n": 20,
     "n_exp": 30,
-    "ev": 7.91,
-    "sum": 179.23,
-    "med": 8.65,
-    "avg": 10.54,
+    "ev": 1.15,
+    "sum": 231.58,
+    "med": 7.91,
+    "avg": 11.58,
     "orig_n": 30,
-    "orig_ev": 8.93,
-    "orig_sum": 357.39,
-    "orig_med": 7.22,
-    "orig_avg": 11.91
+    "orig_ev": 1.24,
+    "orig_sum": 376.45,
+    "orig_med": 7.87,
+    "orig_avg": 12.55
   },
-  "Rare Foil Borderless": {
-    "prob": 0.73,
+  "Rare Borderless Foil": {
+    "prob": 0.01,
     "n": 24,
     "n_exp": 30,
-    "ev": 11.41,
-    "sum": 376.34,
-    "med": 8.68,
-    "avg": 15.68,
+    "ev": 0.1,
+    "sum": 406.77,
+    "med": 9.5,
+    "avg": 16.95,
     "orig_n": 30,
-    "orig_ev": 11.83,
-    "orig_sum": 487.63,
-    "orig_med": 10.05,
-    "orig_avg": 16.25
+    "orig_ev": 0.11,
+    "orig_sum": 526.27,
+    "orig_med": 10.51,
+    "orig_avg": 17.54
+  },
+  "Mythic": {
+    "prob": 0.24,
+    "n": 27,
+    "n_exp": 40,
+    "ev": 5.55,
+    "sum": 635.48,
+    "med": 19.1,
+    "avg": 23.54,
+    "orig_n": 40,
+    "orig_ev": 5.74,
+    "orig_sum": 973.3,
+    "orig_med": 13.64,
+    "orig_avg": 24.33
   },
   "Mythic Foil": {
-    "prob": 0.14,
-    "n": 36,
+    "prob": 0.01,
+    "n": 35,
     "n_exp": 40,
-    "ev": 4.87,
-    "sum": 1228.4,
-    "med": 24.35,
-    "avg": 34.12,
+    "ev": 0.48,
+    "sum": 1935.33,
+    "med": 27.86,
+    "avg": 55.3,
     "orig_n": 40,
-    "orig_ev": 4.92,
-    "orig_sum": 1376.6,
-    "orig_med": 21.85,
-    "orig_avg": 34.41
-  },
-  "Mythic Foil-etched": {
-    "prob": 0.14,
-    "n": 39,
-    "n_exp": 40,
-    "ev": 7.62,
-    "sum": 2080.04,
-    "med": 33.01,
-    "avg": 53.33,
-    "orig_n": 39,
-    "orig_ev": 7.62,
-    "orig_sum": 2080.04,
-    "orig_med": 33.01,
-    "orig_avg": 53.33
+    "orig_ev": 0.48,
+    "orig_sum": 2227.95,
+    "orig_med": 21.42,
+    "orig_avg": 55.7
   },
   "Mythic Borderless": {
-    "prob": 0.25,
+    "prob": 0.01,
     "n": 19,
     "n_exp": 20,
-    "ev": 9.88,
-    "sum": 750.71,
-    "med": 32.23,
-    "avg": 39.51,
+    "ev": 0.59,
+    "sum": 786.04,
+    "med": 32.97,
+    "avg": 41.37,
     "orig_n": 20,
-    "orig_ev": 9.93,
-    "orig_sum": 794.03,
-    "orig_med": 31.55,
-    "orig_avg": 39.7
+    "orig_ev": 0.59,
+    "orig_sum": 831.24,
+    "orig_med": 32.83,
+    "orig_avg": 41.56
   },
-  "Mythic Foil Borderless": {
-    "prob": 0.24,
+  "Mythic Borderless Foil": {
+    "prob": 0.0,
     "n": 20,
     "n_exp": 20,
-    "ev": 13.69,
-    "sum": 1128.67,
-    "med": 45.22,
-    "avg": 56.43,
+    "ev": 0.17,
+    "sum": 1987.98,
+    "med": 62.58,
+    "avg": 99.4,
     "orig_n": 20,
-    "orig_ev": 13.69,
-    "orig_sum": 1128.67,
-    "orig_med": 45.22,
-    "orig_avg": 56.43
-  },
-  "Textured Foil": {
-    "prob": 0.03,
-    "n": 5,
-    "n_exp": 5,
-    "ev": 7.38,
-    "sum": 1229.32,
-    "med": 264.98,
-    "avg": 245.86,
-    "orig_n": 5,
-    "orig_ev": 7.38,
-    "orig_sum": 1229.32,
-    "orig_med": 264.98,
-    "orig_avg": 245.86
+    "orig_ev": 0.17,
+    "orig_sum": 1987.98,
+    "orig_med": 62.58,
+    "orig_avg": 99.4
   }
 }
 
 
 Category to EV:
 {
-  "Rare Foil": 5.22,
-  "Rare Foil-etched": 7.5,
-  "Uncommon Foil": 1.8,
-  "Common Foil": 1.5,
-  "Rare Borderless": 8.93,
-  "Rare Foil Borderless": 11.83,
-  "Mythic Foil": 4.92,
-  "Mythic Foil-etched": 7.62,
-  "Mythic Borderless": 9.93,
-  "Mythic Foil Borderless": 13.69,
-  "Uncommon Borderless": 1.53,
-  "Uncommon Borderless Foil": 2.51,
-  "Common Borderless": 0.28,
-  "Common Borderless Foil": 0.51,
-  "Textured Foil": 7.38
+  "Rare": 6.36,
+  "Rare Foil": 0.41,
+  "Uncommon": 1.4,
+  "Uncommon Foil": 0.42,
+  "Common": 1.52,
+  "Common Foil": 0.44,
+  "Rare Borderless": 1.24,
+  "Rare Borderless Foil": 0.11,
+  "Mythic": 5.74,
+  "Mythic Foil": 0.48,
+  "Mythic Borderless": 0.59,
+  "Mythic Borderless Foil": 0.17,
+  "Uncommon Borderless": 0.31,
+  "Uncommon Borderless Foil": 0.09,
+  "Common Borderless": 0.15,
+  "Common Borderless Foil": 0.05
 }
 
 
 Category to EV (exclusive price = $5.0):
 {
-  "Rare Foil": 4.29,
-  "Rare Foil-etched": 6.16,
-  "Rare Borderless": 7.91,
-  "Rare Foil Borderless": 11.41,
-  "Mythic Foil": 4.87,
-  "Mythic Foil-etched": 7.62,
-  "Mythic Borderless": 9.88,
-  "Mythic Foil Borderless": 13.69,
-  "Textured Foil": 7.38
+  "Rare": 5.06,
+  "Rare Foil": 0.34,
+  "Rare Borderless": 1.15,
+  "Rare Borderless Foil": 0.1,
+  "Mythic": 5.55,
+  "Mythic Foil": 0.48,
+  "Mythic Borderless": 0.59,
+  "Mythic Borderless Foil": 0.17
 }
 
 
-Total EV: 85.13
-Total EV (EP = $5.0): 73.19
+Total EV: 19.48
+Total EV (EP = $5.0): 13.44
 
 
-Mean:   $81.91
-Median: $61.87
+Mean:   $14.67
+Median: $5.35
 
-EP $5.0 Mean:   $72.9
-EP $5.0 Median: $53.41
+EP $5.0 Mean:   $11.39
+EP $5.0 Median: $0.0
 
-Vwant val: $64.25
-Percentile:           51.59
-Percentile EP $5.0:   57.39
+Want val: $64.25
+Percentile:           96.04
+Percentile EP $5.0:   96.39
+
+Set category to info:
+{
+  "Common": {
+    "prob": 7.74,
+    "actualN": 92
+  },
+  "Uncommon": {
+    "prob": 2.74,
+    "actualN": 80
+  },
+  "Rare": {
+    "prob": 1.65,
+    "actualN": 120
+  },
+  "Mythic": {
+    "prob": 0.24,
+    "actualN": 40
+  },
+  "Common Borderless": {
+    "prob": 0.26,
+    "actualN": 9
+  },
+  "Uncommon Borderless": {
+    "prob": 0.26,
+    "actualN": 21
+  },
+  "Rare Borderless": {
+    "prob": 0.1,
+    "actualN": 30
+  },
+  "Mythic Borderless": {
+    "prob": 0.01,
+    "actualN": 20
+  },
+  "Common Foil": {
+    "prob": 1.39,
+    "actualN": 92
+  },
+  "Uncommon Foil": {
+    "prob": 0.44,
+    "actualN": 80
+  },
+  "Rare Foil": {
+    "prob": 0.07,
+    "actualN": 120
+  },
+  "Mythic Foil": {
+    "prob": 0.01,
+    "actualN": 40
+  },
+  "Common Borderless Foil": {
+    "prob": 0.05,
+    "actualN": 9
+  },
+  "Uncommon Borderless Foil": {
+    "prob": 0.04,
+    "actualN": 21
+  },
+  "Rare Borderless Foil": {
+    "prob": 0.01,
+    "actualN": 30
+  },
+  "Mythic Borderless Foil": {
+    "prob": 0.0,
+    "actualN": 20
+  }
+}

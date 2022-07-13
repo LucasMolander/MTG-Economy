@@ -88,6 +88,8 @@ class MTGSetHandler(Protocol):
   NAME: ClassVar[str]
   CODE: ClassVar[str]
 
+  PACKS_PER_BOX: ClassVar[int]
+
   CAT_TO_INFO: ClassVar[Dict[Type[CardCategorizer], CatInfoForSet]]
 
   @staticmethod
