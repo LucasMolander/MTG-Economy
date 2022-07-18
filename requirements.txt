@@ -1,5 +1,6 @@
 scipy
 requests
+types-requests
 prettytable
 sanitize_filename
 matplotlib

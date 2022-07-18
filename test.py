@@ -196,8 +196,8 @@ class MyJSONEncoder(json.JSONEncoder):
     return super().encode(theObj)
 
 
-mtgSet = DoubleMasters2022Collectors
-# mtgSet = DoubleMasters2022
+# mtgSet = DoubleMasters2022Collectors
+mtgSet = DoubleMasters2022
 
 code = mtgSet.CODE
 name = mtgSet.NAME
@@ -206,7 +206,6 @@ boxPrice = SetUtil.readBoxPrices()[name]['marketPrice']
 print(f"{name} box market price: ${boxPrice}")
 
 cards = SetUtil.loadFromFile(setName=name)
-print(f"\n{name} has {len(cards)} cards")
 
 catToNameToPrice = mtgSet.categorizePrices(cards)
 catToPrices = {
@@ -220,10 +219,10 @@ ep = 5.0
 catToDistinfo = mtgSet.getDistinfos(catToNameToPrice)
 catToDistinfoEP = mtgSet.getDistinfos(catToNameToPrice, exclPrice=ep)
 
-print("\n\nCategory to distribution info:")
-print(json.dumps(catToDistinfo, indent=2, cls=MyJSONEncoder))
-print(f"\n\nCategory to distribution info (exclusive price = ${ep}):")
-print(json.dumps(catToDistinfoEP, indent=2, cls=MyJSONEncoder))
+# print("\n\nCategory to distribution info:")
+# print(json.dumps(catToDistinfo, indent=2, cls=MyJSONEncoder))
+# print(f"\n\nCategory to distribution info (exclusive price = ${ep}):")
+# print(json.dumps(catToDistinfoEP, indent=2, cls=MyJSONEncoder))
 
 catToEV = {
   catstr: distInfo.ev

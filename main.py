@@ -353,7 +353,13 @@ def downloadCardsAndPersist(args):
 
   if (args.set):
     setCode = SetUtil.coerceToCode(args.set)
-    setName = SetUtil.coerceToName(args.set)
+    # Some set codes have multiple set names.
+    # For example, "Double Masters 2022" and "Double Masters 2022 Collectors"
+    # are both associated with the set code "2x2". For now, just get smallest.
+    setName = sorted(
+      list(SetUtil.coerceToNames(args.set)),
+      key=lambda s: len(s)
+    )[0]
 
     cards = SetUtil.downloadCards(setCode)
     SetUtil.persistSetCards(setName, cards)
