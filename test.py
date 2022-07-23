@@ -196,8 +196,8 @@ class MyJSONEncoder(json.JSONEncoder):
     return super().encode(theObj)
 
 
-# mtgSet = DoubleMasters2022Collectors
-mtgSet = DoubleMasters2022
+mtgSet = DoubleMasters2022Collectors
+# mtgSet = DoubleMasters2022
 
 code = mtgSet.CODE
 name = mtgSet.NAME

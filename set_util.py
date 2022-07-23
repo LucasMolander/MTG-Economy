@@ -100,6 +100,17 @@ class SetUtil(object):
 
     raise Exception('Invalid set name or code: %s' % setCodeOrName)
 
+  @staticmethod
+  def coerceToShortestName(setCodeOrName: str) -> str:
+    """
+    Some set codes have multiple set names.
+    For example, "Double Masters 2022" and "Double Masters 2022 Collectors"
+    are both associated with the set code "2x2". For now, just get smallest.
+    """
+    return sorted(
+      list(SetUtil.coerceToNames(setCodeOrName)),
+      key=lambda s: len(s)
+    )[0]
 
   @staticmethod
   def isCollectorsEd(setCodeOrName: str) -> bool:
@@ -145,8 +156,7 @@ class SetUtil(object):
     setName: Optional[str] = None
     mpName: Optional[str] = None
     if setCode is not None:
-      setNames = SetUtil.coerceToNames(setCode)
-      setName = list(setNames)[0]
+      setName = SetUtil.coerceToShortestName(setCode)
       print('Getting cards for %s' % setName)
     elif mpCode is not None:
       mpName = SetUtil.masterpieces[mpCode]['name']
